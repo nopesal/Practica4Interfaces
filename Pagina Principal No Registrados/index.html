@@ -11,8 +11,8 @@
           rel="stylesheet">
 </head>
 <body>
-<header>
-    <div id="brand-header">
+<nav>
+    <div id="brand-nav">
         <div class="marca-column">
             <svg version="1.2" preserveAspectRatio="none" viewBox="0 0 24 24" class="ng-element" fill="#193441"
                  style="opacity: 0.75; width: 45px; height: 45px;">
@@ -27,13 +27,15 @@
             </svg>
         </div>
         <div class="marca-column">
-            <h1 id="name-header">Aperture</h1>
+            <h1 id="name-nav">Aperture</h1>
         </div>
     </div>
     <div id="search-div">
-        <input id="search-bar" type="text" name="search" placeholder="Busca fotos, usuarios, álbumes...">
+        <form>
+            <input id="search-bar" type="search" name="search" placeholder="Busca fotos, usuarios, álbumes...">
+        </form>
     </div>
-    <div id="buttons-header">
+    <div id="buttons-nav">
         <div class="button-sign" id="iniciar-sesion">
             <p>Inicia sesión</p>
         </div>
@@ -41,7 +43,7 @@
             <p>Regístrate</p>
         </div>
     </div>
-</header>
+</nav>
 <div id="reclamo-container">
     <div id="reclamo-texto">
         <h1>Un lugar para tus mejores fotos</h1>
