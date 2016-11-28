@@ -2,7 +2,7 @@ $("#ver-mas")[0].addEventListener("click", verMasImagenes, false);
 
 function verMasImagenes() {
     $("#ver-mas")[0].style.display = "none";
-    $(".fa-spin")[0].style.display = "inline-block";
+    $(".fa-spin")[0].style.display = "block";
     setTimeout(function () {
         $("#imagenes-hidden").css("display", "block");
         $(".fa-spin")[0].style.display = "none";
