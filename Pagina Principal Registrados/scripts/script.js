@@ -1,7 +1,14 @@
 $("#ver-mas")[0].addEventListener("click", verMasImagenes, false);
 
 function verMasImagenes() {
-    $("#imagenes-hidden").css("display", "block");
+    $("#ver-mas")[0].style.display = "none";
+    $(".fa-spin")[0].style.display = "inline-block";
+    setTimeout(function () {
+        $("#imagenes-hidden").css("display", "block");
+        $(".fa-spin")[0].style.display = "none";
+    }, 1000);
+
+
 }
 
 var imagenes = document.getElementsByClassName("imagen");
