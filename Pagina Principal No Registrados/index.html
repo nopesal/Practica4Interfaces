@@ -36,7 +36,8 @@
         </form>
     </div>
     <div id="buttons-nav">
-        <a href="" class="button-sign" id="iniciar-sesion">
+        <a onclick="document.getElementById('login').style.display='block'" href="#" class="button-sign"
+           id="iniciar-sesion">
             <p>Inicia sesión</p>
         </a>
         <a href="" class="button-sign" id="registrate">
@@ -44,6 +45,32 @@
         </a>
     </div>
 </nav>
+<div id="login" class="popup">
+    <form class="popup-content animate">
+        <div class="imgperfil">
+            <span onclick="document.getElementById('login').style.display='none'" class="close"
+                  title="Cerrar">&times;
+            </span>
+            <img src="../images/user-icon.png" alt="Avatar" class="avatar">
+        </div>
+        <div class="container">
+            <label>Nombre de usuario</label>
+            <input type="text" placeholder="Introduzca nombre de usuario" name="uname" required>
+            <label>Contraseña</label>
+            <input type="password" placeholder="Introduzca contraseña" name="psw"
+                   required>
+            <button type="submit" onclick="logIn(uname.value, psw.value)">Iniciar sesión</button>
+            <input type="checkbox" checked="checked"> Recuérdame
+        </div>
+        <div class="container" id="container-2">
+            <button type="button" onclick="document.getElementById('login').style.display='none'"
+                    class="cancelbtn">
+                Cancelar
+            </button>
+            <span class="psw"><a href="#">¿Olvidó su contraseña?</a></span>
+        </div>
+    </form>
+</div>
 <div id="reclamo-container">
     <div id="reclamo-texto">
         <h1>Un lugar para tus mejores fotos</h1>
