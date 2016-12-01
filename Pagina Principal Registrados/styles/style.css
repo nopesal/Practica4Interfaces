@@ -56,16 +56,14 @@ img {
 
 .fila {
     display: flex;
-    height: 230px;
+    height: 17vw; /*La altura es responsive con la anchura de la imagen (ViewPort Width)*/
     margin-bottom: 1%;
+    overflow: hidden;
+
 }
 
 #ultimas-fotos {
     width: 100%;
-}
-
-.fila {
-    overflow: hidden;
 }
 
 .imagen {

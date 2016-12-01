@@ -30,26 +30,26 @@ function ocultarDatosImagen() {
 }
 
 function crearlikeOnClickListener() {
-    var corazones = document.getElementsByClassName("fa-heart-o");
-    for (var i = 0; i < corazones.length; i++) {
-        corazones[i].addEventListener("click", darLike, false);
+    var corazonesInactivos = document.getElementsByClassName("fa-heart-o");
+    for (var i = 0; i < corazonesInactivos.length; i++) {
+        corazonesInactivos[i].addEventListener("click", darLike, false);
+    }
+    var corazonesActivos = document.getElementsByClassName("fa-heart");
+    for (var i = 0; i < corazonesActivos.length; i++) {
+        corazonesActivos[i].addEventListener("click", darLike, false);
     }
 
     function darLike() {
         var corazon = $(this);
         var contadorDeLikes = $(this).next();
+        var numeroDeLikes = parseInt(contadorDeLikes.html());
         if (corazon.hasClass("fa-heart-o")) {
-            corazon.toggleClass('fa-heart-o fa-heart');
-            var numeroDeLikes = contadorDeLikes.html();
-            numeroDeLikes = parseInt(numeroDeLikes);
-            numeroDeLikes = numeroDeLikes + 1
-            contadorDeLikes.text(numeroDeLikes);
+            numeroDeLikes = numeroDeLikes + 1;
         } else if (corazon.hasClass("fa-heart")) {
-            corazon.toggleClass('fa-heart-o fa-heart');
-            var numeroDeLikes = contadorDeLikes.html();
-            numeroDeLikes = parseInt(numeroDeLikes);
             numeroDeLikes = numeroDeLikes - 1;
-            contadorDeLikes.text(numeroDeLikes);
         }
+        corazon.toggleClass('fa-heart-o fa-heart');
+        contadorDeLikes.text(numeroDeLikes);
+        actualizarValorStorage(corazon, "likes", numeroDeLikes);
     }
 }
