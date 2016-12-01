@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="../images/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="styles/style.css">
 </head>
-<body>
+<body onload="cargarImagenes()">
 <nav>
     <div id="brand-nav">
         <div class="marca-column">
@@ -50,181 +50,39 @@
     </div>
     <div id="imagenes">
         <div class="fila">
-            <div class="imagen" style="margin-right: 1%">
-                <img src="../images/Puente1.PNG" alt="Puente">
-                <div class="gradient"></div>
-                <p>Rose Sky</p>
-                <div class="social">
-                    <i class="fa fa-heart" aria-hidden="true"></i>34445
-                    <i class="fa fa-comment" aria-hidden="true"></i>1479
-                </div>
-            </div>
-            <div class="imagen">
-                <img src="../images/Perro.PNG" alt="Perro">
-                <div class="gradient"></div>
-                <p>Más fotogénico que yo</p>
-                <div class="social">
-                    <i class="fa fa-heart" aria-hidden="true"></i>344
-                    <i class="fa fa-comment" aria-hidden="true"></i>19
-                </div>
-            </div>
+            <div class="imagen" style="margin-right: 1%"></div>
+            <div class="imagen" style="margin-right: 1%"></div>
+            <div class="imagen"></div>
         </div>
         <div class="fila">
-            <div class="imagen" style="margin-right: 1%">
-                <img src="../images/Puente%20(2).PNG" alt="Puente">
-                <div class="gradient"></div>
-                <p></p>
-                <div class="social">
-                    <i class="fa fa-heart" aria-hidden="true"></i>6234
-                    <i class="fa fa-comment" aria-hidden="true"></i>344
-                </div>
-            </div>
-            <div class="imagen" style="margin-right: 1%">
-                <img src="../images/Nieve.PNG" alt="Nieve">
-                <div class="gradient"></div>
-                <p>Baby it's cold outside... and beautiful</p>
-                <div class="social">
-                    <i class="fa fa-heart" aria-hidden="true"></i>558
-                    <i class="fa fa-comment" aria-hidden="true"></i>23
-                </div>
-            </div>
-            <div class="imagen">
-                <img src="../images/Montaña.PNG" alt="Montaña">
-                <div class="gradient"></div>
-                <p>Altas vistas, altos cantos</p>
-                <div class="social">
-                    <i class="fa fa-heart" aria-hidden="true"></i>447
-                    <i class="fa fa-comment" aria-hidden="true"></i>22
-                </div>
-            </div>
+            <div class="imagen" style="margin-right: 1%"></div>
+            <div class="imagen" style="margin-right: 1%"></div>
+            <div class="imagen"></div>
         </div>
         <div class="fila">
-            <div class="imagen" style="margin-right: 1%">
-                <img src="../images/Manos.PNG" alt="Manos">
-                <div class="gradient"></div>
-                <p>With the touch of your hand</p>
-                <div class="social">
-                    <i class="fa fa-heart" aria-hidden="true"></i>4454
-                    <i class="fa fa-comment" aria-hidden="true"></i>189
-                </div>
-            </div>
-            <div class="imagen" style="margin-right: 1%">
-                <img src="../images/Otoño.PNG" alt="Otoño">
-                <div class="gradient"></div>
-                <p></p>
-                <div class="social">
-                    <i class="fa fa-heart" aria-hidden="true"></i>345
-                    <i class="fa fa-comment" aria-hidden="true"></i>23
-                </div>
-            </div>
-            <div class="imagen">
-                <img src="../images/Puerto.PNG" alt="Puerto">
-                <div class="gradient"></div>
-                <p>Vistas desde el puerto</p>
-                <div class="social">
-                    <i class="fa fa-heart" aria-hidden="true"></i>12385
-                    <i class="fa fa-comment" aria-hidden="true"></i>429
-                </div>
-            </div>
+            <div class="imagen" style="margin-right: 1%"></div>
+            <div class="imagen"></div>
         </div>
         <div class="fila">
-            <div class="imagen" style="margin-right: 1%">
-                <img src="../images/Corredor.PNG" alt="Corredor">
-                <div class="gradient"></div>
-                <p>Mañanas</p>
-                <div class="social">
-                    <i class="fa fa-heart" aria-hidden="true"></i>480
-                    <i class="fa fa-comment" aria-hidden="true"></i>12
-                </div>
-            </div>
-            <div class="imagen">
-                <img src="../images/Buho.PNG" alt="Buho">
-                <div class="gradient"></div>
-                <p>Poco me apasionan los búhos últimamente</p>
-                <div class="social">
-                    <i class="fa fa-heart" aria-hidden="true"></i>130
-                    <i class="fa fa-comment" aria-hidden="true"></i>19
-                </div>
-            </div>
+            <div class="imagen" style="margin-right: 1%"></div>
+            <div class="imagen" style="margin-right: 1%"></div>
+            <div class="imagen"></div>
         </div>
         <div id="imagenes-hidden">
             <div class="fila">
-                <div class="imagen" style="margin-right: 1%">
-                    <img src="../images/Atardecer.PNG" alt="Atarceder">
-                    <div class="gradient"></div>
-                    <p>El mejor atardecer que he...</p>
-                    <div class="social">
-                        <i class="fa fa-heart" aria-hidden="true"></i>1007
-                        <i class="fa fa-comment" aria-hidden="true"></i>63
-                    </div>
-                </div>
-                <div class="imagen">
-                    <img src="../images/Aurora.PNG" alt="Aurora">
-                    <div class="gradient"></div>
-                    <p>Las vistas desde el campamen..</p>
-                    <div class="social">
-                        <i class="fa fa-heart" aria-hidden="true"></i>4225
-                        <i class="fa fa-comment" aria-hidden="true"></i>101
-                    </div>
-                </div>
+                <div class="imagen" style="margin-right: 1%"></div>
+                <div class="imagen" style="margin-right: 1%"></div>
+                <div class="imagen"></div>
             </div>
             <div class="fila">
-                <div class="imagen" style="margin-right: 1%">
-                    <img src="../images/Setas.PNG" alt="Setas">
-                    <div class="gradient"></div>
-                    <p>Adoro el momento en el...</p>
-                    <div class="social">
-                        <i class="fa fa-heart" aria-hidden="true"></i>334
-                        <i class="fa fa-comment" aria-hidden="true"></i>60
-                    </div>
-                </div>
-                <div class="imagen" style="margin-right: 1%">
-                    <img src="../images/Desierto.PNG" alt="Desierto">
-                    <div class="gradient"></div>
-                    <p>Las vistas desde el rodaje</p>
-                    <div class="social">
-                        <i class="fa fa-heart" aria-hidden="true"></i>2004
-                        <i class="fa fa-comment" aria-hidden="true"></i>224
-                    </div>
-                </div>
-                <div class="imagen">
-                    <img src="../images/Flores.PNG" alt="Flores">
-                    <div class="gradient"></div>
-                    <p>De boda en boda</p>
-                    <div class="social">
-                        <i class="fa fa-heart" aria-hidden="true"></i>885
-                        <i class="fa fa-comment" aria-hidden="true"></i>74
-                    </div>
-                </div>
+                <div class="imagen" style="margin-right: 1%"></div>
+                <div class="imagen" style="margin-right: 1%"></div>
+                <div class="imagen"></div>
             </div>
             <div class="fila">
-                <div class="imagen" style="margin-right: 1%">
-                    <img src="../images/Pizza.PNG" alt="Pizza">
-                    <div class="gradient"></div>
-                    <p>Como en casa</p>
-                    <div class="social">
-                        <i class="fa fa-heart" aria-hidden="true"></i>98
-                        <i class="fa fa-comment" aria-hidden="true"></i>6
-                    </div>
-                </div>
-                <div class="imagen" style="margin-right: 1%">
-                    <img src="../images/Bicicletas.PNG" alt="Bicicletas">
-                    <div class="gradient"></div>
-                    <p>Trattoria</p>
-                    <div class="social">
-                        <i class="fa fa-heart" aria-hidden="true"></i>130
-                        <i class="fa fa-comment" aria-hidden="true"></i>24
-                    </div>
-                </div>
-                <div class="imagen">
-                    <img src="../images/Feria.PNG" alt="Feria">
-                    <div class="gradient"></div>
-                    <p>Las vistas desde el mirador de Santa...</p>
-                    <div class="social">
-                        <i class="fa fa-heart" aria-hidden="true"></i>80
-                        <i class="fa fa-comment" aria-hidden="true"></i>2
-                    </div>
-                </div>
+                <div class="imagen" style="margin-right: 1%"></div>
+                <div class="imagen" style="margin-right: 1%"></div>
+                <div class="imagen"></div>
             </div>
         </div>
     </div>
@@ -278,6 +136,7 @@
         </p>
     </div>
 </footer>
+<script src="scripts/local_storage_script_explorar.js"></script>
 <script src="scripts/index_script.js"></script>
 </body>
 </html>
