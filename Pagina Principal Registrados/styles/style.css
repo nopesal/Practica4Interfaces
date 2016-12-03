@@ -228,7 +228,7 @@ nav {
     user-select: none;
 }
 
-footer{
+footer {
     width: 100%;
     height: 176px;
     bottom: 0;
@@ -236,13 +236,13 @@ footer{
     position: relative;
     text-align: center;
 }
-#logo{
+
+#logo {
     width: 30px;
     height: 30px;
     float: left;
     margin: auto;
 }
-
 
 #eslogan-footer {
     float: left;
@@ -251,7 +251,8 @@ footer{
     font-family: "PT Sans";
     font-size: 18px;
 }
-#eslogan{
+
+#eslogan {
     display: inline;
     width: 35%;
     float: left;
@@ -260,54 +261,55 @@ footer{
     margin: 15px 0 15px 15px;
 }
 
-#more-links{
+#more-links {
     width: 40%;
     float: right;
 }
 
-.link-column{
+.link-column {
     width: 32%;
     display: inline-block;
     margin: 15px 0 0 0;
     text-align: left;
 }
 
-.link-column a:link{
+.link-column a:link {
     color: #FFFFFF;
 }
 
-.link-column a:visited{
+.link-column a:visited {
     color: #FFFFFF;
 }
-#info{
+
+#info {
     text-align: center;
     margin: 0 auto;
     display: block;
     width: 50%;
     position: absolute;
-    bottom:0;
+    bottom: 0;
     left: 25%;
     font-family: "PT Serif";
     color: #A4ABBF;
 }
 
-#info a:link, a:visited{
+#info a:link, a:visited {
     color: #A4ABBF;
     text-decoration: underline;
 }
 
-.title-column{
+.title-column {
     color: #A4ABBF;
     font-family: "PT Sans";
     margin: auto;
 }
 
-.links-footer{
+.links-footer {
     color: #FFFFFF;
     font-family: "PT Serif";
     margin: auto;
 }
 
-.links-footer a:hover, a:visited, a:link, a:active{
+.links-footer a:hover, a:visited, a:link, a:active {
     text-decoration: none;
 }
