@@ -16,6 +16,7 @@ function soportaLocalStorage() {
 function cargarImagenes() {
     if (localStorage["listaImagenesInversa"] == null) {
         listaImagenesInversa = parsearDatosImagenesJSON();
+        location.reload();
     } else {
         listaImagenesInversa = JSON.parse(localStorage["listaImagenesInversa"]);
     }
