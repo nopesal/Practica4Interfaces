@@ -10,10 +10,13 @@ body {
     max-width: 1200px;
     padding-left: 5%;
     padding-right: 5%;
-    text-align: center;
     font-family: 'PT Sans Caption', sans-serif;
     background-color: #ededed;
     position: relative;
+}
+
+h2 {
+    color: #464646;
 }
 
 nav {
@@ -160,6 +163,7 @@ nav {
 #usuario h2 {
     margin-top: 5px;
     color: #5b605f;
+    text-align: center;
 }
 
 #texto-imagen {
@@ -167,14 +171,300 @@ nav {
 }
 
 #texto-imagen h1 {
-    font-size: 1.5em;
-    text-align: left;
+    font-size: 1.7em;
     color: #5b605f;
     font-family: "PT Sans", sans-serif;
     font-weight: bold;
 }
 
 #texto-imagen p {
-    text-align: left;
     color: #5b605f;
+}
+
+#comentarios {
+    width: 50%;
+    margin-left: 3%;
+    margin-right: 6%;
+}
+
+#comentarios textarea {
+    width: 93%;
+    margin-left: 3%;
+    border-radius: 3px;
+    font-family: 'PT Sans Caption', sans-serif;
+    padding: 10px;
+    overflow: hidden;
+    resize: none;
+    height: 25px;
+    -webkit-box-shadow: inset 1px 1px 1px 0 #d6d6d6;
+}
+
+#comentarios textarea::-webkit-input-placeholder {
+    font-family: 'PT Sans Caption', sans-serif;
+}
+
+#boton-comentar {
+    background-color: #2B3A42;
+    border-radius: 3px;
+    width: 35%;
+    text-align: center;
+    float: right;
+    cursor: pointer;
+}
+
+#boton-comentar a {
+    font-family: "PT Sans Caption", sans-serif;
+    color: #FFFFFF;
+    display: block;
+    font-weight: bold;
+    font-size: 0.9em;
+    text-decoration: none;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+#boton-comentar:hover {
+    background-color: #6D94A8;
+}
+
+#columna-derecha {
+    width: 50%;
+    margin-left: 3%;
+}
+
+.comentario {
+    display: flex;
+    width: 90%;
+    margin: 5% auto;
+}
+
+.comentario img {
+    width: 45px;
+    height: 45px;
+    border-radius: 100px;
+    margin-right: 3%;
+}
+
+.comentario-usuario {
+    margin-top: 0;
+    margin-right: 3%;
+    color: #464646;
+    font-weight: bold;
+    font-size: 0.9em;
+    line-height: 13px;
+}
+
+.comentario-hora {
+    color: #c7c7c7;
+    font-size: 0.8em;
+}
+
+.comentario-texto {
+    margin-bottom: 1%;
+    margin-top: 1%;
+    font-size: 0.9em;
+}
+
+.comentario-responder {
+    color: #c7c7c7;
+    font-size: 0.8em;
+}
+
+#informacion {
+    background-color: #464646;
+    font-family: 'Montserrat', sans-serif;
+    color: #EFEFEF;
+    padding: 2%;
+}
+
+#informacion i {
+    color: #EFEFEF;
+}
+
+.informacion-linea {
+    display: flex;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    margin-left: 5%;
+}
+
+.informacion-linea a {
+    margin-left: 3%;
+}
+
+.informacion-linea span {
+    margin-left: 3%;
+    line-height: 24px;
+}
+
+.etiqueta {
+    height: 25px;
+    background-color: #8A8A8A;
+    border-radius: 4px;
+    display: inline-block;
+    font-size: 0.8em;
+    font-weight: bold;
+    line-height: 24px;
+    color: #FFFFFF;
+    padding: 1% 2%;
+}
+
+#albumes {
+    margin-bottom: 3%;
+}
+
+.album {
+    position: relative;
+    margin-right: 10px;
+}
+
+.album img{
+    width: 310px;
+    height: 310px;
+}
+
+.album span {
+    position: absolute;
+    font-family: Marvel, serif;
+    font-weight: bold;
+    bottom: 0;
+    width: 100%;
+    line-height: 300px;
+    text-align: center;
+    font-size: 3em;
+    color: #FFFFFF;
+    display: none;
+}
+
+.transparencia {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0.5;
+    bottom: 0;
+    display: none;
+}
+
+.album-pequeño {
+    position: relative;
+}
+
+.album-pequeño img{
+    width: 150px;
+    height: 150px;
+    display: block;
+}
+
+.album-pequeño span {
+    position: absolute;
+    font-family: Marvel, serif;
+    font-weight: bold;
+    bottom: 0;
+    width: 100%;
+    line-height: 150px;
+    text-align: center;
+    font-size: 1.5em;
+    color: #FFFFFF;
+    display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+footer {
+    width: 100%;
+    height: 176px;
+    bottom: 0;
+    background-color: #353740;
+    position: relative;
+    text-align: center;
+}
+
+#logo {
+    width: 30px;
+    height: 30px;
+    float: left;
+    margin: auto;
+}
+
+#eslogan-footer {
+    float: left;
+    margin: auto;
+    padding-top: 4px;
+    font-family: "PT Sans";
+    font-size: 18px;
+    color: #FFFFFF;
+}
+
+#eslogan {
+    display: inline;
+    width: 35%;
+    float: left;
+    color: #ffffff;
+    display: flex;
+    margin: 15px 0 15px 15px;
+}
+
+#more-links {
+    width: 40%;
+    float: right;
+}
+
+.link-column {
+    width: 32%;
+    display: inline-block;
+    margin: 15px 0 0 0;
+    text-align: left;
+}
+
+.link-column a:link {
+    color: #FFFFFF;
+}
+
+.link-column a:visited {
+    color: #FFFFFF;
+}
+
+#info {
+    text-align: center;
+    margin: 0 auto;
+    display: block;
+    width: 50%;
+    position: absolute;
+    bottom: 0;
+    left: 25%;
+    font-family: "PT Serif";
+    color: #A4ABBF;
+}
+
+#info a:link, a:visited {
+    color: #A4ABBF;
+    text-decoration: underline;
+}
+
+.title-column {
+    color: #A4ABBF;
+    font-family: "PT Sans";
+    margin: auto;
+}
+
+.links-footer {
+    color: #FFFFFF;
+    font-family: "PT Serif";
+    margin: auto;
+}
+
+.links-footer a:hover, a:visited, a:link, a:active {
+    text-decoration: none;
 }
