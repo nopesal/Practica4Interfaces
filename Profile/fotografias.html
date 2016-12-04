@@ -2,17 +2,17 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Perfil de usuario</title>
+    <title>Fotografías</title>
     <link rel="stylesheet" href="styles/profile_style.css">
-    <link rel="stylesheet" href="styles/transparencias_profile.css">
+    <link rel="stylesheet" href="styles/transparencias_fotografias.css">
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.0/jquery.min.js"></script>
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.9/jquery-ui.min.js"></script>
-     <!-- <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=PT+Sans"/>
+    <!-- <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=PT+Sans"/>
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=PT+Sans+Caption"/>
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=PT+Serif"/>
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Marvel"/>
     -->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
           rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
@@ -75,7 +75,7 @@
         </div>
 
         <div id="menu">
-            <a href="fotografias.html">Fotografías</a>
+            <a href="fotografias.html" style= "font-weight:bold;">Fotografías</a>
             <a href="albumes.html">Álbumes</a>
             <a href="#urlMensajes">Mensajes</a>
         </div>
@@ -88,11 +88,7 @@
 
 
 
-        <!--Sección "Fotografías más recientes"-->
-
-        <h1>Fotos más recientes</h1>
-
-        <div class="fila">
+        <div class="fila" style="margin-top: 30px;">
 
             <div class="columna">
                 <div class="transparencia" onclick="window.location='#urlImagen1';"></div> 
@@ -111,34 +107,70 @@
 
         </div>
 
-
-        <!--Sección "Álbumes más populares"-->
-
-        <h1>Álbumes más populares</h1>
-
         <div class="fila">
 
             <div class="columna">
-                <div class="transparencia" onclick="window.location='#urlImagen4';"></div>
-                <img class= "albumes" src="images/wood.jpg" alt="Album1">
+                <div class="transparencia" onclick="window.location='#urlImagen4';"></div> 
+                <img class= "fotografias" src="images/paisaje.jpg" alt="Fotografia4">
             </div>
 
             <div class="columna" style="margin-left:2.5%; margin-right:2.5%;">
                 <div class="transparencia" onclick="window.location='#urlImagen5';"></div>
-                <img class= "albumes" src="images/b&w2.jpg" alt="Album2">
+                <img class= "fotografias" src="images/autumn.jpg" alt="Fotografia5">
             </div>
 
             <div class="columna">
                 <div class="transparencia" onclick="window.location='#urlImagen6';"></div>
-                <img class= "albumes" src="images/birds.jpg" alt="Album3">
+                <img class= "fotografias" src="images/wedding.jpg" alt="Fotografia6">
             </div>
 
         </div>
 
+        <div class="fila">
+
+            <div class="columna">
+                <div class="transparencia" onclick="window.location='#urlImagen7';"></div> 
+                <img class= "fotografias" src="images/concert.jpg" alt="Fotografia7">
+            </div>
+
+            <div class="columna" style="margin-left:2.5%; margin-right:2.5%;">
+                <div class="transparencia" onclick="window.location='#urlImagen8';"></div>
+                <img class= "fotografias" src="images/birds.jpg" alt="Fotografia8">
+            </div>
+
+            <div class="columna">
+                <div class="transparencia" onclick="window.location='#urlImagen9';"></div>
+                <img class= "fotografias" src="images/b&w2.jpg" alt="Fotografia9">
+            </div>
+
+        </div>
+
+        <div id="imagenes-hidden">
+            <div class="fila">
+
+                <div class="columna">
+                     <div class="transparencia" onclick="window.location='#urlImagen10';"></div> 
+                     <img class= "fotografias" src="images/b&w3.jpg" alt="Fotografia10">
+                </div>
+
+                <div class="columna" style="margin-left:2.5%; margin-right:2.5%;">
+                     <div class="transparencia" onclick="window.location='#urlImagen11';"></div>
+                     <img class= "fotografias" src="images/lion.jpg" alt="Fotografia11">
+                </div>
+            </div>
+
+        </div>
+
+        <div id="ver-mas">
+            <a>Ver más</a>
+        </div>
+        <i class="fa fa-circle-o-notch fa-spin fa-3x fa-fw"></i>
+
     </div>
 
-<script src="scripts/profile_script.js"></script>
 <script src="scripts/verMas_script.js"></script>
+<script src="scripts/fotografias_script.js"></script>
+
 
 </body>
 </html>

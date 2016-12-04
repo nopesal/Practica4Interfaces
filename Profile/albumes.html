@@ -2,11 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Perfil de usuario</title>
-    <link rel="stylesheet" href="styles/profile_style.css">
-    <link rel="stylesheet" href="styles/transparencias_profile.css">
+    <title>Álbumes</title>
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.0/jquery.min.js"></script>
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.9/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="styles/profile_style.css">
+    <link rel="stylesheet" href="styles/transparencias_albumes.css">
      <!-- <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=PT+Sans"/>
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=PT+Sans+Caption"/>
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=PT+Serif"/>
@@ -76,7 +76,7 @@
 
         <div id="menu">
             <a href="fotografias.html">Fotografías</a>
-            <a href="albumes.html">Álbumes</a>
+            <a href="albumes.html" style= "font-weight:bold;">Álbumes</a>
             <a href="#urlMensajes">Mensajes</a>
         </div>
 
@@ -86,37 +86,7 @@
 
     <div id="bodyPerfil">
 
-
-
-        <!--Sección "Fotografías más recientes"-->
-
-        <h1>Fotos más recientes</h1>
-
-        <div class="fila">
-
-            <div class="columna">
-                <div class="transparencia" onclick="window.location='#urlImagen1';"></div> 
-                <img class= "fotografias" src="images/sunset.jpg" alt="Fotografia1">
-            </div>
-
-            <div class="columna" style="margin-left:2.5%; margin-right:2.5%;">
-                <div class="transparencia" onclick="window.location='#urlImagen2';"></div>
-                <img class= "fotografias" src="images/b&w1.jpg" alt="Fotografia2">
-            </div>
-
-            <div class="columna">
-                <div class="transparencia" onclick="window.location='#urlImagen3';"></div>
-                <img class= "fotografias" src="images/wood.jpg" alt="Fotografia3">
-            </div>
-
-        </div>
-
-
-        <!--Sección "Álbumes más populares"-->
-
-        <h1>Álbumes más populares</h1>
-
-        <div class="fila">
+        <div class="fila" style="margin-top: 30px;">
 
             <div class="columna">
                 <div class="transparencia" onclick="window.location='#urlImagen4';"></div>
@@ -125,7 +95,7 @@
 
             <div class="columna" style="margin-left:2.5%; margin-right:2.5%;">
                 <div class="transparencia" onclick="window.location='#urlImagen5';"></div>
-                <img class= "albumes" src="images/b&w2.jpg" alt="Album2">
+                <img class= "albumes" src="images/wedding.jpg" alt="Album2">
             </div>
 
             <div class="columna">
@@ -135,10 +105,25 @@
 
         </div>
 
+        <div class="fila">
+
+            <div class="columna">
+                <div class="transparencia" onclick="window.location='#urlImagen4';"></div>
+                <img class= "albumes" src="images/b&w2.jpg" alt="Album1">
+            </div>
+
+            <div class="columna" style="margin-left:2.5%; margin-right:2.5%;">
+                <div class="transparencia" onclick="window.location='#urlImagen5';"></div>
+                <img class= "albumes" src="images/concert.jpg" alt="Album2">
+            </div>
+
+        </div>
+
     </div>
 
-<script src="scripts/profile_script.js"></script>
 <script src="scripts/verMas_script.js"></script>
+<script src="scripts/albumes_script.js"></script>
+
 
 </body>
 </html>
