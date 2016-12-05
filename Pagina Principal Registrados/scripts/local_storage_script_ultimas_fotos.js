@@ -49,6 +49,7 @@ function actualizarValorStorage(elemento, atributo, valor) {
 }
 
 function abrirPaginaImagen() {
+    console.log("Funciona");
     var coleccionImagenes = $(".imagen");
     var imagenAModificar = $(this).closest(".imagen");
     var index = coleccionImagenes.index(imagenAModificar);
