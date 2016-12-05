@@ -36,11 +36,12 @@
         </form>
     </div>
     <div id="buttons-nav">
-        <a onclick="document.getElementById('login').style.display='block'" href="#" class="button-sign"
+        <a onclick="document.getElementById('login').style.display='block'; document.getElementById('signup').style.display='none'" href="#" class="button-sign"
            id="iniciar-sesion">
             <p>Inicia sesión</p>
         </a>
-        <a href="" class="button-sign" id="registrate">
+        <a onclick="document.getElementById('signup').style.display='block'; document.getElementById('login').style.display='none'" href="#" class="button-sign"
+           id="registrate">
             <p>Regístrate</p>
         </a>
     </div>
@@ -62,12 +63,61 @@
             <button type="submit" onclick="logIn(uname.value, psw.value)">Iniciar sesión</button>
             <input type="checkbox" checked="checked"> Recuérdame
         </div>
-        <div class="container" id="container-2">
+        <div class="container-2">
             <button type="button" onclick="document.getElementById('login').style.display='none'"
                     class="cancelbtn">
                 Cancelar
             </button>
             <span class="psw"><a href="#">¿Olvidó su contraseña?</a></span>
+        </div>
+    </form>
+</div>
+<div id="signup" class="popup-signup">
+    <form class="popup-content animate">
+        <div class="imgperfil">
+            <span onclick="document.getElementById('signup').style.display='none'" class="close"
+                  title="Cerrar">&times;
+            </span>
+        </div>
+        <div class="container" id="container-signup">
+            <div id="title-signup">
+                <h2>Cree una cuenta en Aperture</h2>
+                <p>Complete el siguiente formulario para registrarte como usuario en Aperture</p>
+            </div>
+            <div class="column-signup">
+                <label>Nombre completo</label><br>
+                <input type="text" placeholder="Introduzca nombre completo" name="cname" required>
+                <label>Nombre de usuario</label>
+                <input type="text" placeholder="Introduzca nombre de usuario" name="uname" required>
+            </div>
+            <div class="column-signup">
+                <label>Email</label>
+                <input type="email" placeholder="Introduzca su email" name="mail"
+                       required>
+                <label>Confirmación de email</label>
+                <input type="email" placeholder="Confirme su email" name="cmail"
+                       required>
+            </div>
+            <div class="column-signup">
+                <label>Contraseña</label>
+                <input type="password" placeholder="Introduzca su contraseña" name="psw"
+                       required>
+                <label>Confirmación de contraseña</label>
+                <input type="password" placeholder="Confirme su contraseña" name="cpsw"
+                       required>
+            </div>
+            <div id="foto-pro">
+                <p>¿Es usted un fotógrafo profesional?</p>
+                <input type="checkbox" checked="checked"> Sí
+                <input type="checkbox"> No
+            </div>
+            <button type="submit" onclick="logIn(uname.value, psw.value)">Registrarme</button>
+        </div>
+        <div class="container-2">
+            <button type="button" onclick="document.getElementById('signup').style.display='none'"
+                    class="cancelbtn">
+                Cancelar
+            </button>
         </div>
     </form>
 </div>
@@ -78,9 +128,9 @@
             artístico a los mandos de tu cámara o smartphone. Una <br>
             solución rápida y sencilla, estés donde estés.</p>
     </div>
-    <div class="button-sign-big">
+    <a onclick="document.getElementById('signup').style.display='block'; document.getElementById('login').style.display='none'" href="#" class="button-sign-big">
         <p>Regístrate</p>
-    </div>
+    </a>
 </div>
 <div id="muestra-container">
     <h1>Aquí tienes una muestra de lo que se cuece en Aperture</h1>

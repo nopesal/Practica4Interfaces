@@ -288,7 +288,7 @@ footer{
 .links-footer a:hover, a:visited, a:link, a:active{
     text-decoration: none;
 }
-input[type=text], input[type=password] {
+input[type=text], input[type=password], input[type=email] {
     width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
@@ -331,8 +331,45 @@ img.avatar {
     padding: 16px;
 }
 
-#container-2{
+.container-2{
     background-color: #353740;
+    display: flex;
+    justify-content: center;
+}
+.container-2 a, button {
+    align-self: center;
+}
+
+.container-2 a {
+    margin-left: 2.5em;
+}
+#title-signup{
+    display: inline;
+    margin-bottom: 5%;
+}
+#container-signup{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+#container-signup p{
+    margin: auto;
+}
+
+#container-signup h2{
+    text-align: center;
+}
+
+.column-signup{
+    display: flex;
+    width: 32%;
+    margin: auto;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.column-signup label{
+    display: block;
+    text-align: left;
 }
 
 span.psw {
@@ -349,6 +386,22 @@ span.psw {
     bottom: 50%;
     right: 0;
     width: 33%;
+    height: 56%;
+    margin: auto;
+    background-size: 1000px;
+    padding-top: 180px;
+    font-family: "PT Sans";
+}
+
+.popup-signup{
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    bottom: 50%;
+    right: 0;
+    width: 60%;
     height: 56%;
     margin: auto;
     background-size: 1000px;
