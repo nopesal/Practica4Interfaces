@@ -56,96 +56,100 @@
     <!-- Cabecera con la imagen de usuario y su username-->
 
     <div id="cabeceraPerfil">
-
-        <a href="profile.html"><div id= "imgUsuario"></div></a>
-        <h1 id="nombreUsuario"> @MaxSteel</h1>
-
+        <div id="cabeceraBackground">
+        </div>
     </div>
 
+    <a href="profile.html"><div id= "imgUsuario"></div></a>
+    <h1 id="nombreUsuario"> @MaxSteel</h1>
+
+    <div id="contenido">
 
     <!-- Menú de navegación del perfil-->
     
-    <div id="navPerfil">
+        <div id="navPerfil">
 
-        <div id="cuadroSeguidores">
-            <a href="fotografias.html">11<br>fotografías</a>
-            <a href="#urlSeguidores">224<br>seguidores</a>
-            <a href="#urlSeguidos">345<br>seguidos</a>
+            <div id="cuadroSeguidores">
+                <a href="fotografias.html">11<br>fotografías</a>
+                <a href="#urlSeguidores">224<br>seguidores</a>
+                <a href="#urlSeguidos">345<br>seguidos</a>
+            </div>
+
+            <div id="menu">
+                <a href="fotografias.html">Fotografías</a>
+                <a href="albumes.html" style= "font-weight:bold;">Álbumes</a>
+            </div>
+
         </div>
 
-        <div id="menu">
-            <a href="fotografias.html">Fotografías</a>
-            <a href="albumes.html" style= "font-weight:bold;">Álbumes</a>
-        </div>
+        <!-- Cuerpo de la página-->
 
+
+        <div id="bodyPerfil">
+
+            <div id="barraBotones">
+                <div id="botones-perfil">
+                    <a id="seguir" class="boton"  onclick="seguir()" href="#" >Seguir</a>
+                    <a id="mensaje" class="boton" onclick="document.getElementById('enviarMensaje').style.display='block'" href="#" >
+                        Mensaje
+                    </a>
+                </div>
+                <div id="ordenar">
+                    <p> Ordenar por:</p>
+
+                    <select id="selectOrdenar">
+                        <option value="fechaRecientes" selected="selected">Fecha (más recientes a más antiguos)</option>
+                        <option value="fechaAntiguos">Fecha (más antiguos a más recientes)</option>
+                        <option value="masFav">Más gustados</option>
+                    </select>
+
+                </div>
+            </div>
+
+
+            <div class="fila">
+
+                <div class="columna">
+                    <div class="transparencia" style="background-color: #B7863A;" onclick="window.location='#urlImagen3';"></div>
+                    <span class="tituloFoto">PAISAJES</span> <i class="fa fa-heart"></i> <span class="numeroLikes">55</span>
+                    <img src="images/wood.jpg" alt="Album1">
+                </div>
+
+                <div class="columna"style="margin-left:2.5%; margin-right:2.5%;">
+                    <div class="transparencia" style="background-color: #BAB58F;" onclick="window.location='#urlImagen6';"></div>
+                    <span class="tituloFoto">EVENTOS</span> <i class="fa fa-heart"></i> <span class="numeroLikes">20</span>
+                    <img src="images/wedding.jpg" alt="Album2">
+                </div>
+
+                <div class="columna">
+                    <div class="transparencia" style="background-color: #F0A689;" onclick="window.location='#urlImagen8';"></div>
+                    <span class="tituloFoto">ANIMALES</span> <i class="fa fa-heart"></i> <span class="numeroLikes">36</span>
+                    <img src="images/birds.jpg" alt="Album3">
+                </div>
+
+            </div>
+
+            <div class="fila">
+
+                <div class="columna">
+                    <div class="transparencia" style="background-color: #585858;" onclick="window.location='#urlImagen9';"></div>
+                    <span class="tituloFoto">BLACK N WHITE</span> <i class="fa fa-heart"></i> <span class="numeroLikes">47</span>
+                    <img src="images/b&w2.jpg" alt="Album4">
+                </div>
+
+                <div class="columna" style="margin-left:2.5%; margin-right:2.5%;">
+                    <div class="transparencia" style="background-color: #154B80;" onclick="window.location='#urlImagen7';"></div>
+                    <span class="tituloFoto">OTROS</span> <i class="fa fa-heart"></i> <span class="numeroLikes">8</span>
+                    <img src="images/concert.jpg" alt="Album5">
+                </div>
+
+            </div>
+
+        </div>
     </div>
 
-    <!-- Cuerpo de la página-->
-
-
-    <div id="bodyPerfil">
-
-        <div id="barraBotones">
-            <div id="botones-perfil">
-                <a id="boton" href="#" >
-                    Seguir
-                </a>
-                <a id="boton" onclick="document.getElementById('enviarMensaje').style.display='block'" href="#" >
-                    Mensaje
-                </a>
-            </div>
-            <div id="ordenar">
-                <p> Ordenar por:</p>
-
-                <select id="selectOrdenar">
-                    <option value="fechaRecientes" selected="selected">Fecha (más recientes a más antiguos)</option>
-                    <option value="fechaAntiguos">Fecha (más antiguos a más recientes)</option>
-                    <option value="masFav">Más gustados</option>
-                </select>
-
-            </div>
-        </div>
-
-        <div id="enviarMensaje" class="popup">
-        </div>
-
-        <div class="fila">
-
-            <div class="columna">
-                <div class="transparencia" onclick="window.location='#urlImagen4';"></div>
-                <img src="images/wood.jpg" alt="Album1">
-            </div>
-
-            <div class="columna" style="margin-left:2.5%; margin-right:2.5%;">
-                <div class="transparencia" onclick="window.location='#urlImagen5';"></div>
-                <img src="images/wedding.jpg" alt="Album2">
-            </div>
-
-            <div class="columna">
-                <div class="transparencia" onclick="window.location='#urlImagen6';"></div>
-                <img src="images/birds.jpg" alt="Album3">
-            </div>
-
-        </div>
-
-        <div class="fila">
-
-            <div class="columna">
-                <div class="transparencia" onclick="window.location='#urlImagen4';"></div>
-                <img src="images/b&w2.jpg" alt="Album1">
-            </div>
-
-            <div class="columna" style="margin-left:2.5%; margin-right:2.5%;">
-                <div class="transparencia" onclick="window.location='#urlImagen5';"></div>
-                <img src="images/concert.jpg" alt="Album2">
-            </div>
-
-        </div>
-
-    </div>
-
-<script src="scripts/verMas_script.js"></script>
-<script src="scripts/albumes_script.js"></script>
+<script src="scripts/general.js"></script>
+<script src="scripts/transparencias.js"></script>
 
 
 </body>
