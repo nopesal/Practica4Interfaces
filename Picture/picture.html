@@ -46,87 +46,99 @@
         </div>
     </div>
 </nav>
-<div id="visor">
-    <div id="carrusel-izquierda">
-        <div class="material-icons">keyboard_arrow_left</div>
-    </div>
-    <div id="imagen"></div>
-    <div id="carrusel-derecha">
-        <div class="material-icons">keyboard_arrow_right</div>
-    </div>
-</div>
-<div id="datos-imagen">
-    <div id="usuario">
-        <img src="images/avatar.PNG" alt="Emily">
-        <h2>@emily</h2>
-    </div>
-    <div id="texto-imagen">
-        <h1>Adoro Londres y todos sus rincones.</h1>
-        <p>Siempre que tengo oportunidad de venir, me siento a la orilla del Támesis y contemplo el maravilloso paisaje
-            que ofrece esta cuidad. Cada vez me enamora más. ¡Suerte que esta vez no he venido sola!</p>
-    </div>
-</div>
-<div style="display: flex">
-    <div id="comentarios">
-        <h2>Comentarios</h2>
-        <textarea name="nuevo-comentario" placeholder="Escribe tu comentario..."></textarea>
-        <div id="boton-comentar">
-            <a>Comentar</a>
+<div id="contenido">
+    <div id="visor">
+        <div id="carrusel-izquierda">
+            <div class="material-icons">keyboard_arrow_left</div>
         </div>
-        <div class="comentario">
-            <img src="images/avatar.PNG" alt="">
-            <div style="width: 100%">
-                <div style="display: flex">
-                    <span class="comentario-usuario">@laura</span>
-                    <span class="comentario-hora">Hace dos días</span>
+        <div id="imagen"></div>
+        <div id="carrusel-derecha">
+            <div class="material-icons">keyboard_arrow_right</div>
+        </div>
+    </div>
+    <div id="datos-imagen">
+        <div id="usuario">
+            <img src="images/avatar.PNG" alt="Emily">
+            <h2>@emily</h2>
+        </div>
+        <div id="texto-imagen">
+            <div style="display: flex">
+                <h1>Adoro Londres y todos sus rincones.</h1>
+                <div id="social">
+                    <span>317</span>
+                    <i class="fa fa-comment" aria-hidden="true"></i><span>1</span>
+                    <i class="fa fa-share" aria-hidden="true"></i>
+                    <i class="fa fa-arrow-down" aria-hidden="true"></i>
                 </div>
-                <p class="comentario-texto">Nena, disfruta muchísimo del viaje. Ya nos contarás a todas tomándonos un
-                    café.</p>
-                <span class="comentario-responder">Responder</span>
+            </div>
+            <p>Siempre que tengo oportunidad de venir, me siento a la orilla del Támesis y contemplo el maravilloso
+                paisaje
+                que ofrece esta cuidad. Cada vez me enamora más. ¡Suerte que esta vez no he venido sola!</p>
+        </div>
+    </div>
+    <div style="display: flex">
+        <div id="comentarios">
+            <h2>Comentarios</h2>
+            <textarea name="nuevo-comentario" placeholder="Escribe tu comentario..."></textarea>
+            <div id="boton-comentar">
+                <a>Comentar</a>
+            </div>
+            <div class="comentario">
+                <img src="images/avatar.PNG" alt="">
+                <div style="width: 100%">
+                    <div style="display: flex">
+                        <span class="comentario-usuario">@laura</span>
+                        <span class="comentario-hora">Hace dos días</span>
+                    </div>
+                    <p class="comentario-texto">Nena, disfruta muchísimo del viaje. Ya nos contarás a todas tomándonos
+                        un
+                        café.</p>
+                    <span class="comentario-responder">Responder</span>
+                </div>
             </div>
         </div>
-    </div>
-    <div id="columna-derecha">
-        <div id="informacion">
-            <div class="informacion-linea"><i class="material-icons">place</i>
-                <a>Victoria Embankment, London, Reino Unido</a></div>
-            <div class="informacion-linea"><i class="material-icons">date_range</i>
-                <span>14 de noviembre de 2016,  lunes</span></div>
-            <div class="informacion-linea"><i class="material-icons">schedule</i>
-                <span>13:24</span></div>
-            <div class="informacion-linea"><i class="material-icons">camera_alt</i>
-                <span>Galaxy S7</span></div>
-            <div class="informacion-linea"><i class="material-icons">camera</i>
-                <span>f/1.7</span></div>
-            <div class="informacion-linea"><i class="material-icons">exposure</i>
-                <span>1/25 ISO250</span></div>
-            <div class="informacion-linea"><i class="material-icons">center_focus_strong</i>
-                <span>4.2mm</span></div>
-        </div>
-        <div id="etiquetas">
-            <h2>Etiquetas</h2>
-            <div class="etiqueta">MEJORES ALBUMES</div>
-            <div class="etiqueta">INVIERNO</div>
-            <div class="etiqueta">FAVORITOS</div>
-        </div>
-        <div id="albumes">
-            <h2>Otros álbumes de @emily</h2>
-            <div style="display: flex;height: 310px;">
-                <div class="album">
-                    <img src="../images/Londres.PNG" alt="Viajes">
-                    <div class="transparencia" style="background-color: #829eb6;"></div>
-                    <span>VIAJES</span>
-                </div>
-                <div>
-                    <div class="album-pequeño" style="margin-bottom: 10px">
-                        <img src="../images/FloresRojas.PNG" alt="Flores">
-                        <div class="transparencia" style="background-color: #ce1f1f;"></div>
-                        <span>FLORES</span>
+        <div id="columna-derecha">
+            <div id="informacion">
+                <div class="informacion-linea"><i class="material-icons">place</i>
+                    <a>Victoria Embankment, London, Reino Unido</a></div>
+                <div class="informacion-linea"><i class="material-icons">date_range</i>
+                    <span>14 de noviembre de 2016,  lunes</span></div>
+                <div class="informacion-linea"><i class="material-icons">schedule</i>
+                    <span>13:24</span></div>
+                <div class="informacion-linea"><i class="material-icons">camera_alt</i>
+                    <span>Galaxy S7</span></div>
+                <div class="informacion-linea"><i class="material-icons">camera</i>
+                    <span>f/1.7</span></div>
+                <div class="informacion-linea"><i class="material-icons">exposure</i>
+                    <span>1/25 ISO250</span></div>
+                <div class="informacion-linea"><i class="material-icons">center_focus_strong</i>
+                    <span>4.2mm</span></div>
+            </div>
+            <div id="etiquetas">
+                <h2>Etiquetas</h2>
+                <div class="etiqueta">MEJORES ALBUMES</div>
+                <div class="etiqueta">INVIERNO</div>
+                <div class="etiqueta">FAVORITOS</div>
+            </div>
+            <div id="albumes">
+                <h2>Otros álbumes de @emily</h2>
+                <div style="display: flex;height: 310px;">
+                    <div class="album">
+                        <img src="../images/Londres.PNG" alt="Viajes">
+                        <div class="transparencia" style="background-color: #829eb6;"></div>
+                        <span>VIAJES</span>
                     </div>
-                    <div class="album-pequeño">
-                        <img src="../images/Playa.PNG" alt="Playa">
-                        <div class="transparencia" style="background-color: #4f4f4f;"></div>
-                        <span>PLAYAS</span>
+                    <div>
+                        <div class="album-pequeño" style="margin-bottom: 10px">
+                            <img src="../images/FloresRojas.PNG" alt="Flores">
+                            <div class="transparencia" style="background-color: #ce1f1f;"></div>
+                            <span>FLORES</span>
+                        </div>
+                        <div class="album-pequeño">
+                            <img src="../images/Playa.PNG" alt="Playa">
+                            <div class="transparencia" style="background-color: #4f4f4f;"></div>
+                            <span>PLAYAS</span>
+                        </div>
                     </div>
                 </div>
             </div>

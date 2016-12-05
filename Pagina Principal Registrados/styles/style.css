@@ -3,17 +3,18 @@
         height: 230px !important;
     }
 }
+#contenido {
+    max-width: 1200px;
+    margin: auto;
+}
 
 body {
-    margin-right: auto;
-    margin-left: auto;
-    max-width: 1200px;
     padding-left: 5%;
     padding-right: 5%;
-    text-align: center;
     font-family: 'PT Sans Caption', sans-serif;
     background-color: #ededed;
     position: relative;
+    text-align: center;
 }
 
 .gradient {

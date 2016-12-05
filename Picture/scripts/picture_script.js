@@ -36,11 +36,84 @@ function comentar() {
     textarea.value = "";
 }
 
+var listaImagenes;
+if (localStorage["listaImagenes"] == null) {
+    listaImagenes = parsearDatosImagenesJSON();
+} else {
+    listaImagenes = JSON.parse(localStorage["listaImagenes"]);
+}
+
 function cargarImagen() {
-    var hash = window.location.hash;
+    var hash = window.location.hash.substr(1);
     if (hash == "") {
         $("#imagen").append('<img src="../images/Flores.PNG" alt="Flores">');
     } else {
-        $("#imagen").append('<img src="../images/' + hash.substr(1) + '.PNG" alt="' + hash.substr(1) + '">');
+        var imagen = listaImagenes.find(function (imagen) {
+            return imagen.identificador === hash;
+        });
+        $("#imagen").append('<img src="../images/' + hash + '.PNG" alt="' + hash + '">');
+        $("#texto-imagen h1")[0].innerHTML = imagen.titulo;
+        $("#social").prepend('<i class="fa ' + imagen.likeDado + '" aria-hidden="true"></i>');
+        $("#social span")[0].innerHTML = imagen.likes;
+    }
+    crearlikeOnClickListener();
+}
+
+function crearlikeOnClickListener() {
+
+    var corazonesInactivos = document.getElementsByClassName("fa-heart-o");
+    for (var i = 0; i < corazonesInactivos.length; i++) {
+        corazonesInactivos[i].addEventListener("click", darLike, false);
+    }
+    var corazonesActivos = document.getElementsByClassName("fa-heart");
+    for (var i = 0; i < corazonesActivos.length; i++) {
+        corazonesActivos[i].addEventListener("click", darLike, false);
+    }
+
+    function darLike() {
+        var corazon = $(this);
+        var contadorDeLikes = $(this).next();
+        var numeroDeLikes = parseInt(contadorDeLikes.html());
+        if (corazon.hasClass("fa-heart-o")) {
+            numeroDeLikes = numeroDeLikes + 1;
+        } else if (corazon.hasClass("fa-heart")) {
+            numeroDeLikes = numeroDeLikes - 1;
+        }
+        corazon.toggleClass('fa-heart-o fa-heart');
+        contadorDeLikes.text(numeroDeLikes);
+        actualizarValorStorage("likes", numeroDeLikes);
+    }
+}
+
+function actualizarValorStorage(atributo, valor) {
+    if (soportaLocalStorage()) {
+        var hash = window.location.hash.substr(1);
+        var index;
+        if (hash == "") {
+            index = 11;
+        } else {
+            index = getIndexListaImagenes(hash);
+            switch (atributo) {
+                case "likes" :
+                    listaImagenes[index].likes = valor;
+                    if (listaImagenes[index].likeDado == "fa-heart-o") {
+                        listaImagenes[index].likeDado = "fa-heart";
+                    } else if (listaImagenes[index].likeDado == "fa-heart") {
+                        listaImagenes[index].likeDado = "fa-heart-o";
+                    }
+                    localStorage["listaImagenes"] = JSON.stringify(listaImagenes);
+                    break;
+            }
+        }
+    }
+}
+
+function soportaLocalStorage() {
+    return ('localStorage' in window) && window['localStorage'] !== null;
+}
+
+function getIndexListaImagenes(imagen) {
+    for (var i = 0; i < listaImagenes.length; i++) {
+        if (listaImagenes[i].identificador == imagen) return i;
     }
 }
