@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Inicio</title>
-    <link rel="stylesheet" href="style/index_styles.css">
+    <link rel="stylesheet" href="style/style.css">
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=PT+Sans"/>
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=PT+Serif"/>
     <link rel="stylesheet" href="../images/font-awesome/css/font-awesome.min.css">
@@ -215,17 +215,5 @@
     </div>
 </footer>
 </body>
-<script>
-    $(document).ready(function() {
-        $(".overlay").hide(); //al abrir la página está oculto
-
-        $(".cancelbtn, .close").click(function() {
-            $(".overlay").hide(); //al pulsar la cruz o el botón cancelar se oculta
-        });
-
-        $(".button-sign, .button-sign-big").click(function() {
-            $(".overlay").show(); //se muestra al intentar iniciar sesión/registrarse
-        });
-    });
-</script>
+<script src="scripts/homepage_index_script.js"></script>
 </html>
