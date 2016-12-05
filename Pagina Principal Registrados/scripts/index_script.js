@@ -39,6 +39,11 @@ function crearlikeOnClickListener() {
         corazonesActivos[i].addEventListener("click", darLike, false);
     }
 
+    var imgs = document.getElementsByTagName("img");
+    for (var i = 0; i < imgs.length; i++) {
+        imgs[i].addEventListener("click", abrirPaginaImagen, false);
+    }
+
     function darLike() {
         var corazon = $(this);
         var contadorDeLikes = $(this).next();
