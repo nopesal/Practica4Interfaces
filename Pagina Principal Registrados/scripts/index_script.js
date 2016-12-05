@@ -15,6 +15,7 @@ var imagenes = document.getElementsByClassName("imagen");
 for (var i = 0; i < imagenes.length; i++) {
     imagenes[i].addEventListener("mouseover", mostrarDatosImagen, false);
     imagenes[i].addEventListener("mouseout", ocultarDatosImagen, false);
+    imagenes[i].addEventListener("click", abrirPaginaImagen, false);
 }
 
 function mostrarDatosImagen() {

@@ -35,3 +35,12 @@ function comentar() {
     $(this).after('<div class="comentario"><img src="images/user-icon.png" alt=""><div style="width: 100%;"><div style="display: flex"><span class="comentario-usuario">@usuario</span><span class="comentario-hora">Hace 1 minuto</span></div><p class="comentario-texto">' + textarea.value + '</p><span class="comentario-responder">Responder</span></div></div>');
     textarea.value = "";
 }
+
+function cargarImagen() {
+    var hash = window.location.hash;
+    if (hash == "") {
+        $("#imagen").append('<img src="../images/Flores.PNG" alt="Flores">');
+    } else {
+        $("#imagen").append('<img src="../images/' + hash.substr(1) + '.PNG" alt="' + hash.substr(1) + '">');
+    }
+}

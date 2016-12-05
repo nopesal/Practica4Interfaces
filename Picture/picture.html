@@ -6,12 +6,13 @@
     <title>Aperture</title>
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.0/jquery.min.js"></script>
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.9/jquery-ui.min.js"></script>
-    <link href="https://fonts.googleapis.com/css?family=PT+Sans|PT+Sans+Caption|PT+Serif|Montserrat|Marvel" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans|PT+Sans+Caption|PT+Serif|Montserrat|Marvel"
+          rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="../images/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="styles/style.css">
 </head>
-<body>
+<body onload="cargarImagen()">
 <nav>
     <div id="brand-nav">
         <div class="marca-column">
@@ -49,9 +50,7 @@
     <div id="carrusel-izquierda">
         <div class="material-icons">keyboard_arrow_left</div>
     </div>
-    <div id="imagen">
-        <img src="../images/Flores.PNG" alt="Chica">
-    </div>
+    <div id="imagen"></div>
     <div id="carrusel-derecha">
         <div class="material-icons">keyboard_arrow_right</div>
     </div>
