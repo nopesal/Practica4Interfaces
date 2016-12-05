@@ -20,12 +20,13 @@ function cargarImagenes() {
     } else {
         listaImagenes = JSON.parse(localStorage["listaImagenes"]);
     }
-    $(".imagen").each(function (i) {
-        $(this).append('<img src="../images/' + listaImagenes[i].identificador + '.PNG" alt="' + listaImagenes[i].identificador + '">');
-        $(this).append('<div class="gradient"></div>');
-        $(this).append('<p class="unselectable">' + listaImagenes[i].titulo + '</p>');
-        $(this).append('<div class="social"><i class="fa ' + listaImagenes[i].likeDado + '" aria-hidden="true"></i><span class="unselectable">' + listaImagenes[i].likes + '</span><i class="fa fa-comment" aria-hidden="true"></i><span class="unselectable">' + listaImagenes[i].comentarios + '</span></div>');
-    });
+    var imagenes = $(".imagen");
+    for (var i = 0; i < imagenes.length; i++){
+        $(imagenes[i]).append('<img src="../images/' + listaImagenes[i].identificador + '.PNG" alt="' + listaImagenes[i].identificador + '">');
+        $(imagenes[i]).append('<div class="gradient"></div>');
+        $(imagenes[i]).append('<p class="unselectable">' + listaImagenes[i].titulo + '</p>');
+        $(imagenes[i]).append('<div class="social"><i class="fa ' + listaImagenes[i].likeDado + '" aria-hidden="true"></i><span class="unselectable">' + listaImagenes[i].likes + '</span><i class="fa fa-comment" aria-hidden="true"></i><span class="unselectable">' + listaImagenes[i].comentarios + '</span></div>');
+    }
     crearlikeOnClickListener();
 }
 

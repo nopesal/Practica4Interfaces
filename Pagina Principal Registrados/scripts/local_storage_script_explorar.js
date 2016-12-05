@@ -1,11 +1,11 @@
-var listaImagenesInversa;
+var listaImagenes;
 
 function parsearDatosImagenesJSON() {
     $.getJSON("scripts/datos_imagenes.json", function (jsonParseado) {
         if (soportaLocalStorage()) {
-            localStorage["listaImagenesInversa"] = JSON.stringify(jsonParseado.reverse());
+            localStorage["listaImagenes"] = JSON.stringify(jsonParseado);
         }
-        return jsonParseado.reverse();
+        return jsonParseado;
     });
 }
 
@@ -14,18 +14,21 @@ function soportaLocalStorage() {
 }
 
 function cargarImagenes() {
-    if (localStorage["listaImagenesInversa"] == null) {
-        listaImagenesInversa = parsearDatosImagenesJSON();
+    if (localStorage["listaImagenes"] == null) {
+        listaImagenes = parsearDatosImagenesJSON();
         location.reload();
     } else {
-        listaImagenesInversa = JSON.parse(localStorage["listaImagenesInversa"]);
+        listaImagenes = JSON.parse(localStorage["listaImagenes"]);
     }
-    $($(".imagen")).each(function (i) {
-        $(this).append('<img src="../images/' + listaImagenesInversa[i].identificador + '.PNG" alt="' + listaImagenesInversa[i].identificador + '">');
-        $(this).append('<div class="gradient"></div>');
-        $(this).append('<p class="unselectable">' + listaImagenesInversa[i].titulo + '</p>');
-        $(this).append('<div class="social"><i class="fa ' + listaImagenesInversa[i].likeDado + '" aria-hidden="true"></i><span class="unselectable">' + listaImagenesInversa[i].likes + '</span><i class="fa fa-comment" aria-hidden="true"></i><span class="unselectable">' + listaImagenesInversa[i].comentarios + '</span></div>');
-    });
+    var imagenes = $(".imagen");
+    var index = imagenes.length - 1;
+    for (var i = 0; i < imagenes.length; i++){
+        $(imagenes[i]).append('<img src="../images/' + listaImagenes[index].identificador + '.PNG" alt="' + listaImagenes[index].identificador + '">');
+        $(imagenes[i]).append('<div class="gradient"></div>');
+        $(imagenes[i]).append('<p class="unselectable">' + listaImagenes[index].titulo + '</p>');
+        $(imagenes[i]).append('<div class="social"><i class="fa ' + listaImagenes[index].likeDado + '" aria-hidden="true"></i><span class="unselectable">' + listaImagenes[index].likes + '</span><i class="fa fa-comment" aria-hidden="true"></i><span class="unselectable">' + listaImagenes[index].comentarios + '</span></div>');
+        index--;
+    }
     crearlikeOnClickListener();
 }
 
@@ -36,13 +39,13 @@ function actualizarValorStorage(elemento, atributo, valor) {
         var index = coleccionImagenes.index(imagenAModificar);
         switch (atributo) {
             case "likes" :
-                listaImagenesInversa[index].likes = valor;
-                if (listaImagenesInversa[index].likeDado == "fa-heart-o") {
-                    listaImagenesInversa[index].likeDado = "fa-heart";
-                } else if (listaImagenesInversa[index].likeDado == "fa-heart") {
-                    listaImagenesInversa[index].likeDado = "fa-heart-o";
+                listaImagenes[index].likes = valor;
+                if (listaImagenes[index].likeDado == "fa-heart-o") {
+                    listaImagenes[index].likeDado = "fa-heart";
+                } else if (listaImagenes[index].likeDado == "fa-heart") {
+                    listaImagenes[index].likeDado = "fa-heart-o";
                 }
-                localStorage["listaImagenesInversa"] = JSON.stringify(listaImagenesInversa);
+                localStorage["listaImagenes"] = JSON.stringify(listaImagenes);
                 break;
         }
     }
@@ -52,5 +55,5 @@ function abrirPaginaImagen() {
     var coleccionImagenes = $(".imagen");
     var imagenAModificar = $(this).closest(".imagen");
     var index = coleccionImagenes.index(imagenAModificar);
-    window.location.href = "/PracticaInterfaces/Picture/picture.html#" + listaImagenesInversa[index].identificador;
+    window.location.href = "/PracticaInterfaces/Picture/picture.html#" + listaImagenes[index].identificador;
 }
