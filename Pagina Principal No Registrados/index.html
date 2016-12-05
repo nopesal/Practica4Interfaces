@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="../images/font-awesome/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
           rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 </head>
 <body>
 <div class="overlay"></div>
@@ -214,7 +215,7 @@
     </div>
 </footer>
 </body>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js">
+<script>
     $(document).ready(function() {
         $(".overlay").hide(); //al abrir la página está oculto
 
@@ -222,8 +223,8 @@
             $(".overlay").hide(); //al pulsar la cruz o el botón cancelar se oculta
         });
 
-        $(".button-sign").click(function() {
-            $(".overlay").css('display', 'block'); //se muestra al intentar iniciar sesión/registrarse
+        $(".button-sign, .button-sign-big").click(function() {
+            $(".overlay").show(); //se muestra al intentar iniciar sesión/registrarse
         });
     });
 </script>
