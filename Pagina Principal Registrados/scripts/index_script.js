@@ -15,7 +15,6 @@ var imagenes = document.getElementsByClassName("imagen");
 for (var i = 0; i < imagenes.length; i++) {
     imagenes[i].addEventListener("mouseover", mostrarDatosImagen, false);
     imagenes[i].addEventListener("mouseout", ocultarDatosImagen, false);
-    imagenes[i].addEventListener("click", abrirPaginaImagen, false);
 }
 
 function mostrarDatosImagen() {
@@ -38,6 +37,11 @@ function crearlikeOnClickListener() {
     var corazonesActivos = document.getElementsByClassName("fa-heart");
     for (var i = 0; i < corazonesActivos.length; i++) {
         corazonesActivos[i].addEventListener("click", darLike, false);
+    }
+
+    var imgs = document.getElementsByTagName("img");
+    for (var i = 0; i < imgs.length; i++) {
+        imgs[i].addEventListener("click", abrirPaginaImagen, false);
     }
 
     function darLike() {
