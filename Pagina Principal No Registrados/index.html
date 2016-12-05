@@ -11,6 +11,7 @@
           rel="stylesheet">
 </head>
 <body>
+<div class="overlay"></div>
 <nav>
     <div id="brand-nav">
         <div class="marca-column">
@@ -213,4 +214,18 @@
     </div>
 </footer>
 </body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script>
+    $(document).ready(function() {
+        $(".overlay").hide(); //al abrir la página está oculto
+
+        $(".cancelbtn, .close").click(function() {
+            $(".overlay").hide(); //al pulsar la cruz o el botón cancelar se oculta
+        });
+
+        $(".button-sign").click(function() {
+            $(".overlay").css('display', 'block'); //se muestra al intentar iniciar sesión/registrarse
+        });
+    });
+</script>
 </html>
