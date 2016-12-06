@@ -48,125 +48,130 @@
         </a>
     </div>
 </nav>
-<div id="login" class="popup">
-    <form class="popup-content animate">
-        <div class="imgperfil">
+<div id="contenido">
+    <div id="login" class="popup">
+        <form class="popup-content animate">
+            <div class="imgperfil">
             <span onclick="document.getElementById('login').style.display='none'" class="close"
                   title="Cerrar">&times;
             </span>
-            <img src="../images/user-icon.png" alt="Avatar" class="avatar">
-        </div>
-        <div class="container">
-            <label>Nombre de usuario</label>
-            <input type="text" placeholder="Introduzca nombre de usuario" name="uname" required>
-            <label>Contraseña</label>
-            <input type="password" placeholder="Introduzca contraseña" name="psw"
-                   required>
-            <button type="submit" onclick="logIn(uname.value, psw.value)">Iniciar sesión</button>
-            <input type="checkbox" checked="checked"> Recuérdame
-        </div>
-        <div class="container-2">
-            <button type="button" onclick="document.getElementById('login').style.display='none'"
-                    class="cancelbtn">
-                Cancelar
-            </button>
-            <span class="psw"><a href="#">¿Olvidó su contraseña?</a></span>
-        </div>
-    </form>
-</div>
-<div id="signup" class="popup-signup">
-    <form class="popup-content animate">
-        <div class="imgperfil">
+                <img src="../images/user-icon.png" alt="Avatar" class="avatar">
+            </div>
+            <div class="container">
+                <label>Nombre de usuario</label>
+                <input type="text" placeholder="Introduzca nombre de usuario" name="uname" required>
+                <label>Contraseña</label>
+                <input type="password" placeholder="Introduzca contraseña" name="psw"
+                       required>
+                <button type="submit" onclick="logIn(uname.value, psw.value)">Iniciar sesión</button>
+                <input type="checkbox" checked="checked"> Recuérdame
+            </div>
+            <div class="container-2">
+                <button type="button" onclick="document.getElementById('login').style.display='none'"
+                        class="cancelbtn">
+                    Cancelar
+                </button>
+                <span class="psw"><a href="#">¿Olvidó su contraseña?</a></span>
+            </div>
+        </form>
+    </div>
+    <div id="signup" class="popup-signup">
+        <form class="popup-content animate">
+            <div class="imgperfil">
             <span onclick="document.getElementById('signup').style.display='none'" class="close"
                   title="Cerrar">&times;
             </span>
-        </div>
-        <div class="container" id="container-signup">
-            <div id="title-signup">
-                <h2>Cree una cuenta en Aperture</h2>
-                <p>Complete el siguiente formulario para registrarte como usuario en Aperture</p>
             </div>
-            <div class="column-signup">
-                <label>Nombre completo</label><br>
-                <input type="text" placeholder="Introduzca nombre completo" name="cname" required>
-                <label>Nombre de usuario</label>
-                <input type="text" placeholder="Introduzca nombre de usuario" name="uname" required>
+            <div class="container" id="container-signup">
+                <div id="title-signup">
+                    <h2>Cree una cuenta en Aperture</h2>
+                    <p>Complete el siguiente formulario para registrarte como usuario en Aperture</p>
+                </div>
+                <div class="column-signup">
+                    <label>Nombre completo</label><br>
+                    <input type="text" placeholder="Introduzca nombre completo" name="cname" required>
+                    <label>Nombre de usuario</label>
+                    <input type="text" placeholder="Introduzca nombre de usuario" name="uname" required>
+                </div>
+                <div class="column-signup">
+                    <label>Email</label>
+                    <input type="email" placeholder="Introduzca su email" name="mail"
+                           required>
+                    <label>Confirmación de email</label>
+                    <input type="email" placeholder="Confirme su email" name="cmail"
+                           required>
+                </div>
+                <div class="column-signup">
+                    <label>Contraseña</label>
+                    <input type="password" placeholder="Introduzca su contraseña" name="psw"
+                           required>
+                    <label>Confirmación de contraseña</label>
+                    <input type="password" placeholder="Confirme su contraseña" name="cpsw"
+                           required>
+                </div>
+                <div id="foto-pro">
+                    <p>¿Es usted un fotógrafo profesional?</p>
+                    <input name="fotopro" type="radio" checked="checked"> Sí
+                    <input name="fotopro" type="radio"> No
+                </div>
+                <button type="submit" onclick="logIn(uname.value, psw.value)">Registrarme</button>
             </div>
-            <div class="column-signup">
-                <label>Email</label>
-                <input type="email" placeholder="Introduzca su email" name="mail"
-                       required>
-                <label>Confirmación de email</label>
-                <input type="email" placeholder="Confirme su email" name="cmail"
-                       required>
+            <div class="container-2">
+                <button type="button" onclick="document.getElementById('signup').style.display='none'"
+                        class="cancelbtn">
+                    Cancelar
+                </button>
             </div>
-            <div class="column-signup">
-                <label>Contraseña</label>
-                <input type="password" placeholder="Introduzca su contraseña" name="psw"
-                       required>
-                <label>Confirmación de contraseña</label>
-                <input type="password" placeholder="Confirme su contraseña" name="cpsw"
-                       required>
-            </div>
-            <div id="foto-pro">
-                <p>¿Es usted un fotógrafo profesional?</p>
-                <input name="fotopro" type="radio" checked="checked"> Sí
-                <input name="fotopro" type="radio"> No
-            </div>
-            <button type="submit" onclick="logIn(uname.value, psw.value)">Registrarme</button>
-        </div>
-        <div class="container-2">
-            <button type="button" onclick="document.getElementById('signup').style.display='none'"
-                    class="cancelbtn">
-                Cancelar
-            </button>
-        </div>
-    </form>
-</div>
-<div id="reclamo-container">
-    <div id="reclamo-texto">
-        <h1>Un lugar para tus mejores fotos</h1>
-        <p>Sube, comparte, edita y demuéstrale al mundo tu lado más <br>
-            artístico a los mandos de tu cámara o smartphone. Una <br>
-            solución rápida y sencilla, estés donde estés.</p>
+        </form>
     </div>
-    <a onclick="document.getElementById('signup').style.display='block'; document.getElementById('login').style.display='none'" href="#" class="button-sign-big">
-        <p>Regístrate</p>
-    </a>
-</div>
-<div id="muestra-container">
-    <h1>Aquí tienes una muestra de lo que se cuece en Aperture</h1>
-</div>
-<div id="features-title">
-    <h3>TUS MEJORES FOTOS SE MERECEN LAS MEJORES HERRAMIENTAS</h3>
-    <p>Mejora tu experiencia utilizando la gran variedad de herramientas que ponemos a tu disposición</p>
-</div>
-<div id="features-container">
-    <div class="feature-column">
-        <div class="feature-icon">
-            <i class="fa fa-camera-retro" aria-hidden="true"></i>
+    <div id="reclamo-container">
+        <div id="reclamo-texto">
+            <h1>Un lugar para tus mejores fotos</h1>
+            <p>Sube, comparte, edita y demuéstrale al mundo tu lado más <br>
+                artístico a los mandos de tu cámara o smartphone. Una <br>
+                solución rápida y sencilla, estés donde estés.</p>
         </div>
-        <div class="feature-text">
-            <p>Selecciona tus mejores fotografías y súbelas a tu perfil
-            </p>
+        <a onclick="document.getElementById('signup').style.display='block'; document.getElementById('login').style.display='none'" href="#" class="button-sign-big">
+            <p>Regístrate</p>
+        </a>
+    </div>
+    <div id="muestra-container">
+        <h1>Aquí tienes una muestra de lo que se cuece en Aperture</h1>
+    </div>
+    <div id="features-title">
+        <h3>TUS MEJORES FOTOS SE MERECEN LAS MEJORES HERRAMIENTAS</h3>
+        <p>Mejora tu experiencia utilizando la gran variedad de herramientas que ponemos a tu disposición</p>
+    </div>
+    <div id="features-container">
+        <div id="features-columns">
+            <div class="feature-column">
+                <div class="feature-icon">
+                    <i class="fa fa-camera-retro" aria-hidden="true"></i>
+                </div>
+                <div class="feature-text">
+                    <p>Selecciona tus mejores fotografías y súbelas a tu perfil
+                    </p>
+                </div>
+            </div>
+            <div class="feature-column">
+                <div class="feature-icon">
+                    <i class="fa fa-pencil" aria-hidden="true"></i>
+                </div>
+                <p class="feature-text">
+                    Edítalas a tu gusto usando nuestros filtros y ajustes personalizados
+                </p>
+            </div>
+            <div class="feature-column">
+                <div class="feature-icon">
+                    <i class="fa fa-share" aria-hidden="true"></i>
+                </div>
+                <p class="feature-text">
+                    Compártelas en cualquier plataforma en tan solo un click
+                </p>
+            </div>
         </div>
     </div>
-    <div class="feature-column">
-        <div class="feature-icon">
-            <i class="fa fa-pencil" aria-hidden="true"></i>
-        </div>
-        <p class="feature-text">
-            Edítalas a tu gusto usando nuestros filtros y ajustes personalizados
-        </p>
-    </div>
-    <div class="feature-column">
-        <div class="feature-icon">
-            <i class="fa fa-share" aria-hidden="true"></i>
-        </div>
-        <p class="feature-text">
-            Compártelas en cualquier plataforma en tan solo un click
-        </p>
-    </div>
+
 </div>
 <footer>
     <div id="eslogan">
@@ -193,24 +198,24 @@
     <div id="more-links">
         <div class="link-column">
             <p class="title-column">AYUDA</p>
-            <a href="" class="links-footer">FAQ</a><br>
-            <a href="" class="links-footer">Foro</a>
+            <a href="#" class="links-footer">FAQ</a><br>
+            <a href="#" class="links-footer">Foro</a>
         </div>
         <div class="link-column">
             <p class="title-column">SOBRE NOSOTROS</p>
-            <a href="" class="links-footer">Nuestra historia</a><br>
-            <a href="" class="links-footer">Oficinas</a>
+            <a href="#" class="links-footer">Nuestra historia</a><br>
+            <a href="#" class="links-footer">Oficinas</a>
         </div>
         <div class="link-column">
             <p class="title-column">CONTÁCTANOS</p>
-            <a href="" class="links-footer">Facebook</a><br>
-            <a href="" class="links-footer">Twitter</a>
+            <a href="#" class="links-footer">Facebook</a><br>
+            <a href="#" class="links-footer">Twitter</a>
         </div>
 
     </div>
     <div id="info">
         <p>
-            <a href="">Privacidad</a> • <a href="">Condiciones</a> • <a href="">Seguridad</a> © 2016 Aperture
+            <a href="#">Privacidad</a> • <a href="#">Condiciones</a> • <a href="#">Seguridad</a> © 2016 Aperture
         </p>
     </div>
 </footer>

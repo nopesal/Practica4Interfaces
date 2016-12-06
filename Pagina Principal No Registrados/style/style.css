@@ -1,14 +1,21 @@
 body{
-    margin-right: auto;
-    margin-left: auto;
-    max-width: 1200px;
-    padding-left: 5%;
-    padding-right: 5%;
+    width: 100%;
     text-align: center;
     font-family: 'PT Sans Caption', sans-serif;
     background-color: #ededed;
     position: relative;
 }
+#contenido :not(div){
+    max-width:1200px;
+    margin-right: auto;
+    margin-left: auto;
+}
+#contenido {
+    margin-right: auto;
+    margin-left: auto;
+    width: 100%;
+}
+
 .overlay {
     position:fixed;
     top:0;
@@ -157,6 +164,7 @@ nav{
     display: flex;
     justify-content: center;
     background-size: cover;
+    background-position: center;
     background-repeat: no-repeat;
 }
 #muestra-container h1{
@@ -166,11 +174,15 @@ nav{
     color: #EBEBEB;
 }
 #features-container{
-    width: 100%;
+    background-color: #193441;
+}
+#features-columns {
+    max-width: 1200px;
     height: 462px;
     background-color: #193441;
     display: flex;
     justify-content: center;
+    margin: auto;
 }
 
 #features-title{
