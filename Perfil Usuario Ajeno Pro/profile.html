@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <title>Perfil de usuario</title>
     <link rel="stylesheet" href="styles/profile_style.css">
-    <link rel="stylesheet" href="styles/transparencias_profile.css">
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.0/jquery.min.js"></script>
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.9/jquery-ui.min.js"></script>
      <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=PT+Sans"/>
@@ -57,152 +56,161 @@
     <!-- Cabecera con la imagen de usuario y su username-->
 
     <div id="cabeceraPerfil">
-
-        <a href="profile.html"><div id= "imgUsuario"></div></a>
-        <h1 id="nombreUsuario"> @MaxSteel</h1>
-
+        <div id="cabeceraBackground">
+        </div>
     </div>
+
+    <a href="profile.html"><div id= "imgUsuario"></div></a>
+    <h1 id="nombreUsuario"> @MaxSteel</h1>
+
+    <div id="contenido">
 
 
     <!-- Menú de navegación del perfil-->
     
-    <div id="navPerfil">
+        <div id="navPerfil">
 
-        <div id="cuadroSeguidores">
-            <a href="fotografias.html">11<br>fotografías</a>
-            <a href="#urlSeguidores">224<br>seguidores</a>
-            <a href="#urlSeguidos">345<br>seguidos</a>
+            <div id="cuadroSeguidores">
+                <a href="fotografias.html">11<br>fotografías</a>
+                <a href="#urlSeguidores">224<br>seguidores</a>
+                <a href="#urlSeguidos">345<br>seguidos</a>
+            </div>
+
+            <div id="menu">
+                <a href="fotografias.html">Fotografías</a>
+                <a href="albumes.html">Álbumes</a>
+            </div>
+
         </div>
 
-        <div id="menu">
-            <a href="fotografias.html">Fotografías</a>
-            <a href="albumes.html">Álbumes</a>
-        </div>
+        <!-- Cuerpo de la página-->
 
+        <div id="bodyPerfil">
+
+            <div id="barraBotones">
+                <div id="botones-perfil">
+                    <a class="boton" id="seguir" onclick="seguir()" href="#" >Seguir</a>
+                    <a class="boton" id="presupuesto" onclick="document.getElementById('pedirPresupuesto').style.display='block'" href="#" >
+                        Presupuesto
+                    </a>
+                    <a class="boton" id="mensaje" onclick="document.getElementById('enviarMensaje').style.display='block'" href="#" >
+                        Mensaje
+                    </a>
+                </div>
+
+                <div id="pedirPresupuesto" class="popup" onsubmit="document.getElementById('pedirPresupuesto').style.display='none'" action="#">
+
+                    <form class="popup-content animate">
+                        <span onclick="document.getElementById('pedirPresupuesto').style.display='none'" class="close"
+                              title="Cerrar">&times;
+                        </span>
+
+                        <h1 id="tituloSolicitud"> Solicitud de presupuesto </h1>
+
+                        <div class="contenedorPresupuesto">
+                            <p> Para solicitar un presupuesto al fotógrafo rellena los siguientes campos.
+                                El fotógrafo recibirá tu solicitud y, en caso de aceptarla, se te informará debidamente.</p>
+                            <label>Tipo de evento</label><br>
+                            <div id="eventos">
+                                <select required>
+                                    <option value="boda" selected="selected">Boda</option>
+                                    <option value="bautizo">Bautizo</option>
+                                    <option value="comunion">Comunión</option>
+                                    <option value="sesion de fotos">Sesión de fotos</option>
+                                    <option value="cumpleaños">Cumpleaños</option>
+                                    <option value="empresa">Eventos de empresa</option>
+                                    <option value="otros">Otros</option>
+                                </select><br>
+                            </div>
+                            <label>Lugar</label>
+                            <input type="text" placeholder="Introduzca el lugar de las fotografías" name="lugar" required>
+
+                            <div id="fecha">
+                                <label>Fecha</label><br>
+                                <input type="date" name="fecha" required>
+                            </div>
+
+                            <div id="horas">
+                                <label>Horas</label><br>
+                                <input type="number" placeholder="Número de horas" name="horas" required>
+                            </div>
+
+                            <p style="text-align:center;"> ¿Quieres que retoquen tus fotos?</p>
+
+                            <div id="retoque">
+                                <input type="radio" name="retoque" value="si"> Sí
+                                <input type="radio" name="retoque" value="no" checked> No
+                            </div>
+
+                            <button id="botonEnviar" type="submit">Enviar Solicitud</button>
+                        </div>
+                    </form>
+                </div>
+
+                <div id="enviarMensaje" class="popup">
+                </div>
+
+                <h1 class= "titulosBody" style="margin:0;margin-top: 5px;">Fotos más recientes</h1>
+
+            </div>
+
+            <!--Sección "Fotografías más recientes"-->
+
+            <div class="fila">
+
+                <div class="columna">
+                    <div class="transparencia" style="background-color: #F0A689;" onclick="window.location='#urlImagen1'"></div>
+                    <span class="tituloFoto">AMANECER</span> <i class="fa fa-heart"></i> <span class="numeroLikes">36</span>
+                    <img src="images/sunset.jpg" alt="Fotografia1"  onclick="window.location='#urlImagen1'">
+                </div>
+
+                <div class="columna" style="margin-left:2.5%; margin-right:2.5%;">
+                    <div class="transparencia" style="background-color: #585858;" onclick="window.location='#urlImagen2';"></div>
+                    <span class="tituloFoto">EIFFEL B&W</span> <i class="fa fa-heart"></i> <span class="numeroLikes">15</span>
+                    <img src="images/b&w1.jpg" alt="Fotografia2">
+                </div>
+
+                <div class="columna">
+                    <div class="transparencia" style="background-color: #B7863A;" onclick="window.location='#urlImagen3';"></div>
+                    <span class="tituloFoto">TRIGALES</span> <i class="fa fa-heart"></i> <span class="numeroLikes">25</span>
+                    <img src="images/wood.jpg" alt="Fotografia3">
+                </div>
+
+            </div>
+
+
+            <!--Sección "Álbumes más populares"-->
+
+            <h1 class= "titulosBody">Álbumes más populares</h1>
+
+            <div class="fila">
+
+                <div class="columna">
+                    <div class="transparencia" style="background-color: #B7863A;" onclick="window.location='#urlImagen3';"></div>
+                    <span class="tituloFoto">PAISAJES</span> <i class="fa fa-heart"></i> <span class="numeroLikes">55</span>
+                    <img src="images/wood.jpg" alt="Album1">
+                </div>
+
+                <div class="columna" style="margin-left:2.5%; margin-right:2.5%;">
+                    <div class="transparencia" style="background-color: #585858;" onclick="window.location='#urlImagen9';"></div>
+                    <span class="tituloFoto">BLACK N WHITE</span> <i class="fa fa-heart"></i> <span class="numeroLikes">47</span>
+                    <img src="images/b&w2.jpg" alt="Album2">
+                </div>
+
+                <div class="columna">
+                    <div class="transparencia" style="background-color: #F0A689;" onclick="window.location='#urlImagen8';"></div>
+                    <span class="tituloFoto">ANIMALES</span> <i class="fa fa-heart"></i> <span class="numeroLikes">36</span>
+                    <img src="images/birds.jpg" alt="Album3">
+                </div>
+
+            </div>
+        </div>
     </div>
 
-    <!-- Cuerpo de la página-->
 
-    <div id="bodyPerfil">
+<script src="scripts/transparencias.js"></script>
+<script src="scripts/general.js"></script>
 
-        <div id="barraBotones">
-            <div id="botones-perfil">
-                <a id="boton" href="#" >
-                    Seguir
-                </a>
-                <a id="boton" onclick="document.getElementById('pedirPresupuesto').style.display='block'" href="#" >
-                    Presupuesto
-                </a>
-                <a id="boton" onclick="document.getElementById('enviarMensaje').style.display='block'" href="#" >
-                    Mensaje
-                </a>
-            </div>
-
-            <div id="pedirPresupuesto" class="popup" onsubmit="document.getElementById('pedirPresupuesto').style.display='none'" action="#">
-
-                <form class="popup-content animate">
-                    <span onclick="document.getElementById('pedirPresupuesto').style.display='none'" class="close"
-                          title="Cerrar">&times;
-                    </span>
-
-                    <h1 id="tituloSolicitud"> Solicitud de presupuesto </h1>
-
-                    <div class="contenedorPresupuesto">
-                        <p> Para solicitar un presupuesto al fotógrafo rellena los siguientes campos.
-                            El fotografó recibirá tu solicitud y, en caso de aceptarla, se te informará debidamente.</p>
-                        <label>Tipo de evento</label><br>
-                        <div id="eventos">
-                            <select required>
-                                <option value="boda" selected="selected">Boda</option>
-                                <option value="bautizo">Bautizo</option>
-                                <option value="comunion">Comunión</option>
-                                <option value="sesion de fotos">Sesión de fotos</option>
-                                <option value="cumpleaños">Cumpleaños</option>
-                                <option value="empresa">Eventos de empresa</option>
-                                <option value="otros">Otros</option>
-                            </select><br>
-                        </div>
-                        <label>Lugar</label>
-                        <input type="text" placeholder="Introduzca el lugar de las fotografías" name="lugar" required>
-
-                        <div id="fecha">
-                            <label>Fecha</label><br>
-                            <input type="date" name="fecha" required>
-                        </div>
-
-                        <div id="horas">
-                            <label>Horas</label><br>
-                            <input type="number" placeholder="Número de horas" name="horas" required>
-                        </div>
-
-                        <p style="text-align:center;"> ¿Quieres que retoquen tus fotos?</p>
-
-                        <div id="retoque">
-                            <input type="radio" name="retoque" value="si"> Sí
-                            <input type="radio" name="retoque" value="no" checked> No
-                        </div>
-
-                        <button id="botonEnviar" type="submit">Enviar Solicitud</button>
-                    </div>
-                </form>
-            </div>
-
-            <div id="enviarMensaje" class="popup">
-            </div>
-
-            <h1 class= "titulosBody" style="margin:0;margin-top: 5px;">Fotos más recientes</h1>
-
-        </div>
-
-        <!--Sección "Fotografías más recientes"-->
-
-        <div class="fila">
-
-            <div class="columna">
-                <div class="transparencia" onclick="window.location='#urlImagen1';"></div> 
-                <img src="images/sunset.jpg" alt="Fotografia1">
-            </div>
-
-            <div class="columna" style="margin-left:2.5%; margin-right:2.5%;">
-                <div class="transparencia" onclick="window.location='#urlImagen2';"></div>
-                <img src="images/b&w1.jpg" alt="Fotografia2">
-            </div>
-
-            <div class="columna">
-                <div class="transparencia" onclick="window.location='#urlImagen3';"></div>
-                <img src="images/wood.jpg" alt="Fotografia3">
-            </div>
-
-        </div>
-
-
-        <!--Sección "Álbumes más populares"-->
-
-        <h1  class="titulosBody" >Álbumes más populares</h1>
-
-        <div class="fila">
-
-            <div class="columna">
-                <div class="transparencia" onclick="window.location='#urlImagen4';"></div>
-                <img src="images/wood.jpg" alt="Album1">
-            </div>
-
-            <div class="columna" style="margin-left:2.5%; margin-right:2.5%;">
-                <div class="transparencia" onclick="window.location='#urlImagen5';"></div>
-                <img src="images/b&w2.jpg" alt="Album2">
-            </div>
-
-            <div class="columna">
-                <div class="transparencia" onclick="window.location='#urlImagen6';"></div>
-                <img src="images/birds.jpg" alt="Album3">
-            </div>
-
-        </div>
-
-    </div>
-
-<script src="scripts/profile_script.js"></script>
-<script src="scripts/verMas_script.js"></script>
 
 </body>
 </html>

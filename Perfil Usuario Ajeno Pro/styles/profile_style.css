@@ -1,4 +1,19 @@
 body {
+    background-color: #ededed;
+    font-family: 'PT Sans Caption', sans-serif;
+    font-size:1em;
+    position: relative;
+    margin:0;
+}
+
+nav{
+    width: 100%;
+    height: 75px;
+    background-color: #EBEBEB;
+    display: flex;
+}
+
+#contenido{
     margin-right: auto;
     margin-left: auto;
     max-width: 1200px;
@@ -8,13 +23,6 @@ body {
     font-family: 'PT Sans Caption', sans-serif;
     font-size:1em;
     position: relative;
-}
-
-nav{
-    width: 100%;
-    height: 75px;
-    background-color: #EBEBEB;
-    display: flex;
 }
 
 #brand-nav{
@@ -87,42 +95,53 @@ nav{
     border: 1px solid #C8C8C8;
     border-radius: 6px;
     margin: 7px 0 0 19px;
-    background-image: url('../images/search-icon.png');
+    background-image: url('#');
     background-repeat: no-repeat;
     background-size: 20px 20px;
     background-position: 8px 50%;
     padding: 0 0 0 30px;
 }
 
-
 #cabeceraPerfil{
-    height: 200px;
-    margin-top: 30px;
-    padding-top:50px;
-    padding: 25px;
+    height: 300px;
+    width: 100%;
+    position:absolute;
+    -webkit-box-shadow: 0 4px 15px 2px #686e6b;
+    -moz-box-shadow: 0 4px 15px 2px #686e6b;
+    box-shadow: 0 4px 15px 2px #686e6b;
+}
+
+#cabeceraBackground{
     background-image: url('../images/cabecera.jpg');
     overflow: hidden;
+    width: 100%;
+    height: 300px;
+    -webkit-filter: blur(4px);
+    -moz-filter: blur(4px);
+    -o-filter: blur(4px);
+    -ms-filter: blur(4px);
+    filter: blur(4px);
+    z-index:0;
 }
-
-
-#cabeceraPerfil h1{
-    color: white;
-}
-
 
 #imgUsuario{
-	width: 200px;
-	float:left;
-	height: 100%;
-	border-radius: 150px;
+    position:relative;
+    width: 200px;
+    margin:auto;
+    margin-top:30px;
+    height: 200px;
+    border-radius: 150px;
     background-image: url('../images/ImgPerfil.jpg');
     overflow: hidden;
 }
 
 #nombreUsuario{
-    margin:0;
+    color: white;
+    position:relative;
+    text-align:center;
+    margin-top: 10px;
+    margin-bottom: 35px;
     padding:0;
-    float:left;
     font-size:2em;
 }
 
@@ -207,7 +226,7 @@ nav{
     height: 40px;
 }
 
-#boton{
+.boton{
     border-radius: 6px;
     width: 100px;
     margin-left: 20px;
@@ -220,11 +239,15 @@ nav{
     color: #193441;
 }
 
-#boton:hover {
+.boton:hover {
     background-color: #193441;
     color: #EBEBEB;
 }
 
+.seguido{
+    background-color: #193441;
+    color: #EBEBEB;
+}
 
 /* POPUP */
 
@@ -422,42 +445,51 @@ input[type=date]{
 }
 
 
+
 .transparencia{
     cursor: pointer;
     width:100%;
     height: 98.5%;
+    opacity: 0.5;
     position:absolute;
     text-align: center;
+    display:none;
 }
 
-
-.nombreImagen{
-    margin:0;
-    padding:0;
-    margin-top:25%;
-    font-family: Marvel;
-    font-size: 25px;
-    font-style: normal;
-    color: #EBEBEB;
-    font-weight:bold;
+.tituloFoto{
+    position: absolute;
+    font-family: Marvel, serif;
+    font-weight: bold;
+    bottom: 130px;
+    width: 100%;
+    line-height: 100px;
+    text-align: center;
+    font-size: 2.5em;
+    color: #FFFFFF;
+    display:none;
 }
 
-.numero{
-    margin:0;
-    padding:0;
-    font-family: Marvel;
-    font-size: 25px;
-    font-style: normal;
-    color: #EBEBEB;
-    font-weight:bold;
+.numeroLikes{
+    position: absolute;
+    font-family: Marvel, serif;
+    font-weight: bold;
+    bottom: 0;
+    width: 100%;
+    line-height: 180px;
+    text-align: center;
+    font-size: 2.5em;
+    color: #FFFFFF;
+    display:none;
 }
 
-
-.icono{
-    margin:0;
-    padding:0;
-    margin-top:8px;
-    font-family: Marvel;
-    color:#EBEBEB;
+.fa.fa-heart{
+    position: absolute;
+    bottom: 115px;
+    width: 100%;
+    text-align: center;
+    font-size: 2.5em;
+    color: #FFFFFF;
+    display:none;
 }
+
 
