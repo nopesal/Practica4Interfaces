@@ -1,4 +1,4 @@
-        $("#ver-mas")[0].addEventListener("click", verMasImagenes, false);
+$("#ver-mas")[0].addEventListener("click", verMasImagenes, false);
 
 function verMasImagenes() {
     $("#ver-mas")[0].style.display = "none";

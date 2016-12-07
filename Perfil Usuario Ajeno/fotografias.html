@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <title>Fotografías</title>
     <link rel="stylesheet" href="styles/profile_style.css">
-    <link rel="stylesheet" href="styles/transparencias_fotografias.css">
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.0/jquery.min.js"></script>
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.9/jquery-ui.min.js"></script>
      <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=PT+Sans"/>
@@ -57,142 +56,156 @@
     <!-- Cabecera con la imagen de usuario y su username-->
 
     <div id="cabeceraPerfil">
-
-        <a href="profile.html"><div id= "imgUsuario"></div></a>
-        <h1 id="nombreUsuario"> @MaxSteel</h1>
-
+        <div id="cabeceraBackground">
+        </div>
     </div>
 
+    <a href="profile.html"><div id= "imgUsuario"></div></a>
+    <h1 id="nombreUsuario"> @MaxSteel</h1>
 
-    <!-- Menú de navegación del perfil-->
-    
-    <div id="navPerfil">
+    <div id="contenido">
+        <!-- Menú de navegación del perfil-->
 
-        <div id="cuadroSeguidores">
-            <a href="fotografias.html">11<br>fotografías</a>
-            <a href="#urlSeguidores">224<br>seguidores</a>
-            <a href="#urlSeguidos">345<br>seguidos</a>
-        </div>
+        <div id="navPerfil">
 
-        <div id="menu">
-            <a href="fotografias.html" style= "font-weight:bold;">Fotografías</a>
-            <a href="albumes.html">Álbumes</a>
-        </div>
-
-    </div>
-
-    <!-- Cuerpo de la página-->
-
-    <div id="bodyPerfil">
-
-        <div id="barraBotones">
-            <div id="botones-perfil">
-                <a id="boton" href="#" >
-                    Seguir
-                </a>
-                <a id="boton" onclick="document.getElementById('enviarMensaje').style.display='block'" href="#" >
-                    Mensaje
-                </a>
+            <div id="cuadroSeguidores">
+                <a href="fotografias.html">11<br>fotografías</a>
+                <a href="#urlSeguidores">224<br>seguidores</a>
+                <a href="#urlSeguidos">345<br>seguidos</a>
             </div>
 
-            <div id="enviarMensaje" class="popup">
-            </div>
-
-            <div id="ordenar">
-
-                <p> Ordenar por:</p>
-
-                <select id="selectOrdenar">
-                    <option value="fechaRecientes" selected="selected">Fecha (más recientes a más antiguos)</option>
-                    <option value="fechaAntiguos">Fecha (más antiguos a más recientes)</option>
-                    <option value="masFav">Más gustados</option>
-                </select>
-
-            </div>
-        </div>
-
-        <div class="fila">
-
-            <div class="columna">
-                <div class="transparencia" onclick="window.location='#urlImagen1';"></div> 
-                <img src="images/sunset.jpg" alt="Fotografia1">
-            </div>
-
-            <div class="columna" style="margin-left:2.5%; margin-right:2.5%;">
-                <div class="transparencia" onclick="window.location='#urlImagen2';"></div>
-                <img src="images/b&w1.jpg" alt="Fotografia2">
-            </div>
-
-            <div class="columna">
-                <div class="transparencia" onclick="window.location='#urlImagen3';"></div>
-                <img src="images/wood.jpg" alt="Fotografia3">
+            <div id="menu">
+                <a href="fotografias.html" style= "font-weight:bold;">Fotografías</a>
+                <a href="albumes.html">Álbumes</a>
             </div>
 
         </div>
 
-        <div class="fila">
+        <!-- Cuerpo de la página-->
 
-            <div class="columna">
-                <div class="transparencia" onclick="window.location='#urlImagen4';"></div> 
-                <img src="images/paisaje.jpg" alt="Fotografia4">
+        <div id="bodyPerfil">
+
+            <div id="barraBotones">
+                <div id="botones-perfil">
+                    <a id="seguir" class="boton"  onclick="seguir()" href="#" >Seguir</a>
+                    <a id="mensaje" class="boton" onclick="document.getElementById('enviarMensaje').style.display='block'" href="#" >
+                        Mensaje
+                    </a>
+                </div>
+
+                <div id="enviarMensaje" class="popup">
+                </div>
+
+                <div id="ordenar">
+
+                    <p> Ordenar por:</p>
+
+                    <select id="selectOrdenar">
+                        <option value="fechaRecientes" selected="selected">Fecha (más recientes a más antiguos)</option>
+                        <option value="fechaAntiguos">Fecha (más antiguos a más recientes)</option>
+                        <option value="masFav">Más gustados</option>
+                    </select>
+
+                </div>
             </div>
 
-            <div class="columna" style="margin-left:2.5%; margin-right:2.5%;">
-                <div class="transparencia" onclick="window.location='#urlImagen5';"></div>
-                <img src="images/autumn.jpg" alt="Fotografia5">
-            </div>
-
-            <div class="columna">
-                <div class="transparencia" onclick="window.location='#urlImagen6';"></div>
-                <img src="images/wedding.jpg" alt="Fotografia6">
-            </div>
-
-        </div>
-
-        <div class="fila">
-
-            <div class="columna">
-                <div class="transparencia" onclick="window.location='#urlImagen7';"></div> 
-                <img src="images/concert.jpg" alt="Fotografia7">
-            </div>
-
-            <div class="columna" style="margin-left:2.5%; margin-right:2.5%;">
-                <div class="transparencia" onclick="window.location='#urlImagen8';"></div>
-                <img src="images/birds.jpg" alt="Fotografia8">
-            </div>
-
-            <div class="columna">
-                <div class="transparencia" onclick="window.location='#urlImagen9';"></div>
-                <img src="images/b&w2.jpg" alt="Fotografia9">
-            </div>
-
-        </div>
-
-        <div id="imagenes-hidden">
             <div class="fila">
 
                 <div class="columna">
-                     <div class="transparencia" onclick="window.location='#urlImagen10';"></div> 
-                     <img src="images/b&w3.jpg" alt="Fotografia10">
+
+                    <div class="transparencia" style="background-color: #F0A689;" onclick="window.location='#urlImagen1'"></div>
+                    <span class="tituloFoto">AMANECER</span> <i class="fa fa-heart"></i> <span class="numeroLikes">36</span>
+                    <img src="images/sunset.jpg" alt="Fotografia1"  onclick="window.location='#urlImagen1'">
+
                 </div>
 
                 <div class="columna" style="margin-left:2.5%; margin-right:2.5%;">
-                     <div class="transparencia" onclick="window.location='#urlImagen11';"></div>
-                     <img src="images/lion.jpg" alt="Fotografia11">
+                    <div class="transparencia" style="background-color: #585858;" onclick="window.location='#urlImagen2';"></div>
+                    <span class="tituloFoto">EIFFEL B&W</span> <i class="fa fa-heart"></i> <span class="numeroLikes">15</span>
+                    <img src="images/b&w1.jpg" alt="Fotografia2">
                 </div>
+
+                <div class="columna">
+                    <div class="transparencia" style="background-color: #B7863A;" onclick="window.location='#urlImagen3';"></div>
+                    <span class="tituloFoto">TRIGALES</span> <i class="fa fa-heart"></i> <span class="numeroLikes">25</span>
+                    <img src="images/wood.jpg" alt="Fotografia3">
+                </div>
+
             </div>
 
-        </div>
+            <div class="fila">
 
-        <div id="ver-mas">
-            <a>Ver más</a>
-        </div>
-        <i class="fa fa-circle-o-notch fa-spin fa-3x fa-fw"></i>
+                <div class="columna">
+                    <div class="transparencia" style="background-color: #8AB6FB;" onclick="window.location='#urlImagen4';"></div>
+                    <span class="tituloFoto">MONTAÑAS</span> <i class="fa fa-heart"></i> <span class="numeroLikes">32</span>
+                    <img src="images/paisaje.jpg" alt="Fotografia4">
+                </div>
 
+                <div class="columna" style="margin-left:2.5%; margin-right:2.5%;">
+                    <div class="transparencia" style="background-color: #996633;" onclick="window.location='#urlImagen5';"></div>
+                    <span class="tituloFoto">OTOÑO</span> <i class="fa fa-heart"></i> <span class="numeroLikes">14</span>
+                    <img src="images/autumn.jpg" alt="Fotografia5">
+                </div>
+
+                <div class="columna">
+                    <div class="transparencia" style="background-color: #BAB58F;" onclick="window.location='#urlImagen6';"></div>
+                    <span class="tituloFoto">RECIÉN CASADOS</span> <i class="fa fa-heart"></i> <span class="numeroLikes">34</span>
+                    <img src="images/wedding.jpg" alt="Fotografia6">
+                </div>
+
+            </div>
+
+            <div class="fila">
+
+                <div class="columna">
+                    <div class="transparencia" style="background-color: #154B80;" onclick="window.location='#urlImagen7';"></div>
+                    <span class="tituloFoto">CONCIERTO</span> <i class="fa fa-heart"></i> <span class="numeroLikes">8</span>
+                    <img src="images/concert.jpg" alt="Fotografia7">
+                </div>
+
+                <div class="columna" style="margin-left:2.5%; margin-right:2.5%;">
+                    <div class="transparencia" style="background-color: #F0A689;" onclick="window.location='#urlImagen8';"></div>
+                    <span class="tituloFoto">PERIQUITOS</span> <i class="fa fa-heart"></i> <span class="numeroLikes">14</span>
+                    <img src="images/birds.jpg" alt="Fotografia8">
+                </div>
+
+                <div class="columna">
+                    <div class="transparencia" style="background-color: #585858;" onclick="window.location='#urlImagen9';"></div>
+                    <span class="tituloFoto">ROCAS EN LA COSTA</span> <i class="fa fa-heart"></i> <span class="numeroLikes">5</span>
+                    <img src="images/b&w2.jpg" alt="Fotografia9">
+                </div>
+
+            </div>
+
+            <div id="imagenes-hidden">
+                <div class="fila">
+
+                    <div class="columna">
+                        <div class="transparencia" style="background-color: #585858;" onclick="window.location='#urlImagen10';"></div>
+                        <span class="tituloFoto">THE CITY</span> <i class="fa fa-heart"></i> <span class="numeroLikes">36</span>
+                        <img src="images/b&w3.jpg" alt="Fotografia10">
+                    </div>
+
+                    <div class="columna" style="margin-left:2.5%; margin-right:2.5%;">
+                        <div class="transparencia" style="background-color: #86602B;" onclick="window.location='#urlImagen11';"></div>
+                        <span class="tituloFoto">LEÓN</span> <i class="fa fa-heart"></i> <span class="numeroLikes">46</span>
+                        <img src="images/lion.jpg" alt="Fotografia11">
+                    </div>
+                </div>
+
+            </div>
+
+            <div id="ver-mas">
+                <a>Ver más</a>
+            </div>
+            <i class="fa fa-circle-o-notch fa-spin fa-3x fa-fw"></i>
+
+        </div>
     </div>
 
+<script src="scripts/general.js"></script>
+<script src="scripts/transparencias.js"></script>
 <script src="scripts/verMas_script.js"></script>
-<script src="scripts/fotografias_script.js"></script>
 
 
 </body>
