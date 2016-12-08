@@ -13,6 +13,41 @@ nav {
     display: flex;
 }
 
+#brand-nav {
+    display: flex;
+    width: 10%;
+    margin: auto;
+}
+
+.marca-column {
+    width: 42%;
+}
+svg{
+    opacity: 0.75;
+    width: 85%;
+    height: auto;
+    fill: #193441;
+}
+#name-nav {
+    font-family: "PT Sans";
+    font-size: 30px;
+    margin: 5% 0 0 10%;
+    color: #353740;
+}
+
+#logo-nav {
+    width: 90%;
+    height: 90%;
+    float: left;
+    margin: auto;
+}
+
+#search-div {
+    width: 60%;
+    margin: auto;
+    padding: 0 0 0.5% 1.5%;
+}
+
 nav a {
     text-decoration: none;
 }
@@ -27,35 +62,6 @@ nav a {
     font-family: 'PT Sans Caption', sans-serif;
     font-size: 1em;
     position: relative;
-}
-
-#brand-nav {
-    display: flex;
-    width: 10%;
-    margin: auto;
-}
-
-.marca-column {
-    width: 42%;
-}
-
-#name-nav {
-    font-family: 'PT Sans Caption', sans-serif;
-    font-size: 30px;
-    margin: 5% 0 0 0;
-}
-
-#logo-nav {
-    width: 90%;
-    height: 90%;
-    float: left;
-    margin: auto;
-}
-
-#search-div {
-    width: 60%;
-    margin: auto 0 auto 0;
-    padding: 0 0 0.5% 1.5%;
 }
 
 #buttons-nav {
