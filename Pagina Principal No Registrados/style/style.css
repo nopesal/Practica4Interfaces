@@ -45,11 +45,16 @@ nav {
 .marca-column {
     width: 42%;
 }
-
+svg{
+    opacity: 0.75;
+    width: 85%;
+    height: auto;
+    fill: #193441;
+}
 #name-nav {
     font-family: "PT Sans";
     font-size: 30px;
-    margin: 5% 0 0 0;
+    margin: 5% 0 0 10%;
     color: #353740;
 }
 

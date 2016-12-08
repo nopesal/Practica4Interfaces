@@ -12,6 +12,9 @@ nav{
     background-color: #EBEBEB;
     display: flex;
 }
+nav a{
+    text-decoration: none;
+}
 
 #contenido{
     margin-right: auto;
@@ -50,43 +53,50 @@ nav{
 
 #search-div{
     width: 60%;
-    margin: auto;
+    margin: auto 0 auto 0;
     padding: 0 0 0.5% 1.5%;
 }
 #buttons-nav{
     display: flex;
     float: right;
-    width: 25%;
-    margin: auto;
+    width: 20%;
+    margin: auto auto auto 0;
+    justify-content: space-between;
 }
-#iniciar-sesion{
+#explorar {
     background-color: transparent;
 }
-#iniciar-sesion p{
+#explorar p{
     color: #464646;
-    font-family: 'PT Sans Caption', sans-serif;
+    font-family: 'PT Sans';
     margin: auto;
-    padding: 10px;
     font-weight: bold;
 }
-#registrate{
-    background-color: #2B3A42;
+#subir-foto {
+    background-color: transparent;
 }
-#registrate p{
-    color: #FFFFFF;
+#subir-foto p{
+    color: #464646;
     font-family: "PT Sans";
     font-weight: bold;
     margin: auto;
-    padding: 10px;
-
 }
 .button-sign{
     width: 40%;
     height: 50%;
-    border: 1px solid #464646;
-    border-radius: 3px;
     margin: auto;
     text-align: center;
+}
+
+#perfil-nav{
+    background-image: url('../images/michael-user.jpg');
+    width: 40px;
+    height: 40px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 300px;
+    background-position: center;
+    margin-left: 5%;
 }
 
 #search-bar{
@@ -175,12 +185,14 @@ nav{
     text-align: left;
     margin-top: 30px;
     margin-right: 3%;
-    text-decoration: none;
     font-size: 25px;
     color: #464646;
+    text-decoration: none;
 }
 
-
+#menu a:hover{
+    font-weight: bold;
+}
 
 #barraBotones{
     display: inline-block;
@@ -364,33 +376,4 @@ nav{
     display:none;
 }
 
-.nombreImagen{
-    margin:0;
-    padding:0;
-    margin-top:25%;
-    font-family: Marvel;
-    font-size: 25px;
-    font-style: normal;
-    color: #EBEBEB;
-    font-weight:bold;
-}
-
-.numero{
-    margin:0;
-    padding:0;
-    font-family: Marvel;
-    font-size: 25px;
-    font-style: normal;
-    color: #EBEBEB;
-    font-weight:bold;
-}
-
-
-.icono{
-    margin:0;
-    padding:0;
-    margin-top:8px;
-    font-family: Marvel;
-    color:#EBEBEB;
-}
 
