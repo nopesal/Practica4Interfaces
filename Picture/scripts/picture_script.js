@@ -29,11 +29,20 @@ function ocultarNombreAlbum() {
 }
 
 var botonComentar = document.getElementById("boton-comentar");
-botonComentar.addEventListener("click", comentar, false);
+botonComentar.addEventListener("click", insertarComentario, false);
+
+botonComentar = document.getElementsByClassName("fa-comment");
+botonComentar[0].addEventListener("click", comentar, false);
 
 function comentar() {
+    $("#nuevo-comentario").focus();
+}
+
+function insertarComentario() {
     $(this).after('<div class="comentario"><img src="images/user-icon.png" alt=""><div style="width: 100%;"><div style="display: flex"><span class="comentario-usuario">@usuario</span><span class="comentario-hora">Hace 1 minuto</span></div><p class="comentario-texto">' + textarea.value + '</p><span class="comentario-responder">Responder</span></div></div>');
     textarea.value = "";
+    var numeroComentarios = parseInt($("#social span")[1].innerHTML);
+    $("#social span")[1].innerHTML = numeroComentarios + 1;
 }
 
 var listaImagenes;
@@ -53,14 +62,13 @@ function cargarImagen() {
         });
         $("#imagen").append('<img src="../images/' + hash + '.PNG" alt="' + hash + '">');
         $("#texto-imagen h1")[0].innerHTML = imagen.titulo;
-        $("#social").prepend('<i class="fa ' + imagen.likeDado + '" aria-hidden="true"></i>');
+        $("#social").prepend('<i class="fa ' + imagen.likeDado + '" aria-hidden="true" title="Me gusta"></i>');
         $("#social span")[0].innerHTML = imagen.likes;
     }
     crearlikeOnClickListener();
 }
 
 function crearlikeOnClickListener() {
-
     var corazonesInactivos = document.getElementsByClassName("fa-heart-o");
     for (var i = 0; i < corazonesInactivos.length; i++) {
         corazonesInactivos[i].addEventListener("click", darLike, false);
@@ -93,17 +101,17 @@ function actualizarValorStorage(atributo, valor) {
             index = 11;
         } else {
             index = getIndexListaImagenes(hash);
-            switch (atributo) {
-                case "likes" :
-                    listaImagenes[index].likes = valor;
-                    if (listaImagenes[index].likeDado == "fa-heart-o") {
-                        listaImagenes[index].likeDado = "fa-heart";
-                    } else if (listaImagenes[index].likeDado == "fa-heart") {
-                        listaImagenes[index].likeDado = "fa-heart-o";
-                    }
-                    localStorage["listaImagenes"] = JSON.stringify(listaImagenes);
-                    break;
-            }
+        }
+        switch (atributo) {
+            case "likes" :
+                listaImagenes[index].likes = valor;
+                if (listaImagenes[index].likeDado == "fa-heart-o") {
+                    listaImagenes[index].likeDado = "fa-heart";
+                } else if (listaImagenes[index].likeDado == "fa-heart") {
+                    listaImagenes[index].likeDado = "fa-heart-o";
+                }
+                localStorage["listaImagenes"] = JSON.stringify(listaImagenes);
+                break;
         }
     }
 }
