@@ -59,20 +59,20 @@ nav{
     width: 25%;
     margin: auto;
 }
-#iniciar-sesion{
+#explorar {
     background-color: transparent;
 }
-#iniciar-sesion p{
+#explorar p{
     color: #464646;
     font-family: 'PT Sans Caption', sans-serif;
     margin: auto;
     padding: 10px;
     font-weight: bold;
 }
-#registrate{
+#subir-foto {
     background-color: #2B3A42;
 }
-#registrate p{
+#subir-foto p{
     color: #FFFFFF;
     font-family: "PT Sans";
     font-weight: bold;
