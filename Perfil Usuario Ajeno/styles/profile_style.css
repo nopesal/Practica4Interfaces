@@ -185,12 +185,14 @@ nav a{
     text-align: left;
     margin-top: 30px;
     margin-right: 3%;
-    text-decoration: none;
     font-size: 25px;
     color: #464646;
+    text-decoration: none;
 }
 
-
+#menu a:hover{
+    font-weight: bold;
+}
 
 #barraBotones{
     display: inline-block;
