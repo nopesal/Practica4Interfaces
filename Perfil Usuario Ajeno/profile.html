@@ -44,13 +44,32 @@
         </form>
     </div>
     <div id="buttons-nav">
-        <a onclick="document.getElementById('login').style.display='block'" href="#" class="button-sign"
-           id="notifications">
-            <p>Inicia sesión</p>
+        <div class="dropdown">
+            <button onclick="myNotifications()" class="dropbtn">Notificaciones</button>
+            <div id="myNotifications" class="dropdown-content">
+                <a class="notification" href="#"><p><strong>@laura</strong>, <strong>@ivansoja</strong> y <strong>@andreahg</strong>
+                    han marcado tu foto como favorito</p><img src="images/autumn.jpg"></a>
+                <a class="notification" href="#"><p><strong>@laura</strong> ha marcado tu foto como favorito</p><img
+                        src="images/birds.jpg"></a>
+                <a class="notification" href="#"><p>Tienes un nuevo seguidor <strong>@patrick</strong></p><img
+                        id="follow-user" src="images/michael-user.jpg"></a>
+                <a class="notification" href="#"><p><strong>@andreahg</strong> ha marcado tu foto como favorito</p><img
+                        src="images/birds.jpg"></a>
+            </div>
+        </div>
+
+        <a href="#" class="button-sign" id="subir-foto">
+            <p>Subir foto</p>
         </a>
-        <a href="" class="button-sign" id="subir-foto">
-            <p>Regístrate</p>
-        </a>
+        <div class="dropdown">
+            <button id="perfil-nav" onclick="myMenu()" class="dropbtn"></button>
+            <div id="myMenu" class="dropdown-content">
+                <a class="menu-opc" href="profile.html">Mi perfil</a>
+                <a class="menu-opc" href="fotografias.html">Fotografías</a>
+                <a class="menu-opc" href="albumes.html">Álbumes</a>
+                <a class="menu-opc" href="#pro-link">Sección PRO</a>
+            </div>
+        </div>
     </div>
 </nav>
 
@@ -157,6 +176,33 @@
 
 <script src="scripts/transparencias.js"></script>
 <script src="scripts/general.js"></script>
+<script>
+    /* Cuando el usuario pica en los botones correspondientes se muestra
+     * y oculta el menu dropdown */
+    function myMenu() {
+        document.getElementById("myMenu").classList.toggle("showMenu");
+        document.getElementById("myNotifications").classList.remove('showNot');
+    }
+    function myNotifications() {
+        document.getElementById("myNotifications").classList.toggle("showNot");
+        document.getElementById("myMenu").classList.remove('showMenu');
+    }
 
+    // Close the dropdown if the user clicks outside of it
+    window.onclick = function (event) {
+        if (!event.target.matches('.dropbtn')) {
+
+            var dropdowns = document.getElementsByClassName("dropdown-content");
+            var i;
+            for (i = 0; i < dropdowns.length; i++) {
+                var openDropdown = dropdowns[i];
+                if (openDropdown.classList.contains('showMenu') || openDropdown.classList.contains('showNot')) {
+                    openDropdown.classList.remove('show');
+                    openDropdown.classList.remove('showMenu')
+                }
+            }
+        }
+    }
+</script>
 </body>
 </html>
