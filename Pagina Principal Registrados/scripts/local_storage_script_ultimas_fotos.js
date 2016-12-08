@@ -54,5 +54,5 @@ function abrirPaginaImagen() {
     var coleccionImagenes = $(".imagen");
     var imagenAModificar = $(this).closest(".imagen");
     var index = coleccionImagenes.index(imagenAModificar);
-    window.location.href = "/PracticaInterfaces/Picture/picture.html#" + listaImagenes[index].identificador;
+    window.location.href = "/Practica4Interfaces/Picture/picture.html#" + listaImagenes[index].identificador;
 }

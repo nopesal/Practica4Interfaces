@@ -63,14 +63,37 @@ nav a{
     margin: auto auto auto 0;
     justify-content: space-between;
 }
-#explorar {
-    background-color: transparent;
-}
-#explorar p{
-    color: #464646;
+.notification {
+    background-color: #EBEBEB;
+    color: #193441;
     font-family: 'PT Sans';
-    margin: auto;
     font-weight: bold;
+    border: solid;
+    border-radius: 10px;
+    margin: 5%;
+    padding: 0;
+    text-decoration: none;
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+}
+
+.notification img{
+    height: 100px;
+    width: auto;
+}
+
+
+#follow-user{
+    border-radius: 50%;
+    align-self: center;
+    margin: 2% 4.5% 2% 2%;
+}
+
+.notification p{
+    margin: 4%;
+    align-self: center;
+    font-weight: normal;
 }
 #subir-foto {
     background-color: transparent;
@@ -96,7 +119,62 @@ nav a{
     background-size: cover;
     border-radius: 300px;
     background-position: center;
-    margin-left: 5%;
+    margin-top: 20%;
+}
+
+.dropbtn {
+    color: #353740;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    font-family: "PT Sans";
+    background-color: transparent;
+    margin-left: 0%;
+}
+
+.dropbtn:hover, .dropbtn:focus {
+    font-weight: bold;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    z-index: 100;
+    text-align: center;
+    float: right;
+}
+.dropdown-content {
+    display: inline;
+    position: absolute;
+    background-color: #193441;
+    width: 400%;
+    overflow: hidden;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    right: 0;
+    border-radius: 5px 0px 5px 5px;
+    height:0;
+    transition: height 0.4s;
+}
+
+.menu-opc {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #EBEBEB;
+    color: #353740;
+}
+
+.showNot {
+    height: 560px;
+}
+
+.showMenu{
+    height: 180px;
 }
 
 #search-bar{
@@ -105,7 +183,7 @@ nav a{
     border: 1px solid #C8C8C8;
     border-radius: 6px;
     margin: 7px 0 0 19px;
-    background-image: url('../images/search-icon.png');
+    background-image: url('../../images/search-icon.png');
     background-repeat: no-repeat;
     background-size: 20px 20px;
     background-position: 8px 50%;
