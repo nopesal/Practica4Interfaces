@@ -20,8 +20,8 @@ $(document).ready(function() {
     })
 });
 
-var validReg = false;
 function validateAll() {
+    var validReg = true;
     var elementoNombre = document.getElementById('cname');
     if (elementoNombre.value == "") {
         elementoNombre.style.backgroundColor = "#ff6666";
