@@ -20,6 +20,22 @@ $(document).ready(function() {
     })
 });
 
+function validateLogIn(){
+    var validLog = false;
+    var elementoLoginUsuario = document.getElementById('login-uname');
+    var elementoLoginPassword = document.getElementById('login-psw');
+    if (elementoLoginUsuario.value == localStorage.getItem("usernamePrueba")){
+        if(elementoLoginPassword.value == localStorage.getItem("passwordPrueba")){
+            validLog = true;
+        } else {
+            alert("La contraseña no es correcta");
+        }
+    } else {
+        alert("El nombre de usuario no es correcto");
+    }
+    return validLog;
+}
+
 function validateAll() {
     var validReg = true;
     var elementoNombre = document.getElementById('cname');
@@ -28,9 +44,9 @@ function validateAll() {
         validReg = false;
     }
 
-    var elementoApellidos = document.getElementById('uname');
-    if (elementoApellidos.value == "") {
-        elementoApellidos.style.backgroundColor = "#ff6666";
+    var elementoUsuario = document.getElementById('uname');
+    if (elementoUsuario.value == "") {
+        elementoUsuario.style.backgroundColor = "#ff6666";
         validReg = false;
     }
     var elementoEmail = document.getElementById('mail');
@@ -47,9 +63,12 @@ function validateAll() {
     }
     if (validReg == true) {
         alert("Operación realizada con éxito");
+        localStorage.setItem("usernamePrueba", document.getElementById('uname').value);
+        localStorage.setItem("passwordPrueba", document.getElementById('psw').value);
     }
     return validReg;
 }
+
 function passMatch() {
     var password1 = document.getElementById('psw').value;
     var password2 = document.getElementById("cpsw");

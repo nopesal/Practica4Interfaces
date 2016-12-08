@@ -49,7 +49,7 @@
 </nav>
 <div id="contenido">
     <div id="login" class="popup">
-        <form class="popup-content animate">
+        <form class="popup-content animate" action="../Pagina%20Principal%20Registrados/explorar_index.html" onsubmit="return(validateLogIn())">
             <div class="imgperfil">
             <span onclick="document.getElementById('login').style.display='none'" class="close"
                   title="Cerrar">&times;
@@ -58,11 +58,11 @@
             </div>
             <div class="container">
                 <label>Nombre de usuario</label>
-                <input type="text" placeholder="Introduzca nombre de usuario" name="uname" required>
+                <input id="login-uname" type="text" placeholder="Introduzca nombre de usuario" name="uname" required>
                 <label>Contraseña</label>
-                <input type="password" placeholder="Introduzca contraseña" name="psw"
+                <input id="login-psw" type="password" placeholder="Introduzca contraseña" name="psw"
                        required>
-                <button type="submit" onclick="logIn(uname.value, psw.value)">Iniciar sesión</button>
+                <button type="submit">Iniciar sesión</button>
                 <input type="checkbox" checked="checked"> Recuérdame
             </div>
             <div class="container-2">
@@ -75,7 +75,7 @@
         </form>
     </div>
     <div id="signup" class="popup-signup">
-        <form class="popup-content animate" onsubmit="return(validateAll())" action="../Pagina%20Principal%20Registrados/explorar_index.html">
+        <form class="popup-content animate" onsubmit="return(validateAll())" action="#">
             <div class="imgperfil">
             <span onclick="document.getElementById('signup').style.display='none'" class="close"
                   title="Cerrar">&times;
@@ -173,7 +173,6 @@
             </div>
         </div>
     </div>
-
 </div>
 <footer>
     <div id="eslogan">
