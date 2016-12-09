@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="styles/transparencias_profile.css">
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.0/jquery.min.js"></script>
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.9/jquery-ui.min.js"></script>
-     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=PT+Sans"/>
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=PT+Sans"/>
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=PT+Sans+Caption"/>
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=PT+Serif"/>
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Marvel"/>
@@ -18,9 +18,8 @@
 
 </head>
 <body>
-
 <nav>
-    <div id="brand-nav">
+    <a id="brand-nav" href="../Pagina%20Principal%20Registrados/ultimas_fotos_index.html">
         <div class="marca-column">
             <svg version="1.2" preserveAspectRatio="none" viewBox="0 0 24 24" class="ng-element" fill="#193441"
                  style="opacity: 0.75; width: 45px; height: 45px;">
@@ -37,126 +36,183 @@
         <div class="marca-column">
             <h1 id="name-nav">Aperture</h1>
         </div>
-    </div>
+    </a>
     <div id="search-div">
         <form>
             <input id="search-bar" type="search" name="search" placeholder="Busca fotos, usuarios, álbumes...">
         </form>
     </div>
     <div id="buttons-nav">
-        <a onclick="document.getElementById('login').style.display='block'" href="#" class="button-sign"
-           id="notifications">
-            <p>Inicia sesión</p>
+        <div class="dropdown">
+            <button onclick="myNotifications()" class="dropbtn">Notificaciones</button>
+            <div id="myNotifications" class="dropdown-content">
+                <a class="notification" href="#"><p><strong>@laura</strong>, <strong>@ivansoja</strong> y <strong>@andreahg</strong>
+                    han marcado tu foto como favorito</p><img src="images/autumn.jpg"></a>
+                <a class="notification" href="#"><p><strong>@laura</strong> ha marcado tu foto como favorito</p><img
+                        src="images/birds.jpg"></a>
+                <a class="notification" href="#"><p>Tienes un nuevo seguidor <strong>@patrick</strong></p><img
+                        id="follow-user" src="images/michael-user.jpg"></a>
+                <a class="notification" href="#"><p><strong>@andreahg</strong> ha marcado tu foto como favorito</p><img
+                        src="images/birds.jpg"></a>
+            </div>
+        </div>
+
+        <a href="#" class="button-sign" id="subir-foto">
+            <p>Subir foto</p>
         </a>
-        <a href="" class="button-sign" id="subir-foto">
-            <p>Regístrate</p>
-        </a>
+        <div class="dropdown">
+            <button id="perfil-nav" onclick="myMenu()" class="dropbtn"></button>
+            <div id="myMenu" class="dropdown-content">
+                <a class="menu-opc" href="profile.html">Mi perfil</a>
+                <a class="menu-opc" href="fotografias.html">Fotografías</a>
+                <a class="menu-opc" href="albumes.html">Álbumes</a>
+                <a class="menu-opc" href="#pro-link">Sección PRO</a>
+            </div>
+        </div>
     </div>
 </nav>
 
-    <!-- Cabecera con la imagen de usuario y su username-->
+<!-- Cabecera con la imagen de usuario y su username-->
 
-    <div id="cabeceraPerfil">
-        <div id="cabeceraBackground">
-        </div>
+<div id="cabeceraPerfil">
+    <div id="cabeceraBackground">
     </div>
+</div>
 
-    <a href="profile.html"><div id= "imgUsuario"></div></a>
-    <h1 id="nombreUsuario"> @MaxSteel</h1>
+<a href="profile.html">
+    <div id="imgUsuario"></div>
+</a>
+<h1 id="nombreUsuario"> @MaxSteel</h1>
 
-    <div id="contenido">
+<div id="contenido">
 
     <!-- Menú de navegación del perfil-->
-    
-        <div id="navPerfil">
 
-            <div id="cuadroSeguidores">
-                <a href="fotografias.html">11<br>fotografías</a>
-                <a href="#urlSeguidores">224<br>seguidores</a>
-                <a href="#urlSeguidos">345<br>seguidos</a>
-            </div>
+    <div id="navPerfil">
 
-            <div id="menu">
-                <a href="fotografias.html">Fotografías</a>
-                <a href="albumes.html">Álbumes</a>
-            </div>
-
+        <div id="cuadroSeguidores">
+            <a href="fotografias.html">11<br>fotografías</a>
+            <a href="#urlSeguidores">224<br>seguidores</a>
+            <a href="#urlSeguidos">345<br>seguidos</a>
         </div>
 
-        <!-- Cuerpo de la página-->
-
-        <div id="bodyPerfil">
-
-            <div id="barraBotones">
-                <div id="botones-perfil">
-                    <a id="seguir" class="boton"  onclick="seguir()" href="#" >Seguir</a>
-                    <a id="mensaje" class="boton" onclick="document.getElementById('enviarMensaje').style.display='block'" href="#" >
-                        Mensaje
-                    </a>
-                </div>
-                <div id="enviarMensaje" class="popup">
-                </div>
-
-                <h1 style="margin:0;margin-top: 5px;">Fotos más recientes</h1>
-
-            </div>
-
-            <!--Sección "Fotografías más recientes"-->
-
-            <div class="fila">
-
-                <div class="columna">
-                    <div class="transparencia" style="background-color: #F0A689;" onclick="window.location='#urlImagen1'"></div>
-                    <span class="tituloFoto">AMANECER</span> <i class="fa fa-heart"></i> <span class="numeroLikes">36</span>
-                    <img src="images/sunset.jpg" alt="Fotografia1"  onclick="window.location='#urlImagen1'">
-                </div>
-
-                <div class="columna" style="margin-left:2.5%; margin-right:2.5%;">
-                    <div class="transparencia" style="background-color: #585858;" onclick="window.location='#urlImagen2';"></div>
-                    <span class="tituloFoto">EIFFEL B&W</span> <i class="fa fa-heart"></i> <span class="numeroLikes">15</span>
-                    <img src="images/b&w1.jpg" alt="Fotografia2">
-                </div>
-
-                <div class="columna">
-                    <div class="transparencia" style="background-color: #B7863A;" onclick="window.location='#urlImagen3';"></div>
-                    <span class="tituloFoto">TRIGALES</span> <i class="fa fa-heart"></i> <span class="numeroLikes">25</span>
-                    <img src="images/wood.jpg" alt="Fotografia3">
-                </div>
-
-            </div>
-
-
-            <!--Sección "Álbumes más populares"-->
-
-            <h1>Álbumes más populares</h1>
-
-            <div class="fila">
-
-                <div class="columna">
-                    <div class="transparencia" style="background-color: #B7863A;" onclick="window.location='#urlImagen3';"></div>
-                    <span class="tituloFoto">PAISAJES</span> <i class="fa fa-heart"></i> <span class="numeroLikes">55</span>
-                    <img src="images/wood.jpg" alt="Album1">
-                </div>
-
-                <div class="columna" style="margin-left:2.5%; margin-right:2.5%;">
-                    <div class="transparencia" style="background-color: #585858;" onclick="window.location='#urlImagen9';"></div>
-                    <span class="tituloFoto">BLACK N WHITE</span> <i class="fa fa-heart"></i> <span class="numeroLikes">47</span>
-                    <img src="images/b&w2.jpg" alt="Album2">
-                </div>
-
-                <div class="columna">
-                    <div class="transparencia" style="background-color: #F0A689;" onclick="window.location='#urlImagen8';"></div>
-                    <span class="tituloFoto">ANIMALES</span> <i class="fa fa-heart"></i> <span class="numeroLikes">36</span>
-                    <img src="images/birds.jpg" alt="Album3">
-                </div>
-
-            </div>
-
+        <div id="menu">
+            <a href="fotografias.html">Fotografías</a>
+            <a href="albumes.html">Álbumes</a>
         </div>
+
     </div>
+
+    <!-- Cuerpo de la página-->
+
+    <div id="bodyPerfil">
+
+        <div id="barraBotones">
+            <div id="botones-perfil">
+                <a id="seguir" class="boton" onclick="seguir()" href="#">Seguir</a>
+                <a id="mensaje" class="boton" onclick="document.getElementById('enviarMensaje').style.display='block'"
+                   href="#">
+                    Mensaje
+                </a>
+            </div>
+            <div id="enviarMensaje" class="popup">
+            </div>
+
+            <h1 style="margin:0;margin-top: 5px;">Fotos más recientes</h1>
+
+        </div>
+
+        <!--Sección "Fotografías más recientes"-->
+
+        <div class="fila">
+
+            <div class="columna">
+                <div class="transparencia" style="background-color: #F0A689;"
+                     onclick="window.location='#urlImagen1'"></div>
+                <span class="tituloFoto">AMANECER</span> <i class="fa fa-heart"></i> <span class="numeroLikes">36</span>
+                <img src="images/sunset.jpg" alt="Fotografia1" onclick="window.location='#urlImagen1'">
+            </div>
+
+            <div class="columna" style="margin-left:2.5%; margin-right:2.5%;">
+                <div class="transparencia" style="background-color: #585858;"
+                     onclick="window.location='#urlImagen2';"></div>
+                <span class="tituloFoto">EIFFEL B&W</span> <i class="fa fa-heart"></i> <span
+                    class="numeroLikes">15</span>
+                <img src="images/b&w1.jpg" alt="Fotografia2">
+            </div>
+
+            <div class="columna">
+                <div class="transparencia" style="background-color: #B7863A;"
+                     onclick="window.location='#urlImagen3';"></div>
+                <span class="tituloFoto">TRIGALES</span> <i class="fa fa-heart"></i> <span class="numeroLikes">25</span>
+                <img src="images/wood.jpg" alt="Fotografia3">
+            </div>
+
+        </div>
+
+
+        <!--Sección "Álbumes más populares"-->
+
+        <h1>Álbumes más populares</h1>
+
+        <div class="fila">
+
+            <div class="columna">
+                <div class="transparencia" style="background-color: #B7863A;"
+                     onclick="window.location='#urlImagen3';"></div>
+                <span class="tituloFoto">PAISAJES</span> <i class="fa fa-heart"></i> <span class="numeroLikes">55</span>
+                <img src="images/wood.jpg" alt="Album1">
+            </div>
+
+            <div class="columna" style="margin-left:2.5%; margin-right:2.5%;">
+                <div class="transparencia" style="background-color: #585858;"
+                     onclick="window.location='#urlImagen9';"></div>
+                <span class="tituloFoto">BLACK N WHITE</span> <i class="fa fa-heart"></i> <span
+                    class="numeroLikes">47</span>
+                <img src="images/b&w2.jpg" alt="Album2">
+            </div>
+
+            <div class="columna">
+                <div class="transparencia" style="background-color: #F0A689;"
+                     onclick="window.location='#urlImagen8';"></div>
+                <span class="tituloFoto">ANIMALES</span> <i class="fa fa-heart"></i> <span class="numeroLikes">36</span>
+                <img src="images/birds.jpg" alt="Album3">
+            </div>
+
+        </div>
+
+    </div>
+</div>
 
 <script src="scripts/transparencias.js"></script>
 <script src="scripts/general.js"></script>
+<script>
+    /* Cuando el usuario pica en los botones correspondientes se muestra
+     * y oculta el menu dropdown */
+    function myMenu() {
+        document.getElementById("myMenu").classList.toggle("showMenu");
+        document.getElementById("myNotifications").classList.remove('showNot');
+    }
+    function myNotifications() {
+        document.getElementById("myNotifications").classList.toggle("showNot");
+        document.getElementById("myMenu").classList.remove('showMenu');
+    }
 
+    // Close the dropdown if the user clicks outside of it
+    window.onclick = function (event) {
+        if (!event.target.matches('.dropbtn')) {
+
+            var dropdowns = document.getElementsByClassName("dropdown-content");
+            var i;
+            for (i = 0; i < dropdowns.length; i++) {
+                var openDropdown = dropdowns[i];
+                if (openDropdown.classList.contains('showMenu') || openDropdown.classList.contains('showNot')) {
+                    openDropdown.classList.remove('show');
+                    openDropdown.classList.remove('showMenu')
+                }
+            }
+        }
+    }
+</script>
 </body>
 </html>
