@@ -96,20 +96,20 @@ svg{
 }
 
 #registrate {
-    background-color: #2B3A42;
+    background-color: transparent;
 }
 
 #registrate :hover {
-    background-color: #ededed;
-    color: #464646;
+    background-color: #2B3A42;
+    color: #ededed;
 }
 
 #registrate p {
-    color: #ededed;
+    color: #464646;
     font-family: "PT Sans";
-    font-weight: bold;
     margin: auto;
     padding: 10px;
+    font-weight: bold;
 
 }
 
