@@ -44,7 +44,7 @@
     </div>
     <div id="buttons-nav">
         <div class="dropdown">
-            <button onclick="myNotifications()" class="dropbtn">Notificaciones</button>
+            <button onclick="myNotifications()" id="menuNotificaciones" class="dropbtn">Notificaciones</button>
             <div id="myNotifications" class="dropdown-content">
                 <a class="notification" href="#"><p><strong>@laura</strong>, <strong>@ivansoja</strong> y <strong>@andreahg</strong>
                     han marcado tu foto como favorito</p><img src="images/autumn.jpg"></a>
@@ -189,6 +189,22 @@
     function myNotifications() {
         document.getElementById("myNotifications").classList.toggle("showNot");
         document.getElementById("myMenu").classList.remove('showMenu');
+
+        var delay=400; //0.4 segundos
+
+        /*
+         * Si el menú está abierto se añade un retraso para sincronizar la desaparición de la fleche
+         * con la desaparición del menú.
+         */
+
+        if(document.getElementById("menuNotificaciones").classList.contains('notificationsMenu')){
+            setTimeout(function() {
+                document.getElementById("menuNotificaciones").classList.toggle('notificationsMenu');
+            }, delay);
+        }else{
+                document.getElementById("menuNotificaciones").classList.toggle('notificationsMenu');
+        }
+
     }
 
     // Close the dropdown if the user clicks outside of it
