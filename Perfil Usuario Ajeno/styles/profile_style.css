@@ -52,6 +52,15 @@ svg{
     bottom:0px;
     left: 40%;
 }
+.perfilNavMenu:before{
+    content:"";
+    display:inline-block;
+    position:absolute;
+    border:10px solid #193441;
+    border-color:transparent transparent #193441 transparent;
+    bottom:0px;
+    left: 40%;
+}
 #search-div {
     width: 60%;
     margin: auto;

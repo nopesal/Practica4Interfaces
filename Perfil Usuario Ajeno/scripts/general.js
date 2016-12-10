@@ -31,6 +31,13 @@ function myMenu() {
             document.getElementById("menuNotificaciones").classList.toggle('notificationsMenu');
         }, delay);
     }
+    if (document.getElementById("perfil-nav").classList.contains('perfilNavMenu')) {
+        setTimeout(function () {
+            document.getElementById("perfil-nav").classList.toggle('perfilNavMenu');
+        }, delay-100);
+    } else {
+        document.getElementById("perfil-nav").classList.toggle('perfilNavMenu');
+    }
 }
 function myNotifications() {
     document.getElementById("myNotifications").classList.toggle("showNot");
@@ -50,7 +57,11 @@ function myNotifications() {
     } else {
         document.getElementById("menuNotificaciones").classList.toggle('notificationsMenu');
     }
-
+    if (document.getElementById("perfil-nav").classList.contains('perfilNavMenu')) {
+        setTimeout(function () {
+            document.getElementById("perfil-nav").classList.toggle('perfilNavMenu');
+        }, delay-100);
+    }
 }
 
 // Cierra el dropdown si se hace click fuera
