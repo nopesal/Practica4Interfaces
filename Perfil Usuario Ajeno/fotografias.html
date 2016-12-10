@@ -44,7 +44,7 @@
     </div>
     <div id="buttons-nav">
         <div class="dropdown">
-            <button onclick="myNotifications()" class="dropbtn">Notificaciones</button>
+            <button onclick="myNotifications()" id="menuNotificaciones" class="dropbtn">Notificaciones</button>
             <div id="myNotifications" class="dropdown-content">
                 <a class="notification" href="#"><p><strong>@laura</strong>, <strong>@ivansoja</strong> y <strong>@andreahg</strong>
                     han marcado tu foto como favorito</p><img src="images/autumn.jpg"></a>
@@ -221,38 +221,8 @@
 
         </div>
     </div>
-
 <script src="scripts/general.js"></script>
 <script src="scripts/transparencias.js"></script>
 <script src="scripts/verMas_script.js"></script>
-<script>
-    /* Cuando el usuario pica en los botones correspondientes se muestra
-     * y oculta el menu dropdown */
-    function myMenu() {
-        document.getElementById("myMenu").classList.toggle("showMenu");
-        document.getElementById("myNotifications").classList.remove('showNot');
-    }
-    function myNotifications() {
-        document.getElementById("myNotifications").classList.toggle("showNot");
-        document.getElementById("myMenu").classList.remove('showMenu');
-    }
-
-    // Close the dropdown if the user clicks outside of it
-    window.onclick = function (event) {
-        if (!event.target.matches('.dropbtn')) {
-
-            var dropdowns = document.getElementsByClassName("dropdown-content");
-            var i;
-            for (i = 0; i < dropdowns.length; i++) {
-                var openDropdown = dropdowns[i];
-                if (openDropdown.classList.contains('showMenu') || openDropdown.classList.contains('showNot')) {
-                    openDropdown.classList.remove('show');
-                    openDropdown.classList.remove('showMenu')
-                }
-            }
-        }
-    }
-</script>
-
 </body>
 </html>
