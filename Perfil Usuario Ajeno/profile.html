@@ -44,8 +44,8 @@
     </div>
     <div id="buttons-nav">
         <div class="dropdown">
-            <button onclick="myNotifications()" class="dropbtn" id="menuNotificaciones">Notificaciones</button>
-            <div id="myNotifications" class="dropdown-content">
+            <button onclick="myNotifications()" onmouseenter="myNotifications()" class="dropbtn" id="menuNotificaciones">Notificaciones</button>
+            <div onmouseleave="myNotifications()" id="myNotifications" class="dropdown-content">
                 <a class="notification" href="#"><p><strong>@laura</strong>, <strong>@ivansoja</strong> y <strong>@andreahg</strong>
                     han marcado tu foto como favorito</p><img src="images/autumn.jpg"></a>
                 <a class="notification" href="#"><p><strong>@laura</strong> ha marcado tu foto como favorito</p><img
@@ -61,12 +61,12 @@
             <p>Subir foto</p>
         </a>
         <div class="dropdown">
-            <button id="perfil-nav" onclick="myMenu()" class="dropbtn"></button>
-            <div id="myMenu" class="dropdown-content">
+            <button id="perfil-nav" onmouseenter="myMenu()" onclick="myMenu()" class="dropbtn"></button>
+            <div onmouseleave="myMenu()" id="myMenu" class="dropdown-content">
                 <a class="menu-opc" href="profile.html">Mi perfil</a>
                 <a class="menu-opc" href="fotografias.html">Fotografías</a>
                 <a class="menu-opc" href="albumes.html">Álbumes</a>
-                <a class="menu-opc" href="#pro-link">Sección PRO</a>
+                <a class="menu-opc" href="../PRO/pro.html">Sección PRO</a>
             </div>
         </div>
     </div>
