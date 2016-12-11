@@ -1,0 +1,551 @@
+body {
+    width: 100%;
+    margin:0;
+    text-align: center;
+    font-family: 'PT Sans Caption', sans-serif;
+    background-color: #ededed;
+    position: relative;
+    margin:0;
+}
+
+#contenido :not(div) {
+    max-width: 1200px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+#contenido {
+    margin-right: auto;
+    margin-left: auto;
+    width: 100%;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #000;
+    opacity: 0.6;
+    z-index: 1;
+}
+
+nav {
+    width: 100%;
+    height: 75px;
+    background-color: #EBEBEB;
+    display: flex;
+}
+
+#brand-nav {
+    display: flex;
+    width: 10%;
+    margin: auto;
+}
+
+.marca-column {
+    width: 38%;
+}
+svg{
+    opacity: 0.75;
+    width: 85%;
+    height: auto;
+    fill: #193441;
+}
+
+#name-nav {
+    font-family: "PT Sans";
+    font-size: 30px;
+    margin: 5% 0 0 10px;
+    color: #353740;
+}
+
+#logo-nav {
+    width: 90%;
+    height: 90%;
+    float: left;
+    margin: auto;
+}
+
+#search-div {
+    width: 60%;
+    margin: auto 0 auto auto;
+    padding: 0 0 0.5% 1.5%;
+}
+
+#buttons-nav {
+    display: flex;
+    float: right;
+    width: 25%;
+    margin: auto;
+}
+
+#iniciar-sesion {
+    background-color: transparent;
+}
+
+#iniciar-sesion :hover {
+    background-color: #2B3A42;
+    color: #ededed;
+}
+
+#iniciar-sesion p {
+    color: #464646;
+    font-family: "PT Sans";
+    margin: auto;
+    padding: 10px;
+    font-weight: bold;
+}
+
+#registrate {
+    background-color: transparent;
+}
+
+#registrate :hover {
+    background-color: #2B3A42;
+    color: #ededed;
+}
+
+#registrate p {
+    color: #464646;
+    font-family: "PT Sans";
+    margin: auto;
+    padding: 10px;
+    font-weight: bold;
+
+}
+
+.button-sign {
+    width: 40%;
+    height: 50%;
+    border: 1px solid #464646;
+    border-radius: 3px;
+    margin: auto;
+    text-align: center;
+}
+
+#search-bar {
+    width: 95%;
+    height: 30px;
+    border: 1px solid #C8C8C8;
+    border-radius: 6px;
+    margin: 7px 0 0 19px;
+    background-image: url('../images/search-icon.png');
+    background-repeat: no-repeat;
+    background-size: 20px 20px;
+    background-position: 8px 50%;
+    padding: 0 0 0 30px;
+}
+
+#reclamo-container {
+    width: 100%;
+    height: 650px;
+    background-image: url('../images/carretera.jpg');
+    box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, .2);
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    margin: 0;
+    text-align: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#reclamo-texto {
+    display: block;
+}
+
+#reclamo-container h1 {
+    text-align: center;
+    color: #EBEBEB;
+    font-family: "PT Sans";
+    font-size: 48px;
+}
+
+#reclamo-container p {
+    text-align: center;
+    color: #EBEBEB;
+    font-family: "PT Serif";
+}
+
+.button-sign-big {
+    width: 14%;
+    background-color: #193441;
+    border: 0;
+    height: 60px;
+    align-self: center;
+    border-radius: 7px;
+}
+
+#reclamo-container .button-sign-big p {
+    margin-top: 10%;
+    font-size: 18px;
+    font-family: "PT Sans";
+    font-weight: bold;
+    text-align: center;
+
+}
+
+#muestra-container {
+    width: 100%;
+    height: 500px;
+    background-image: url("../images/SingapurSkyline.jpg");
+    box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, .2);
+    display: flex;
+    justify-content: center;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#muestra-container h1 {
+    margin-top: 2%;
+    text-align: center;
+    font-family: "PT Sans";
+    color: #EBEBEB;
+}
+
+#features-container {
+    background-color: #193441;
+}
+
+#features-columns {
+    max-width: 1200px;
+    height: 462px;
+    background-color: #193441;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+}
+
+#features-title {
+    text-align: center;
+    display: block;
+    height: 30px;
+    background-color: #193441;
+    margin-top: 0;
+}
+
+#features-title h3 {
+    margin-top: 0;
+    padding-top: 4%;
+    color: #EBEBEB;
+    font-family: "PT Sans";
+}
+
+#features-title p {
+    color: #EBEBEB;
+    font-family: "PT Serif";
+}
+
+.feature-column {
+    width: 17%;
+    height: 55%;
+    border: 2px solid #FFFFFA;
+    margin: 7% 5% 0 5%;
+    align-self: center;
+    justify-content: center;
+    display: block;
+}
+
+.feature-icon {
+    align-self: flex-start;
+    color: #FFFFFA;
+    font-size: 65px;
+    margin-top: 18%;
+    text-align: center;
+}
+
+.feature-text {
+    color: #FFFFFA;
+    align-self: flex-end;
+    text-align: center;
+    font-family: "PT Serif";
+    margin: 5% 15% 0 15%;
+    font-size: 18px;
+}
+
+footer {
+    width: 100%;
+    height: 176px;
+    bottom: 0;
+    background-color: #353740;
+    position: relative;
+    text-align: center;
+}
+
+#logo {
+    width: 30px;
+    height: 30px;
+    float: left;
+    margin: auto;
+}
+
+#eslogan-footer {
+    float: left;
+    margin: auto;
+    padding-top: 4px;
+    font-family: "PT Sans";
+    font-size: 18px;
+}
+
+#eslogan {
+    display: inline;
+    width: 35%;
+    float: left;
+    color: #ffffff;
+    display: flex;
+    margin: 15px 0 15px 15px;
+}
+
+#more-links {
+    width: 40%;
+    float: right;
+}
+
+.link-column {
+    width: 32%;
+    display: inline-block;
+    margin: 15px 0 0 0;
+    text-align: left;
+}
+
+.link-column a:link {
+    color: #FFFFFF;
+}
+
+.link-column a:visited {
+    color: #FFFFFF;
+}
+
+.link-column a:hover {
+    text-decoration: underline;
+}
+
+#info {
+    text-align: center;
+    margin: 0 auto;
+    display: block;
+    width: 50%;
+    position: absolute;
+    bottom: 0;
+    left: 25%;
+    font-family: "PT Serif";
+    color: #A4ABBF;
+}
+
+
+#info a:link {
+    color: #A4ABBF;
+    text-decoration: underline;
+}
+
+#info a:visited{
+    color: #A4ABBF;
+    text-decoration: underline;
+}
+
+#info a:hover {
+    text-decoration: none;
+}
+
+.title-column {
+    color: #A4ABBF;
+    font-family: "PT Sans";
+    margin: auto;
+}
+
+.links-footer {
+    color: #FFFFFF;
+    font-family: "PT Serif";
+    margin: auto;
+}
+
+.links-footer a:visited, a:link, a:active {
+    text-decoration: none;
+}
+
+input[type=text], input[type=password], input[type=email] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #193441;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+.cancelbtn {
+    width: auto;
+    padding: 10px 18px;
+    background-color: #f44234;
+}
+
+/* Center the image and position the close button */
+.imgperfil {
+    text-align: center;
+    margin: 24px 0 12px 0;
+    position: relative;
+}
+
+img.avatar {
+    width: 40%;
+    border-radius: 50%;
+    display: inline;
+    height: auto;
+}
+
+.container {
+    padding: 16px;
+}
+
+.container-2 {
+    background-color: #353740;
+    display: flex;
+    justify-content: center;
+}
+
+.container-2 a, button {
+    align-self: center;
+}
+
+.container-2 a {
+    margin-left: 2.4em;
+}
+
+#title-signup {
+    display: inline;
+    margin-bottom: 5%;
+}
+
+#container-signup {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#container-signup p {
+    margin: auto;
+}
+
+#container-signup h2 {
+    text-align: center;
+}
+
+.column-signup {
+    display: flex;
+    width: 32%;
+    margin: auto;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.column-signup label {
+    display: block;
+    text-align: left;
+}
+
+span.psw {
+    float: right;
+    padding-top: 16px;
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    z-index: 2;
+    left: 0;
+    top: 0;
+    bottom: 50%;
+    right: 0;
+    width: 33%;
+    height: 56%;
+    margin: auto;
+    background-size: 1000px;
+    padding-top: 180px;
+    font-family: "PT Sans";
+}
+
+.popup-signup {
+    display: none;
+    position: fixed;
+    z-index: 2;
+    left: 0;
+    top: 0;
+    bottom: 50%;
+    right: 0;
+    width: 60%;
+    height: 56%;
+    margin: auto;
+    background-size: 1000px;
+    padding-top: 180px;
+    font-family: "PT Sans";
+}
+
+.popup-content {
+    background-color: #fefefe;
+    margin: 5% auto 15% auto;
+    border: 1px solid #888;
+    width: 80%;
+}
+
+.close {
+    position: absolute;
+    right: 25px;
+    top: 0;
+    color: #000;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: red;
+    cursor: pointer;
+}
+
+/* Add Zoom Animation */
+.animate {
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+    from {
+        -webkit-transform: scale(0)
+    }
+    to {
+        -webkit-transform: scale(1)
+    }
+}
+
+@keyframes animatezoom {
+    from {
+        transform: scale(0)
+    }
+    to {
+        transform: scale(1)
+    }
+}
+
+@media screen and (max-width: 300px) {
+    span.psw {
+        display: block;
+        float: none;
+    }
+
+    .cancelbtn {
+        width: 100%;
+    }
+}
+

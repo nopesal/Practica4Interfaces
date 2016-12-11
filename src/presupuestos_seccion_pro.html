@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Aperture</title>
+    <link type="text/css" rel="stylesheet" href="style/presupuestos_seccion_pro_style.css"/>
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans|PT+Sans+Caption|PT+Serif|Montserrat" rel="stylesheet">
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.0/jquery.min.js"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.9/jquery-ui.min.js"></script>
+</head>
+
+<body>
+<nav>
+    <a id="brand-nav" href="../Pagina%20Principal%20Registrados/ultimas_fotos_index.html">
+        <div class="marca-column">
+            <svg version="1.2" preserveAspectRatio="none" viewBox="0 0 24 24" class="ng-element" fill="#193441"
+                 style="opacity: 0.75; width: 45px; height: 45px;">
+                <g>
+                    <defs></defs>
+                    <rect display="none" fill="#193441" width="24" height="24"></rect>
+                    <rect id="_x3C_Slice_x3E__81_" display="none" fill="#193441" width="24" height="24"></rect>
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                          d="M10.902,16.098c-0.487-0.844-0.9-1.708-1.274-2.582 c-1.646,2.812-2.705,5.929-3.116,9.146c3.149,1.617,6.949,1.805,10.349,0.294C14.522,21.119,12.479,18.83,10.902,16.098z M12.126,14.812c1.613,2.831,3.782,5.307,6.363,7.272c2.976-1.919,5.037-5.116,5.429-8.815C21.159,14.375,18.154,15,15,15 C14.025,15,13.07,14.925,12.126,14.812z M9.502,10.703c-3.26-0.019-6.487,0.622-9.479,1.874c0.174,3.537,1.911,6.921,4.92,9.109 c0.421-2.942,1.382-5.856,2.96-8.589C8.39,12.254,8.932,11.465,9.502,10.703z M11.874,9.188c-1.613-2.832-3.782-5.308-6.363-7.272 C2.535,3.834,0.474,7.031,0.082,10.73C2.841,9.625,5.846,9,9,9C9.975,9,10.93,9.075,11.874,9.188z M13.098,7.902 c0.487,0.844,0.9,1.709,1.274,2.582c1.646-2.812,2.705-5.929,3.117-9.146c-3.15-1.617-6.95-1.805-10.349-0.294 C9.478,2.881,11.521,5.17,13.098,7.902z M14.498,13.297c3.26,0.019,6.487-0.622,9.479-1.874c-0.174-3.537-1.911-6.921-4.919-9.109 c-0.422,2.942-1.383,5.856-2.961,8.589C15.611,11.746,15.068,12.536,14.498,13.297z"
+                          fill="#193441"></path>
+                </g>
+            </svg>
+        </div>
+        <div class="marca-column">
+            <h1 id="name-nav">Aperture</h1>
+        </div>
+    </a>
+    <div id="search-div">
+        <form>
+            <input id="search-bar" type="search" name="search" placeholder="Busca fotos, usuarios, álbumes...">
+        </form>
+    </div>
+    <div id="buttons-nav">
+        <div class="dropdown">
+            <button onclick="myNotifications()" onmouseenter="myNotifications()" class="dropbtn"
+                    id="menuNotificaciones">Notificaciones
+            </button>
+            <div onmouseleave="myNotifications()" id="myNotifications" class="dropdown-content">
+                <a class="notification" href="#"><p><strong>@laura</strong>, <strong>@ivansoja</strong> y <strong>@andreahg</strong>
+                    han marcado tu foto como favorito</p><img src="images/autumn.jpg"></a>
+                <a class="notification" href="#"><p><strong>@laura</strong> ha marcado tu foto como favorito</p><img
+                        src="images/birds.jpg"></a>
+                <a class="notification" href="#"><p>Tienes un nuevo seguidor <strong>@patrick</strong></p><img
+                        id="follow-user" src="images/michael-user.jpg"></a>
+                <a class="notification" href="#"><p><strong>@andreahg</strong> ha marcado tu foto como favorito</p><img
+                        src="images/birds.jpg"></a>
+            </div>
+        </div>
+
+        <a href="#" class="button-sign" id="subir-foto">
+            <p>Subir foto</p>
+        </a>
+        <div class="dropdown">
+            <button id="perfil-nav" onmouseenter="myMenu()" onclick="myMenu()" class="dropbtn"></button>
+            <div onmouseleave="myMenu()" id="myMenu" class="dropdown-content">
+                <a class="menu-opc" href="profile.html">Mi perfil</a>
+                <a class="menu-opc" href="fotografias.html">Fotografías</a>
+                <a class="menu-opc" href="albumes.html">Álbumes</a>
+                <a class="menu-opc" href="seccion_pro.html">Sección PRO</a>
+            </div>
+        </div>
+    </div>
+</nav>
+
+  <div id="cabeceraPerfil">
+      <div id="cabeceraBackground">
+
+      </div>
+  </div>
+
+  <div id="usuarioPRO">
+      <div id="botonPRO"> PRO </div> <br>
+      @michael <br>
+  </div>
+
+  <div id="contenido">
+        <ul class="navegador">
+              <li><a href="seccion_pro.html">Resumen</a></li>
+              <li><a href="#url">Proyectos</a></li>
+              <li class="seccion"><a href="#url">Presupuestos</a></li>
+              <li><a href="#url">Clientes</a></li>
+        </ul>
+
+
+        <div id="titulo">
+              Solicitudes de presupuesto
+        </div>
+
+        <div class="presupuesto">
+
+              <div class="contenedor">
+
+                <div class="divUsuario">
+                    <a href="#"> <img class="imagenCircular" src="images/imgPerfil.jpg" alt="Usuario"> </a>
+                    <div class="usuario">
+                        <a href="#"> @MaxSteel </a> <br>
+                        <div class="fecha"> Solicitado 01/12/2016 </div>
+                    </div>
+
+                </div>
+
+
+                <div class="divInfoPresupuesto">
+
+                    <ul class="infoPresupuesto">
+                          <li> <div class="tituloCampo"> TIPO DE EVENTO </div> <div class="campo"> Boda </div> </li>
+                          <li> <div class="tituloCampo"> LUGAR </div> <div class="campo"> Madrid </div> </li>
+                          <li> <div class="tituloCampo"> FECHA </div> <div class="campo"> 22/05/2017 </div> </li>
+                          <li> <div class="tituloCampo"> NÚMERO DE HORAS </div> <div class="campo"> 8H </div> </li>
+                    </ul>
+
+                </div>
+
+              </div>
+
+        </div>
+
+
+
+        <div class="presupuestoExpandido">
+
+              <div class="presupuestoIzquierda">
+
+
+                  <div class="divUsuarioExpandido">
+                      <a href="#"> <img class="imagenCircular" src="images/imgPerfil.jpg" alt="Usuario"> </a>
+                      <div class="usuario">
+                          <a href="#"> @MaxSteel </a> <br>
+                          <div class="fecha"> Solicitado 01/12/2016 </div>
+                      </div>
+
+                  </div>
+
+                  <div id="tituloMensaje">
+                      MENSAJE
+                  </div>
+                  <div class="mensajeUsuario">
+                      Buenas tardes, estoy interesado en contratar sus servicios para la boda de mi hermana. La boda se va a realizar en una finca con caballos e iglesia.
+                      Además de tomar las fotos de la boda quisiera que realizara un album de recuerdo en el que aparezca la mayoría de la familia. También queremos recibir instrucciones
+                      de como hay que decorar la iglesia. ¿Usted nos las podría proporcionar?
+                      <br>
+                      <br>
+                      Por favor, contacte conmigo lo antes posible.
+                  </div>
+
+              </div>
+
+
+              <div class="presupuestoDerecha">
+                <div class="contenedor">
+
+                      <ul class="columnaInfo">
+                            <li> <div class="tituloCampo"> TIPO DE EVENTO </div> <div class="campo"> Boda </div> </li>
+                            <li> <div class="tituloCampo"> LUGAR </div> <div class="campo"> Madrid </div> </li>
+                            <li> <div class="tituloCampo"> FECHA </div> <div class="campo"> 22/05/2017 </div> </li>
+                      </ul>
+
+                      <ul class="columnaInfo">
+                            <li> <div class="tituloCampo"> NÚMERO DE HORAS </div> <div class="campo"> 8H </div> </li>
+                            <li> <div class="tituloCampo"> RETOQUE DE IMÁGENES </div> <div class="campo"> Sí </div> </li>
+                            <li> <div class="tituloCampo"> NÚMERO DE FOTOS </div> <div class="campo"> 200 </div> </li>
+                      </ul>
+
+                </div>
+
+
+                <div class="botonIniciar"> Iniciar Conversación </div>
+
+              </div>
+
+
+
+        </div>
+
+  </div>
+
+  <footer>
+      <div id="eslogan">
+          <div class="slogan-column">
+              <svg version="1.2" preserveAspectRatio="none" viewBox="0 0 24 24" class="ng-element" fill="#efefef"
+                   style="opacity: 0.75; width: 30px; height: 30px; margin-right: 10px">
+                  <g>
+                      <defs></defs>
+                      <rect display="none" fill="#efefef" width="24" height="24"></rect>
+                      <rect id="_x3C_Slice_x3E__81_" display="none" fill="#efefef" width="24" height="24"></rect>
+                      <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M10.902,16.098c-0.487-0.844-0.9-1.708-1.274-2.582 c-1.646,2.812-2.705,5.929-3.116,9.146c3.149,1.617,6.949,1.805,10.349,0.294C14.522,21.119,12.479,18.83,10.902,16.098z M12.126,14.812c1.613,2.831,3.782,5.307,6.363,7.272c2.976-1.919,5.037-5.116,5.429-8.815C21.159,14.375,18.154,15,15,15 C14.025,15,13.07,14.925,12.126,14.812z M9.502,10.703c-3.26-0.019-6.487,0.622-9.479,1.874c0.174,3.537,1.911,6.921,4.92,9.109 c0.421-2.942,1.382-5.856,2.96-8.589C8.39,12.254,8.932,11.465,9.502,10.703z M11.874,9.188c-1.613-2.832-3.782-5.308-6.363-7.272 C2.535,3.834,0.474,7.031,0.082,10.73C2.841,9.625,5.846,9,9,9C9.975,9,10.93,9.075,11.874,9.188z M13.098,7.902 c0.487,0.844,0.9,1.709,1.274,2.582c1.646-2.812,2.705-5.929,3.117-9.146c-3.15-1.617-6.95-1.805-10.349-0.294 C9.478,2.881,11.521,5.17,13.098,7.902z M14.498,13.297c3.26,0.019,6.487-0.622,9.479-1.874c-0.174-3.537-1.911-6.921-4.919-9.109 c-0.422,2.942-1.383,5.856-2.961,8.589C15.611,11.746,15.068,12.536,14.498,13.297z"
+                            fill="#efefef"></path>
+                  </g>
+              </svg>
+          </div>
+          <div class="eslogan-column">
+              <h2 id="eslogan-footer">
+                  Aperture, el lugar de tus mejores fotos
+              </h2>
+          </div>
+
+      </div>
+      <div id="more-links">
+          <div class="link-column">
+              <p class="title-column">AYUDA</p>
+              <a href="#" class="links-footer">FAQ</a><br>
+              <a href="#" class="links-footer">Foro</a>
+          </div>
+          <div class="link-column">
+              <p class="title-column">SOBRE NOSOTROS</p>
+              <a href="#" class="links-footer">Nuestra historia</a><br>
+              <a href="#" class="links-footer">Oficinas</a>
+          </div>
+          <div class="link-column">
+              <p class="title-column">CONTÁCTANOS</p>
+              <a href="#" class="links-footer">Facebook</a><br>
+              <a href="#" class="links-footer">Twitter</a>
+          </div>
+
+      </div>
+      <div id="info">
+          <p>
+              <a href="#">Privacidad</a> • <a href="#">Condiciones</a> • <a href="#">Seguridad</a> © 2016 Aperture
+          </p>
+      </div>
+  </footer>
+</body>
+
+
+<script src="script/scriptPresupuestos.js"></script>
+<script src="script/barraNavegacion.js"></script>
+
+</html>

@@ -1,0 +1,593 @@
+body {
+    background-color: #ededed;
+    font-family: 'PT Sans Caption', sans-serif;
+    font-size: 1em;
+    position: relative;
+    margin: 0;
+}
+
+#contenido {
+    margin-right: auto;
+    margin-left: auto;
+
+    max-width: 1200px;
+    padding-left: 5%;
+    padding-right: 5%;
+    background-color: #ededed;
+    font-family: 'PT Sans Caption', sans-serif;
+    font-size: 1em;
+    position: relative;
+}
+
+/***navegador principal***/
+nav {
+    width: 100%;
+    height: 75px;
+    background-color: #EBEBEB;
+    display: flex;
+}
+
+#brand-nav {
+    display: flex;
+    width: 10%;
+    margin: auto;
+}
+
+.marca-column {
+    width: 38%;
+}
+
+svg {
+    opacity: 0.75;
+    width: 85%;
+    height: auto;
+    fill: #193441;
+}
+
+#name-nav {
+    font-family: "PT Sans";
+    font-size: 30px;
+    margin: 5% 0 0 10px;
+    color: #353740;
+}
+
+#logo-nav {
+    width: 90%;
+    height: 90%;
+    float: left;
+    margin: auto;
+}
+
+.notificationsMenu:before {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    border: 10px solid #193441;
+    border-color: transparent transparent #193441 transparent;
+    bottom: 0px;
+    left: 40%;
+}
+
+.perfilNavMenu:before {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    border: 10px solid #193441;
+    border-color: transparent transparent #193441 transparent;
+    bottom: 0px;
+    left: 40%;
+}
+
+#search-div {
+    width: 60%;
+    margin: auto 0 auto auto;
+    padding: 0 0 0.5% 1.5%;
+}
+
+nav a {
+    text-decoration: none;
+}
+
+#buttons-nav {
+    display: flex;
+    float: right;
+    width: 20%;
+    margin: auto auto auto 0;
+    justify-content: space-between;
+}
+
+.notification {
+    background-color: #EBEBEB;
+    color: #193441;
+    font-family: 'PT Sans';
+    font-weight: bold;
+    border: solid;
+    border-radius: 10px;
+    margin: 5%;
+    padding: 0;
+    text-decoration: none;
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+}
+
+.notification img {
+    height: 100px;
+    width: auto;
+}
+
+#follow-user {
+    border-radius: 50%;
+    align-self: center;
+    margin: 2% 4.5% 2% 2%;
+}
+
+.notification p {
+    margin: 4%;
+    align-self: center;
+    font-weight: normal;
+}
+
+#subir-foto {
+    background-color: transparent;
+    margin-right: 10px;
+}
+
+#subir-foto p {
+    color: #464646;
+    font-family: "PT Sans";
+    /*font-weight: bold;*/
+    margin: auto;
+}
+
+#subir-foto p:hover {
+    font-weight: bold;
+}
+
+.button-sign {
+    width: 40%;
+    height: 50%;
+    margin: auto;
+    text-align: center;
+}
+
+#perfil-nav {
+    background-image: url('../images/michael-user.jpg');
+    width: 40px;
+    height: 40px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 300px;
+    background-position: center;
+    margin-top: 20%;
+}
+
+.dropbtn {
+    color: #353740;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    font-family: "PT Sans";
+    background-color: transparent;
+    margin-left: 0%;
+
+}
+
+.dropbtn:hover, .dropbtn:focus {
+    font-weight: bold;
+    outline: 0;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    z-index: 100;
+    text-align: center;
+    float: right;
+}
+
+.dropdown-content {
+    display: inline;
+    position: absolute;
+    background-color: #193441;
+    width: 400%;
+    overflow: hidden;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    right: 0;
+    border-radius: 5px 5px 5px 5px;
+    height: 0;
+    transition: height 0.4s;
+}
+
+.menu-opc {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #EBEBEB;
+    color: #353740;
+}
+
+.showNot {
+    height: 560px;
+}
+
+.showMenu {
+    height: 180px;
+}
+
+#search-bar {
+    width: 95%;
+    height: 30px;
+    border: 1px solid #C8C8C8;
+    border-radius: 6px;
+    margin: 7px 0 0 19px;
+    background-image: url('../images/search-icon.png');
+    background-repeat: no-repeat;
+    background-size: 20px 20px;
+    background-position: 8px 50%;
+    padding: 0 0 0 30px;
+}
+
+/**********/
+
+/************ Cabecera *****************/
+
+#cabeceraPerfil {
+    height: 300px;
+    width: 100%;
+    position: absolute;
+    -webkit-box-shadow: 0 4px 15px 2px #686e6b;
+    -moz-box-shadow: 0 4px 15px 2px #686e6b;
+    box-shadow: 0 4px 15px 2px #686e6b;
+}
+
+#cabeceraBackground {
+    background-image: url('../images/bosque.jpg');
+    overflow: hidden;
+    width: 100%;
+    height: 300px;
+    -webkit-filter: blur(4px);
+    -moz-filter: blur(4px);
+    -o-filter: blur(4px);
+    -ms-filter: blur(4px);
+    filter: blur(4px);
+    z-index: 0;
+}
+
+#usuarioPRO {
+    width: 100%;
+    color: white;
+    position: relative;
+    margin: auto;
+    vertical-align: middle;
+    text-align: center;
+    font-family: "PT Sans", sans-serif;
+    z-index: 10;
+    margin-top: 91px;
+    margin-bottom: 105px;
+    font-size: 2em;
+}
+
+#botonPRO {
+    background-color: black;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 38px;
+    margin: auto;
+    cursor: pointer;
+    opacity: 0.5;
+    border-radius: 10px;
+}
+
+/*********** Fin cabecera  *******/
+
+.seccion {
+    font-weight: bold;
+}
+
+.navegador {
+    list-style-type: none;
+    overflow: hidden;
+    padding-left: 0;
+}
+
+.navegador li {
+    float: left;
+    text-align: center;
+    margin-right: 3%;
+}
+
+.navegador li a {
+    text-decoration: none;
+    text-align: center;
+    display: block;
+    font-family: "PT Sans", sans-serif;
+    color: #464646;
+    font-size: 25px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+
+}
+
+#contenedor {
+    display: inline-flex;
+    width: 100%;
+}
+
+#visitas {
+    width: 50%;
+    float: left;
+    margin-left: 5%;
+
+}
+
+#grafica {
+    width: 100%;
+}
+
+#divSolicitudes {
+    width: 50%;
+}
+
+#titulo {
+    font-family: "PT Sans", sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.titulo2 {
+    font-family: "PT Sans", sans-serif;
+    font-weight: bold;
+    color: #464646;
+    font-size: 18px;
+    margin-bottom: 5px;
+
+}
+
+.opciones {
+    list-style-type: none;
+    overflow: hidden;
+    padding-left: 0;
+    color: #464646;
+    font-family: "PT Sans", sans-serif;
+}
+
+.opciones li {
+    display: inline-block;
+}
+
+.opciones li a {
+    text-decoration: none;
+
+}
+
+#opcion1 {
+    float: right;
+    margin-right: 5px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#opcion2 {
+    float: right;
+    cursor: pointer;
+}
+
+.solicitud {
+    background-color: #d6d6d6;
+    width: 100%;
+    height: 100px;
+    display: flex;
+    border-radius: 10px;
+    margin-bottom: 5px;
+    cursor: pointer;
+
+}
+
+.solicitud:hover {
+    background-color: #dedede;
+}
+
+.divCirculo {
+    float: left;
+    margin: auto;
+    margin-left: 4%;
+    margin-right: 4%;
+
+}
+
+.informacion {
+    width: 80%;
+    font-family: "PT Sans Caption", sans-serif;
+    margin: auto;
+
+}
+
+.mensaje {
+    margin-left: 10px;
+    font-size: 15px;
+}
+
+.usuario {
+    margin-left: 10px;
+    font-size: 20px;
+}
+
+.usuario a {
+    text-decoration: none;
+    color: #193441;
+}
+
+.imagen {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    display: block;
+
+}
+
+/* Etiqueta Visitas */
+.etiquetaVisitas {
+    background-color: #d6d6d6;
+    width: 100%;
+    height: 100px;
+    display: flex;
+    margin-bottom: 5px;
+    vertical-align: middle;
+    border-radius: 10px;
+}
+
+.etiquetaVisitas:hover {
+    background-color: #dedede;
+}
+
+.divImagen {
+    width: 25.8%;
+    display: inline-block;
+
+}
+
+.titulo-foto {
+    line-height: 100px;
+    margin-left: 3%;
+}
+
+.social {
+    margin-right: 3%;
+    margin-left: auto;
+    line-height: 100px;
+    min-width: 115px;
+    color: #2B3A42;
+}
+
+.social i {
+    color: #2B3A42;
+    cursor: pointer;
+    vertical-align: middle;
+    margin-right: 2%;
+}
+
+.social span {
+    vertical-align: middle;
+}
+
+.imagenCuadrada {
+    width: 100%;
+    height: 100%;
+    display: block;
+    border-radius: 10px 0px 0px 10px;
+}
+
+.icono {
+    width: 15px;
+    height: 15px;
+}
+
+footer {
+    width: 100%;
+    height: 176px;
+    bottom: 0;
+    background-color: #353740;
+    position: relative;
+    text-align: center;
+    margin-top: 5%;
+}
+
+#logo {
+    width: 30px;
+    height: 30px;
+    float: left;
+    margin: auto;
+}
+
+#eslogan-footer {
+    float: left;
+    margin: auto;
+    padding-top: 4px;
+    font-family: "PT Sans";
+    font-size: 18px;
+}
+
+#eslogan {
+    display: inline;
+    width: 35%;
+    float: left;
+    color: #ffffff;
+    display: flex;
+    margin: 15px 0 15px 15px;
+}
+
+#more-links {
+    width: 40%;
+    float: right;
+}
+
+.link-column {
+    width: 32%;
+    display: inline-block;
+    margin: 15px 0 0 0;
+    text-align: left;
+}
+
+.link-column a:link {
+    color: #FFFFFF;
+}
+
+.link-column a:visited {
+    color: #FFFFFF;
+}
+
+.link-column a:hover {
+    text-decoration: underline;
+}
+
+#info {
+    text-align: center;
+    margin: 0 auto;
+    display: block;
+    width: 50%;
+    position: absolute;
+    bottom: 0;
+    left: 25%;
+    font-family: "PT Serif";
+    color: #A4ABBF;
+}
+
+#info a:link {
+    color: #A4ABBF;
+    text-decoration: underline;
+}
+
+#info a:visited {
+    color: #A4ABBF;
+    text-decoration: underline;
+}
+
+#info a:hover {
+    text-decoration: none;
+}
+
+.title-column {
+    color: #A4ABBF;
+    font-family: "PT Sans";
+    margin: auto;
+}
+
+.links-footer {
+    color: #FFFFFF;
+    font-family: "PT Serif";
+    margin: auto;
+}
+
+.links-footer a:visited, a:link, a:active {
+    text-decoration: none;
+}
