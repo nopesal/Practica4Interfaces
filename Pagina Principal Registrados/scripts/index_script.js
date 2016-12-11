@@ -21,12 +21,14 @@ function mostrarDatosImagen() {
     $(this.children[1]).stop().fadeTo(300, 1);
     $(this.children[2]).stop().fadeTo(300, 1);
     $(this.children[3]).stop().fadeTo(300, 1);
+    $(this.children[4]).stop().fadeTo(300, 1);
 }
 
 function ocultarDatosImagen() {
     $(this.children[1]).stop().fadeTo(300, 0);
     $(this.children[2]).stop().fadeTo(300, 0);
     $(this.children[3]).stop().fadeTo(300, 0);
+    $(this.children[4]).stop().fadeTo(300, 0);
 }
 
 function crearlikeOnClickListener() {
@@ -56,5 +58,21 @@ function crearlikeOnClickListener() {
         corazon.toggleClass('fa-heart-o fa-heart');
         contadorDeLikes.text(numeroDeLikes);
         actualizarValorStorage(corazon, "likes", numeroDeLikes);
+    }
+}
+
+function crearAutorOnClickListener() {
+    var autor = document.getElementsByTagName("small");
+    for (var i = 0; i < autor.length; i++) {
+        autor[i].addEventListener("click", irAPerfilAutor, false);
+    }
+
+    function irAPerfilAutor() {
+        window.location.href = "../../Perfil Usuario Ajeno/profile.html";
+    }
+
+    var titulo = document.getElementsByClassName("titulo-foto");
+    for (var i = 0; i < titulo.length; i++) {
+        titulo[i].addEventListener("click", abrirPaginaImagen, false);
     }
 }

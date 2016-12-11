@@ -25,11 +25,15 @@ function cargarImagenes() {
     for (var i = 0; i < imagenes.length; i++){
         $(imagenes[i]).append('<img src="../images/' + listaImagenes[index].identificador + '.PNG" alt="' + listaImagenes[index].identificador + '">');
         $(imagenes[i]).append('<div class="gradient"></div>');
-        $(imagenes[i]).append('<p class="unselectable">' + listaImagenes[index].titulo + '</p>');
+        $(imagenes[i]).append('<p class="unselectable titulo-foto">' + listaImagenes[index].titulo + '</p>');
+        if (listaImagenes[index].identificador != "Otoño" && listaImagenes[index].identificador != "Puente2") {
+            $(imagenes[i]).append('<small class="unselectable">@MaxSteel</small>');
+        }
         $(imagenes[i]).append('<div class="social"><i class="fa ' + listaImagenes[index].likeDado + '" aria-hidden="true"></i><span class="unselectable">' + listaImagenes[index].likes + '</span><i class="fa fa-comment" aria-hidden="true"></i><span class="unselectable">' + listaImagenes[index].comentarios + '</span></div>');
         index--;
     }
     crearlikeOnClickListener();
+    crearAutorOnClickListener();
 }
 
 function actualizarValorStorage(elemento, atributo, valor) {
