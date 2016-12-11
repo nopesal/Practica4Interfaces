@@ -416,7 +416,7 @@ footer {
     color: #A4ABBF;
 }
 
-#info a:link, a:visited {
+#info a:link, #info a:visited {
     color: #A4ABBF;
     text-decoration: underline;
 }
