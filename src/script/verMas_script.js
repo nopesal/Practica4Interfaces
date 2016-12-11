@@ -7,6 +7,4 @@ function verMasImagenes() {
         $("#imagenes-hidden").css("display", "block");
         $(".fa.fa-circle-o-notch.fa-spin")[0].style.display = "none";
     }, 1000);
-
-
 }
