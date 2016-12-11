@@ -1,4 +1,5 @@
-var ctx = document.getElementById("myChart");
+var ctx = document.getElementById("myChart"); //Variable que contiene el gráfico
+//Se introducen los valores al gráfico. Se configura por defecto para número de visitas
 var myLineChart = Chart.Line(ctx, {
     data:{
         labels: ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio","Julio", "Agosto","Septiembre", "Octubre", "Noviembre", "Diciembre"],
@@ -43,12 +44,14 @@ var myLineChart = Chart.Line(ctx, {
     }
 });
 
+//Se obtienen los elementos que contienen los botones visitas y seguidores
 var opcion1= document.getElementById("opcion1");
 var opcion2= document.getElementById("opcion2");
 
+//Si se pulsa en visitas se actualiza el gráfico
 opcion1.addEventListener("click", visitas);
 function visitas(){
-  opcion1.style.fontWeight="bold";
+  opcion1.style.fontWeight="bold";  //Se cambia el estilo del texto visitas, resaltando la sección en la que se ha hecho click
   opcion2.style.fontWeight="normal";
   myLineChart.destroy();
   myLineChart = Chart.Line(ctx, {
@@ -96,7 +99,7 @@ function visitas(){
   });
 }
 
-
+// Si se pulsa en seguidores se actualiza el gráfico
 opcion2.addEventListener("click", seguidores);
 
 function seguidores(){
@@ -148,10 +151,15 @@ function seguidores(){
     });
 }
 
+//Si se hace click en el div que contiene una solictud de presupuesto te redirecciona a la sección presupuestos
 $(".solicitud").click(function(){
   location.href="presupuestos.html";
 });
 
+/*
+stopPropagation para que en los elementos que se puede hacer click dentro de la solictud de presupuestos se pueda
+seguir haciendo
+ */
 $(".usuario a").click(function(event){
   event.stopPropagation();
 });
