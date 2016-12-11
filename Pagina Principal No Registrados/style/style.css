@@ -5,6 +5,7 @@ body {
     font-family: 'PT Sans Caption', sans-serif;
     background-color: #ededed;
     position: relative;
+    margin:0;
 }
 
 #contenido :not(div) {
