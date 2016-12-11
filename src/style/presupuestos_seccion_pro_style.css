@@ -272,6 +272,11 @@ nav a {
     font-size: 2em;
 }
 
+#usuarioPRO a{
+    text-decoration: none;
+    color: white;
+}
+
 #botonPRO {
     background-color: black;
     border: none;
