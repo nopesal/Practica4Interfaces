@@ -72,6 +72,10 @@ svg{
     font-family: "PT Sans";
 }
 
+.error-container h1 {
+    margin: 3% 3% 3% 3%;
+}
+
 .error-container h3{
     margin: 3% 3% 3% 3%;
     width: 70%;
