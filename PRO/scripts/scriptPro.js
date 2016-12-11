@@ -22,7 +22,7 @@ var myLineChart = Chart.Line(ctx, {
                 pointHoverBorderWidth: 2,
                 pointRadius: 1,
                 pointHitRadius: 10,
-                data: [65, 59, 80, 81, 56, 55, 40, 65, 59, 80, 81, 56],
+                data: [650, 590, 800, 810, 560, 550, 400, 650, 590, 800, 810, 560],
                 spanGaps: false,
             }
         ]
@@ -31,7 +31,7 @@ var myLineChart = Chart.Line(ctx, {
         scales: {
             yAxes: [{
                 ticks: {
-                    suggestedMin:40
+                    suggestedMin:400
                 }
             }]
         },
@@ -74,7 +74,7 @@ function visitas(){
                   pointHoverBorderWidth: 2,
                   pointRadius: 1,
                   pointHitRadius: 10,
-                  data: [65, 59, 80, 81, 56, 55, 40, 65, 59, 80, 81, 56],
+                  data: [650, 590, 800, 810, 560, 550, 400, 650, 590, 800, 810, 560],
                   spanGaps: false,
               }
           ]
@@ -83,7 +83,7 @@ function visitas(){
           scales: {
               yAxes: [{
                   ticks: {
-                      suggestedMin:40
+                      suggestedMin:400
                   }
               }]
           },
@@ -135,7 +135,7 @@ function seguidores(){
             scales: {
                 yAxes: [{
                     ticks: {
-                        suggestedMin:5000
+                        suggestedMin:8000
                     }
                 }]
             },
