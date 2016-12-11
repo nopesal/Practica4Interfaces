@@ -413,6 +413,14 @@ nav a {
 .comentario-responder {
     color: #c7c7c7;
     font-size: 0.8em;
+    margin-right: 1%;
+    cursor: pointer;
+}
+
+.comentario-megusta {
+    color: #c7c7c7;
+    font-size: 0.8em;
+    cursor: pointer;
 }
 
 #informacion {
