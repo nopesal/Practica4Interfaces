@@ -6,6 +6,18 @@ body {
     margin: 0;
 }
 
+
+#contenido {
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 1200px;
+    padding-left: 5%;
+    padding-right: 5%;
+    background-color: #ededed;
+    font-family: 'PT Sans Caption', sans-serif;
+    font-size: 1em;
+    position: relative;
+}
 nav {
     width: 100%;
     height: 75px;
@@ -71,17 +83,6 @@ nav a {
     text-decoration: none;
 }
 
-#contenido {
-    margin-right: auto;
-    margin-left: auto;
-    max-width: 1200px;
-    padding-left: 5%;
-    padding-right: 5%;
-    background-color: #ededed;
-    font-family: 'PT Sans Caption', sans-serif;
-    font-size: 1em;
-    position: relative;
-}
 
 #buttons-nav {
     display: flex;
@@ -485,3 +486,102 @@ nav a {
 }
 
 
+footer {
+    width: 100%;
+    height: 176px;
+    bottom: 0;
+    background-color: #353740;
+    position: relative;
+    text-align: center;
+}
+
+#logo {
+    width: 30px;
+    height: 30px;
+    float: left;
+    margin: auto;
+}
+
+#eslogan-footer {
+    float: left;
+    margin: auto;
+    padding-top: 4px;
+    font-family: "PT Sans";
+    font-size: 18px;
+}
+
+#eslogan {
+    display: inline;
+    width: 35%;
+    float: left;
+    color: #ffffff;
+    display: flex;
+    margin: 15px 0 15px 15px;
+}
+
+#more-links {
+    width: 40%;
+    float: right;
+}
+
+.link-column {
+    width: 32%;
+    display: inline-block;
+    margin: 15px 0 0 0;
+    text-align: left;
+}
+
+.link-column a:link {
+    color: #FFFFFF;
+}
+
+.link-column a:visited {
+    color: #FFFFFF;
+}
+
+.link-column a:hover {
+    text-decoration: underline;
+}
+
+#info {
+    text-align: center;
+    margin: 0 auto;
+    display: block;
+    width: 50%;
+    position: absolute;
+    bottom: 0;
+    left: 25%;
+    font-family: "PT Serif";
+    color: #A4ABBF;
+}
+
+
+#info a:link {
+    color: #A4ABBF;
+    text-decoration: underline;
+}
+
+#info a:visited{
+    color: #A4ABBF;
+    text-decoration: underline;
+}
+
+#info a:hover {
+    text-decoration: none;
+}
+
+.title-column {
+    color: #A4ABBF;
+    font-family: "PT Sans";
+    margin: auto;
+}
+
+.links-footer {
+    color: #FFFFFF;
+    font-family: "PT Serif";
+    margin: auto;
+}
+
+.links-footer a:visited, a:link, a:active {
+    text-decoration: none;
+}
