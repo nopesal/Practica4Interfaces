@@ -1,12 +1,12 @@
 body {
     background-color: #ededed;
     font-family: 'PT Sans Caption', sans-serif;
-    font-size:1em;
+    font-size: 1em;
     position: relative;
-    margin:0;
+    margin: 0;
 }
 
-#contenido{
+#contenido {
     margin-right: auto;
     margin-left: auto;
 
@@ -15,11 +15,9 @@ body {
     padding-right: 5%;
     background-color: #ededed;
     font-family: 'PT Sans Caption', sans-serif;
-    font-size:1em;
+    font-size: 1em;
     position: relative;
 }
-
-
 
 /***navegador principal***/
 nav {
@@ -38,7 +36,8 @@ nav {
 .marca-column {
     width: 38%;
 }
-svg{
+
+svg {
     opacity: 0.75;
     width: 85%;
     height: auto;
@@ -48,7 +47,7 @@ svg{
 #name-nav {
     font-family: "PT Sans";
     font-size: 30px;
-    margin: 5% 0 0 0%;
+    margin: 5% 0 0 10px;
     color: #353740;
 }
 
@@ -59,27 +58,29 @@ svg{
     margin: auto;
 }
 
-.notificationsMenu:before{
-    content:"";
-    display:inline-block;
-    position:absolute;
-    border:10px solid #193441;
-    border-color:transparent transparent #193441 transparent;
-    bottom:0px;
+.notificationsMenu:before {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    border: 10px solid #193441;
+    border-color: transparent transparent #193441 transparent;
+    bottom: 0px;
     left: 40%;
 }
-.perfilNavMenu:before{
-    content:"";
-    display:inline-block;
-    position:absolute;
-    border:10px solid #193441;
-    border-color:transparent transparent #193441 transparent;
-    bottom:0px;
+
+.perfilNavMenu:before {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    border: 10px solid #193441;
+    border-color: transparent transparent #193441 transparent;
+    bottom: 0px;
     left: 40%;
 }
+
 #search-div {
     width: 60%;
-    margin: auto;
+    margin: auto 0 auto auto;
     padding: 0 0 0.5% 1.5%;
 }
 
@@ -129,6 +130,7 @@ nav a {
 
 #subir-foto {
     background-color: transparent;
+    margin-right: 10px;
 }
 
 #subir-foto p {
@@ -193,7 +195,7 @@ nav a {
     overflow: hidden;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     right: 0;
-    border-radius: 5px 0px 5px 5px;
+    border-radius: 5px 5px 5px 5px;
     height: 0;
     transition: height 0.4s;
 }
@@ -230,19 +232,20 @@ nav a {
     background-position: 8px 50%;
     padding: 0 0 0 30px;
 }
+
 /**********/
 
 /********************* cabecera *****************/
-#cabeceraPerfil{
+#cabeceraPerfil {
     height: 300px;
     width: 100%;
-    position:absolute;
+    position: absolute;
     -webkit-box-shadow: 0 4px 15px 2px #686e6b;
     -moz-box-shadow: 0 4px 15px 2px #686e6b;
     box-shadow: 0 4px 15px 2px #686e6b;
 }
 
-#cabeceraBackground{
+#cabeceraBackground {
     background-image: url('../images/bosque.jpg');
     overflow: hidden;
     width: 100%;
@@ -252,40 +255,41 @@ nav a {
     -o-filter: blur(4px);
     -ms-filter: blur(4px);
     filter: blur(4px);
-    z-index:0;
+    z-index: 0;
 }
 
-#usuarioPRO{
-  width: 100%;
-  color:white;
-  position: relative;
-  margin : auto;
-  vertical-align : middle;
-  text-align: center;
-  font-family: "PT Sans", sans-serif;
-  z-index:10;
-  margin-top: 91px;
-  margin-bottom: 105px;
-  font-size: 2em;
+#usuarioPRO {
+    width: 100%;
+    color: white;
+    position: relative;
+    margin: auto;
+    vertical-align: middle;
+    text-align: center;
+    font-family: "PT Sans", sans-serif;
+    z-index: 10;
+    margin-top: 91px;
+    margin-bottom: 105px;
+    font-size: 2em;
 }
-#botonPRO{
-  background-color:black;
-  border: none;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 38px;
-  margin: auto;
-  cursor: pointer;
-  opacity: 0.5;
-  border-radius: 10px;
+
+#botonPRO {
+    background-color: black;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 38px;
+    margin: auto;
+    cursor: pointer;
+    opacity: 0.5;
+    border-radius: 10px;
 }
 
 /********************** fin cabecera *******************/
-.seccion{
-  font-weight: bold;
+.seccion {
+    font-weight: bold;
 }
 
 .navegador {
@@ -294,14 +298,14 @@ nav a {
     padding-left: 0;
 }
 
-.navegador li{
+.navegador li {
     float: left;
     text-align: center;
     margin-right: 3%;
 }
 
-.navegador li a{
-    text-decoration:none;
+.navegador li a {
+    text-decoration: none;
     text-align: center;
     display: block;
     font-family: "PT Sans", sans-serif;
@@ -312,19 +316,19 @@ nav a {
 
 }
 
-#titulo{
-  font-size: 16px;
-  margin-bottom: 8px;
+#titulo {
+    font-size: 16px;
+    margin-bottom: 8px;
 }
 
-.contenedor{
-  width: 100%;
-  display: flex;
+.contenedor {
+    width: 100%;
+    display: flex;
 }
 
-.presupuesto{
+.presupuesto {
     background-color: #d6d6d6;
-    width:90%;
+    width: 90%;
     border-radius: 10px;
     margin-bottom: 5px;
     padding: 5%;
@@ -332,137 +336,139 @@ nav a {
     cursor: pointer;
 }
 
-.presupuesto:hover{
+.presupuesto:hover {
     background-color: #dedede;
 }
 
-.divUsuario{
-    width:25%;
+.divUsuario {
+    width: 25%;
     font-size: 12px;
 }
 
-.imagenCircular{
-    width:80px;
-    height:80px;
+.imagenCircular {
+    width: 80px;
+    height: 80px;
     border-radius: 1000px;
     float: left;
     margin-right: 14px;
 }
-.usuario{
+
+.usuario {
     margin-top: 18px;
 }
 
-.usuario a{
-    text-decoration:none;
+.usuario a {
+    text-decoration: none;
     color: #464646;
     font-size: 1.5em;
 }
 
-.fecha{
+.fecha {
     font-size: 0.9em;
     text-align: left;
 }
 
-.divInfoPresupuesto{
-    width:75%;
+.divInfoPresupuesto {
+    width: 75%;
     margin: auto;
-    font-size:12px;
+    font-size: 12px;
 }
 
-.infoPresupuesto{
+.infoPresupuesto {
     list-style-type: none;
     display: flex;
     padding-left: 0px;
 }
 
-.infoPresupuesto li{
+.infoPresupuesto li {
     width: 17%;
     margin-left: 4%;
     text-align: left;
-    display:inline-block;
+    display: inline-block;
     margin-right: 4%;
 }
 
-.tituloCampo{
-  font-size: 10px;
-}
-.campo{
-  font-size: 13px;
-  text-align: center;
-  background-color: white;
-  margin-top: 5px;
-  opacity: 0.8;
-  border-radius: 5px;
-  padding-top: 12px;
-  padding-bottom: 12px;
+.tituloCampo {
+    font-size: 10px;
 }
 
-
-.presupuestoExpandido{
-  background-color: #d6d6d6;
-  width:90%;
-  display: none;
-  border-radius: 10px;
-  margin-bottom: 5px;
-  padding: 5%;
-  font-family: Montserrat;
+.campo {
+    font-size: 13px;
+    text-align: center;
+    background-color: white;
+    margin-top: 5px;
+    opacity: 0.8;
+    border-radius: 5px;
+    padding-top: 12px;
+    padding-bottom: 12px;
 }
-.presupuestoExpandido:hover{
+
+.presupuestoExpandido {
+    background-color: #d6d6d6;
+    width: 90%;
+    display: none;
+    border-radius: 10px;
+    margin-bottom: 5px;
+    padding: 5%;
+    font-family: Montserrat;
+}
+
+.presupuestoExpandido:hover {
     background-color: #dedede;
 }
 
-.presupuestoIzquierda{
-  width: 60%;
-  margin-right: 5px;
+.presupuestoIzquierda {
+    width: 60%;
+    margin-right: 5px;
 }
 
-.presupuestoDerecha{
-  width: 40%;
+.presupuestoDerecha {
+    width: 40%;
 }
 
-.divUsuarioExpandido{
-  display: inline-block;
-  width: 100%;
-  font-size: 12px;
+.divUsuarioExpandido {
+    display: inline-block;
+    width: 100%;
+    font-size: 12px;
 }
 
-#tituloMensaje{
-  margin-top: 15px;
-  margin-bottom: 15px;
-  font-size: 10px;
+#tituloMensaje {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    font-size: 10px;
 }
 
-.mensajeUsuario{
-  font-size: 15px;
-  text-align: justify;
+.mensajeUsuario {
+    font-size: 15px;
+    text-align: justify;
 }
 
-.columnaInfo{
-  list-style-type: none;
-  display: inline-block;
-  padding-left: 0px;
-  width: 50%;
-}
-.columnaInfo li{
-  width: 71%;
-  margin-left: 17.5%;
-  margin-right: 17.5%;
-  margin-bottom: 10px;
+.columnaInfo {
+    list-style-type: none;
+    display: inline-block;
+    padding-left: 0px;
+    width: 50%;
 }
 
-.botonIniciar{
-  float: right;
-  border: 1px solid #464646;
-  text-align: center;
-  padding: 10px;
-  border-radius: 6px;
-  background-color: #193441;
-  font-weight: bold;
-  color: #EBEBEB;
-  cursor: pointer;
-  margin-right: 5.5%;
+.columnaInfo li {
+    width: 71%;
+    margin-left: 17.5%;
+    margin-right: 17.5%;
+    margin-bottom: 10px;
 }
 
+.botonIniciar {
+    float: right;
+    border: 1px solid #464646;
+    text-align: center;
+    padding: 10px;
+    border-radius: 6px;
+    background-color: #193441;
+    font-weight: bold;
+    color: #EBEBEB;
+    cursor: pointer;
+    margin-right: 5.5%;
+}
 
 /********* footer ********************/
 
@@ -536,13 +542,12 @@ footer {
     color: #A4ABBF;
 }
 
-
 #info a:link {
     color: #A4ABBF;
     text-decoration: underline;
 }
 
-#info a:visited{
+#info a:visited {
     color: #A4ABBF;
     text-decoration: underline;
 }

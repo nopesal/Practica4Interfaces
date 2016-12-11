@@ -57,7 +57,7 @@ svg{
 #name-nav {
     font-family: "PT Sans";
     font-size: 30px;
-    margin: 5% 0 0 0%;
+    margin: 5% 0 0 10px;
     color: #353740;
 }
 
@@ -70,7 +70,7 @@ svg{
 
 #search-div {
     width: 60%;
-    margin: auto;
+    margin: auto 0 auto auto;
     padding: 0 0 0.5% 1.5%;
 }
 

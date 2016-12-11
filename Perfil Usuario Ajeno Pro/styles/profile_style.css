@@ -1,19 +1,19 @@
 body {
     background-color: #ededed;
     font-family: 'PT Sans Caption', sans-serif;
-    font-size:1em;
+    font-size: 1em;
     position: relative;
-    margin:0;
+    margin: 0;
 }
 
-nav{
+nav {
     width: 100%;
     height: 75px;
     background-color: #EBEBEB;
     display: flex;
 }
 
-#contenido{
+#contenido {
     margin-right: auto;
     margin-left: auto;
     max-width: 1200px;
@@ -21,58 +21,64 @@ nav{
     padding-right: 5%;
     background-color: #ededed;
     font-family: 'PT Sans Caption', sans-serif;
-    font-size:1em;
+    font-size: 1em;
     position: relative;
 }
 
-#brand-nav{
+#brand-nav {
     display: flex;
     width: 10%;
     margin: auto;
 }
 
-.marca-column{
+.marca-column {
     width: 42%;
 }
 
-#name-nav{
+#name-nav {
     font-family: 'PT Sans Caption', sans-serif;
     font-size: 30px;
-    margin: 5% 0 0 0;
+    margin: 5% 0 0 10px;
 }
 
-#logo-nav{
+#logo-nav {
     width: 90%;
     height: 90%;
     float: left;
     margin: auto;
 }
 
-#search-div{
+#search-div {
     width: 60%;
     margin: auto;
     padding: 0 0 0.5% 1.5%;
 }
-#buttons-nav{
+
+#buttons-nav {
     display: flex;
     float: right;
     width: 25%;
     margin: auto;
 }
+
 #notifications {
     background-color: transparent;
 }
-#notifications p{
+
+#notifications p {
     color: #464646;
     font-family: 'PT Sans Caption', sans-serif;
     margin: auto;
     padding: 10px;
     font-weight: bold;
 }
+
 #subir-foto {
     background-color: #2B3A42;
+    margin-right: 10px;
 }
-#subir-foto p{
+
+#subir-foto p {
     color: #FFFFFF;
     font-family: "PT Sans";
     font-weight: bold;
@@ -80,7 +86,8 @@ nav{
     padding: 10px;
 
 }
-.button-sign{
+
+.button-sign {
     width: 40%;
     height: 50%;
     border: 1px solid #464646;
@@ -89,7 +96,7 @@ nav{
     text-align: center;
 }
 
-#search-bar{
+#search-bar {
     width: 95%;
     height: 30px;
     border: 1px solid #C8C8C8;
@@ -102,16 +109,16 @@ nav{
     padding: 0 0 0 30px;
 }
 
-#cabeceraPerfil{
+#cabeceraPerfil {
     height: 300px;
     width: 100%;
-    position:absolute;
+    position: absolute;
     -webkit-box-shadow: 0 4px 15px 2px #686e6b;
     -moz-box-shadow: 0 4px 15px 2px #686e6b;
     box-shadow: 0 4px 15px 2px #686e6b;
 }
 
-#cabeceraBackground{
+#cabeceraBackground {
     background-image: url('../images/cabecera.jpg');
     overflow: hidden;
     width: 100%;
@@ -121,12 +128,12 @@ nav{
     -o-filter: blur(4px);
     -ms-filter: blur(4px);
     filter: blur(4px);
-    z-index:0;
+    z-index: 0;
 }
 
 #imgUsuario {
     position: relative;
-    display:block;
+    display: block;
     width: 200px;
     margin: auto;
     margin-top: 30px;
@@ -134,17 +141,17 @@ nav{
     border-radius: 150px;
 }
 
-#nombreUsuario{
+#nombreUsuario {
     color: white;
-    position:relative;
-    text-align:center;
+    position: relative;
+    text-align: center;
     margin-top: 10px;
     margin-bottom: 35px;
-    padding:0;
-    font-size:2em;
+    padding: 0;
+    font-size: 2em;
 }
 
-#cuadroSeguidores{
+#cuadroSeguidores {
     margin-top: 15px;
     float: right;
     height: 60px;
@@ -152,23 +159,21 @@ nav{
     width: 300px;
 }
 
-
-#cuadroSeguidores a{
+#cuadroSeguidores a {
     text-align: center;
-    margin:auto;
+    margin: auto;
     text-decoration: none;
     color: #464646;
     font-weight: bold;
 }
 
-#menu{
+#menu {
     width: auto;
     height: 75px;
     display: flex;
 }
 
-
-#menu a{
+#menu a {
     text-align: left;
     margin-top: 30px;
     margin-right: 3%;
@@ -177,13 +182,11 @@ nav{
     color: #464646;
 }
 
-
-
-#barraBotones{
+#barraBotones {
     display: inline-block;
     width: 100%;
     margin-top: 20px;
-    margin-bottom:20px;
+    margin-bottom: 20px;
 }
 
 #ordenar {
@@ -192,12 +195,12 @@ nav{
 }
 
 #ordenar p {
-    margin:0;
+    margin: 0;
     font-size: 20px;
     color: #464646;
 }
 
-#selectOrdenar{
+#selectOrdenar {
     -webkit-appearance: button;
     -webkit-border-radius: 2px;
     -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
@@ -218,21 +221,21 @@ nav{
     width: 300px;
 }
 
-#botones-perfil{
+#botones-perfil {
     display: flex;
     float: right;
     width: auto;
     height: 40px;
 }
 
-.boton{
+.boton {
     border-radius: 6px;
     width: 100px;
     margin-left: 20px;
     border: 1px solid #464646;
     text-align: center;
     padding: 10px;
-    text-decoration:none;
+    text-decoration: none;
     font-weight: bold;
     font-family: 'PT Sans Caption', sans-serif;
     color: #193441;
@@ -243,7 +246,7 @@ nav{
     color: #EBEBEB;
 }
 
-.seguido{
+.seguido {
     background-color: #193441;
     color: #EBEBEB;
 }
@@ -266,14 +269,12 @@ nav{
     font-family: "PT Sans";
 }
 
-
 .popup-content {
     background-color: #fefefe;
     margin: 5% auto 15% auto;
     border: 1px solid #888;
     width: 80%;
 }
-
 
 /* Add Zoom Animation */
 .animate {
@@ -282,22 +283,30 @@ nav{
 }
 
 @-webkit-keyframes animatezoom {
-    from {-webkit-transform: scale(0)}
-    to {-webkit-transform: scale(1)}
+    from {
+        -webkit-transform: scale(0)
+    }
+    to {
+        -webkit-transform: scale(1)
+    }
 }
 
 @keyframes animatezoom {
-    from {transform: scale(0)}
-    to {transform: scale(1)}
+    from {
+        transform: scale(0)
+    }
+    to {
+        transform: scale(1)
+    }
 }
 
 .popup-content h1 {
     text-align: center;
-    margin-bottom:0;
+    margin-bottom: 0;
 }
 
 .close {
-    float:right;
+    float: right;
     margin-right: 20px;
     color: #000;
     font-size: 35px;
@@ -309,7 +318,7 @@ nav{
     cursor: pointer;
 }
 
-#tituloSolicitud{
+#tituloSolicitud {
     color: #464646;
     font-size: 20px;
     margin: 24px 0 0 20px;
@@ -320,12 +329,12 @@ nav{
     padding: 16px;
 }
 
-.contenedorPresupuesto p{
-    margin:0 0 8px 0;
+.contenedorPresupuesto p {
+    margin: 0 0 8px 0;
     text-align: justify;
 }
 
-input[type=text], input[type=password], input[type=number], input[type=date]{
+input[type=text], input[type=password], input[type=number], input[type=date] {
     width: 100%;
     height: 30px;
     padding: 12px 20px;
@@ -335,37 +344,38 @@ input[type=text], input[type=password], input[type=number], input[type=date]{
     box-sizing: border-box;
 }
 
-input[type=date]{
+input[type=date] {
     height: 30px;
 }
 
-#textarea{
+#textarea {
     margin-top: 8px;
     width: 98%;
 }
 
-#fecha{
+#fecha {
     width: 45%;
     display: inline-block;
 }
 
-#horas{
+#horas {
     margin-left: 8.5%;
     width: 20%;
     display: inline-block;
 }
-#numFotos{
+
+#numFotos {
     margin-left: 3.5%;
-    width:20%;
+    width: 20%;
     display: inline-block;
 }
 
-#retoque{
-    text-align:center;
-    margin-bottom:10px;
+#retoque {
+    text-align: center;
+    margin-bottom: 10px;
 }
 
-#lugar{
+#lugar {
     width: 45%;
     margin-left: 8.5%;
     display: inline-block;
@@ -396,8 +406,7 @@ input[type=date]{
     width: 100%;
 }
 
-
-.titulosBody{
+.titulosBody {
     margin-top: 25px;
     margin-bottom: 30px;
     color: #464646;
@@ -405,17 +414,16 @@ input[type=date]{
     font-weight: bold;
 }
 
-
-.fila{
+.fila {
     display: flex;
     margin-bottom: 30px;
 }
 
-.columna img{
-    width:100%;
+.columna img {
+    width: 100%;
 }
 
-.columna{
+.columna {
     display: inline-block;
     height: 100%;
     width: 31.7%;
@@ -453,25 +461,23 @@ input[type=date]{
     color: #EBEBEB;
 }
 
-.fa.fa-circle-o-notch.fa-spin{
+.fa.fa-circle-o-notch.fa-spin {
     display: none;
     color: #193441;
     margin: 3% auto;
 }
 
-
-
-.transparencia{
+.transparencia {
     cursor: pointer;
-    width:100%;
+    width: 100%;
     height: 98.5%;
     opacity: 0.5;
-    position:absolute;
+    position: absolute;
     text-align: center;
-    display:none;
+    display: none;
 }
 
-.tituloFoto{
+.tituloFoto {
     position: absolute;
     font-family: Marvel, serif;
     font-weight: bold;
@@ -481,10 +487,10 @@ input[type=date]{
     text-align: center;
     font-size: 2.5em;
     color: #FFFFFF;
-    display:none;
+    display: none;
 }
 
-.numeroLikes{
+.numeroLikes {
     position: absolute;
     font-family: Marvel, serif;
     font-weight: bold;
@@ -494,17 +500,17 @@ input[type=date]{
     text-align: center;
     font-size: 2.5em;
     color: #FFFFFF;
-    display:none;
+    display: none;
 }
 
-.fa.fa-heart{
+.fa.fa-heart {
     position: absolute;
     bottom: 115px;
     width: 100%;
     text-align: center;
     font-size: 2.5em;
     color: #FFFFFF;
-    display:none;
+    display: none;
 }
 
 
