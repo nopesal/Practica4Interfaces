@@ -13,10 +13,10 @@
 </head>
 <body>
 <nav>
-    <div id="brand-nav">
+    <a id="brand-nav" href="../Pagina%20Principal%20Registrados/ultimas_fotos_index.html">
         <div class="marca-column">
             <svg version="1.2" preserveAspectRatio="none" viewBox="0 0 24 24" class="ng-element" fill="#193441"
-                 style="opacity: 0.75; width: 45px; height: 45px; margin-right: 10px">
+                 style="opacity: 0.75; width: 45px; height: 45px;">
                 <g>
                     <defs></defs>
                     <rect display="none" fill="#193441" width="24" height="24"></rect>
@@ -30,18 +30,40 @@
         <div class="marca-column">
             <h1 id="name-nav">Aperture</h1>
         </div>
-    </div>
+    </a>
     <div id="search-div">
         <form>
             <input id="search-bar" type="search" name="search" placeholder="Busca fotos, usuarios, álbumes...">
         </form>
     </div>
     <div id="buttons-nav">
-        <div class="button-sign" id="iniciar-sesion">
-            <p>Inicia sesión</p>
+        <div class="dropdown">
+            <button onclick="myNotifications()" onmouseenter="myNotifications()" class="dropbtn"
+                    id="menuNotificaciones">Notificaciones
+            </button>
+            <div onmouseleave="myNotifications()" id="myNotifications" class="dropdown-content">
+                <a class="notification" href="#"><p><strong>@laura</strong>, <strong>@ivansoja</strong> y <strong>@andreahg</strong>
+                    han marcado tu foto como favorito</p><img src="images/autumn.jpg"></a>
+                <a class="notification" href="#"><p><strong>@laura</strong> ha marcado tu foto como favorito</p><img
+                        src="images/birds.jpg"></a>
+                <a class="notification" href="#"><p>Tienes un nuevo seguidor <strong>@patrick</strong></p><img
+                        id="follow-user" src="images/michael-user.jpg"></a>
+                <a class="notification" href="#"><p><strong>@andreahg</strong> ha marcado tu foto como favorito</p><img
+                        src="images/birds.jpg"></a>
+            </div>
         </div>
-        <div class="button-sign" id="registrate">
-            <p>Regístrate</p>
+
+        <a href="#" class="button-sign" id="subir-foto">
+            <p>Subir foto</p>
+        </a>
+        <div class="dropdown">
+            <button id="perfil-nav" onmouseenter="myMenu()" onclick="myMenu()" class="dropbtn"></button>
+            <div onmouseleave="myMenu()" id="myMenu" class="dropdown-content">
+                <a class="menu-opc" href="profile.html">Mi perfil</a>
+                <a class="menu-opc" href="fotografias.html">Fotografías</a>
+                <a class="menu-opc" href="albumes.html">Álbumes</a>
+                <a class="menu-opc" href="../PRO/pro.html">Sección PRO</a>
+            </div>
         </div>
     </div>
 </nav>
@@ -53,7 +75,7 @@
 <div id="usuarioPRO">
     <div id="botonPRO"> PRO</div>
     <br>
-    @Jane <br>
+    @michael <br>
 </div>
 <div id="contenido">
     <ul class="navegador">
@@ -85,7 +107,7 @@
             </div>
             <div class="solicitud">
                 <div class="divCirculo">
-                    <a href="#"> <img class="imagen" src="images/imgUsuario2.png" alt="Usuario"> </a>
+                    <a href="#"> <img class="imagen" src="images/imgUsuario2.jpg" alt="Usuario"> </a>
                 </div>
                 <div class="informacion">
                     <div class="mensaje"> Tienes una nueva solicitud de presupuesto</div>
@@ -202,4 +224,5 @@
 </body>
 <script src="./scripts/Chart.js"></script>
 <script src="./scripts/scriptPro.js"></script>
+<script src="./scripts/barraNavegacion.js"></script>
 </html>

@@ -21,7 +21,7 @@ body {
 
 
 
-/*Navegador Principal*/
+/***navegador principal***/
 nav {
     width: 100%;
     height: 75px;
@@ -36,13 +36,20 @@ nav {
 }
 
 .marca-column {
-    width: 42%;
+    width: 38%;
+}
+svg{
+    opacity: 0.75;
+    width: 85%;
+    height: auto;
+    fill: #193441;
 }
 
 #name-nav {
-    font-family: "PT Sans", sans-serif;
+    font-family: "PT Sans";
     font-size: 30px;
-    margin: 5% 0 0 0;
+    margin: 5% 0 0 0%;
+    color: #353740;
 }
 
 #logo-nav {
@@ -52,50 +59,163 @@ nav {
     margin: auto;
 }
 
+.notificationsMenu:before{
+    content:"";
+    display:inline-block;
+    position:absolute;
+    border:10px solid #193441;
+    border-color:transparent transparent #193441 transparent;
+    bottom:0px;
+    left: 40%;
+}
+.perfilNavMenu:before{
+    content:"";
+    display:inline-block;
+    position:absolute;
+    border:10px solid #193441;
+    border-color:transparent transparent #193441 transparent;
+    bottom:0px;
+    left: 40%;
+}
 #search-div {
     width: 60%;
     margin: auto;
     padding: 0 0 0.5% 1.5%;
 }
 
+nav a {
+    text-decoration: none;
+}
+
 #buttons-nav {
     display: flex;
     float: right;
-    width: 25%;
-    margin: auto;
+    width: 20%;
+    margin: auto auto auto 0;
+    justify-content: space-between;
 }
 
-#iniciar-sesion {
+.notification {
+    background-color: #EBEBEB;
+    color: #193441;
+    font-family: 'PT Sans';
+    font-weight: bold;
+    border: solid;
+    border-radius: 10px;
+    margin: 5%;
+    padding: 0;
+    text-decoration: none;
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+}
+
+.notification img {
+    height: 100px;
+    width: auto;
+}
+
+#follow-user {
+    border-radius: 50%;
+    align-self: center;
+    margin: 2% 4.5% 2% 2%;
+}
+
+.notification p {
+    margin: 4%;
+    align-self: center;
+    font-weight: normal;
+}
+
+#subir-foto {
     background-color: transparent;
 }
 
-#iniciar-sesion p {
+#subir-foto p {
     color: #464646;
-    font-family: "PT Sans", sans-serif;
+    font-family: "PT Sans";
+    /*font-weight: bold;*/
     margin: auto;
-    padding: 10px;
-    font-weight: bold;
 }
 
-#registrate {
-    background-color: #2B3A42;
-}
-
-#registrate p {
-    color: #FFFFFF;
-    font-family: "PT Sans", sans-serif;
+#subir-foto p:hover {
     font-weight: bold;
-    margin: auto;
-    padding: 10px;
 }
 
 .button-sign {
     width: 40%;
     height: 50%;
-    border: 1px solid #464646;
-    border-radius: 3px;
     margin: auto;
     text-align: center;
+}
+
+#perfil-nav {
+    background-image: url('../images/michael-user.jpg');
+    width: 40px;
+    height: 40px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 300px;
+    background-position: center;
+    margin-top: 20%;
+}
+
+.dropbtn {
+    color: #353740;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    font-family: "PT Sans";
+    background-color: transparent;
+    margin-left: 0%;
+
+}
+
+.dropbtn:hover, .dropbtn:focus {
+    font-weight: bold;
+    outline: 0;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    z-index: 100;
+    text-align: center;
+    float: right;
+}
+
+.dropdown-content {
+    display: inline;
+    position: absolute;
+    background-color: #193441;
+    width: 400%;
+    overflow: hidden;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    right: 0;
+    border-radius: 5px 0px 5px 5px;
+    height: 0;
+    transition: height 0.4s;
+}
+
+.menu-opc {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #EBEBEB;
+    color: #353740;
+}
+
+.showNot {
+    height: 560px;
+}
+
+.showMenu {
+    height: 180px;
 }
 
 #search-bar {
@@ -104,13 +224,13 @@ nav {
     border: 1px solid #C8C8C8;
     border-radius: 6px;
     margin: 7px 0 0 19px;
-    background-image: url('../images/search-icon.png');
+    background-image: url('../../images/search-icon.png');
     background-repeat: no-repeat;
     background-size: 20px 20px;
     background-position: 8px 50%;
     padding: 0 0 0 30px;
 }
-/********************/
+/**********/
 
 /********************* cabecera *****************/
 #cabeceraPerfil{
