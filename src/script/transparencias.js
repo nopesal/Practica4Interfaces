@@ -12,7 +12,7 @@ function activarTransparencia(){
 }
 
 
-function desactivarTransparencia(i){
+function desactivarTransparencia(){
     $(this.children[0].children[0]).stop().fadeTo(300, 0);
     $(this.children[0].children[1]).stop().fadeTo(300, 0);
     $(this.children[0].children[2]).stop().fadeTo(300, 0);
