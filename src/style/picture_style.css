@@ -390,6 +390,7 @@ nav a {
     height: 45px;
     border-radius: 100px;
     margin-right: 3%;
+    cursor: pointer;
 }
 
 .comentario-usuario {
@@ -399,6 +400,12 @@ nav a {
     font-weight: bold;
     font-size: 0.9em;
     line-height: 13px;
+    cursor: pointer;
+}
+
+.comentario-usuario:hover {
+    font-weight: bolder;
+    color: #464646;
 }
 
 .comentario-hora {
