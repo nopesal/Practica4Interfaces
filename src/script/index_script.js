@@ -68,7 +68,7 @@ function crearAutorOnClickListener() {
     }
 
     function irAPerfilAutor() {
-        window.location.href = "../perfil_ajeno_index.html";
+        window.location.href = "perfil_ajeno_index.html";
     }
 
     var titulo = document.getElementsByClassName("titulo-foto");
