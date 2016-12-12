@@ -9,6 +9,7 @@ body {
     background-color: #ededed;
     position: relative;
     text-align: center;
+    margin:0;
 }
 
 .gradient {

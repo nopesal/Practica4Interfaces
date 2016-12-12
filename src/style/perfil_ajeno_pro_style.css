@@ -34,7 +34,8 @@ nav {
 .marca-column {
     width: 38%;
 }
-svg{
+
+svg {
     opacity: 0.75;
     width: 85%;
     height: auto;
@@ -42,7 +43,7 @@ svg{
 }
 
 #name-nav {
-    font-family: "PT Sans";
+    font-family: "PT Sans", sans-serif;
     font-size: 30px;
     margin: 5% 0 0 10px;
     color: #353740;
@@ -55,24 +56,26 @@ svg{
     margin: auto;
 }
 
-.notificationsMenu:before{
-    content:"";
-    display:inline-block;
-    position:absolute;
-    border:10px solid #193441;
-    border-color:transparent transparent #193441 transparent;
-    bottom:0px;
+.notificationsMenu:before {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    border: 10px solid #193441;
+    border-color: transparent transparent #193441 transparent;
+    bottom: 0px;
     left: 40%;
 }
-.perfilNavMenu:before{
-    content:"";
-    display:inline-block;
-    position:absolute;
-    border:10px solid #193441;
-    border-color:transparent transparent #193441 transparent;
-    bottom:0px;
+
+.perfilNavMenu:before {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    border: 10px solid #193441;
+    border-color: transparent transparent #193441 transparent;
+    bottom: 0px;
     left: 40%;
 }
+
 #search-div {
     width: 60%;
     margin: auto 0 auto auto;
@@ -82,7 +85,6 @@ svg{
 nav a {
     text-decoration: none;
 }
-
 
 #buttons-nav {
     display: flex;
@@ -121,6 +123,7 @@ nav a {
 .notification p {
     margin: 4%;
     align-self: center;
+    text-align: left;
     font-weight: normal;
 }
 
