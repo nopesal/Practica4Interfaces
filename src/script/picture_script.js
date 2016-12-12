@@ -55,16 +55,15 @@ if (localStorage["listaImagenes"] == null) {
 function cargarImagen() {
     var hash = window.location.hash.substr(1);
     if (hash == "") {
-        $("#imagen").append('<img src="images/Flores.PNG" alt="Flores">');
-    } else {
-        var imagen = listaImagenes.find(function (imagen) {
-            return imagen.identificador === hash;
-        });
-        $("#imagen").append('<img src="images/' + hash + '.PNG" alt="' + hash + '">');
-        $("#texto-imagen h1")[0].innerHTML = imagen.titulo;
-        $("#social").prepend('<i class="fa ' + imagen.likeDado + '" aria-hidden="true" title="Me gusta"></i>');
-        $("#social span")[0].innerHTML = imagen.likes;
+        hash = "Flores";
     }
+    var imagen = listaImagenes.find(function (imagen) {
+        return imagen.identificador === hash;
+    });
+    $("#imagen").append('<img src="images/' + hash + '.PNG" alt="' + hash + '">');
+    $("#texto-imagen h1")[0].innerHTML = imagen.titulo;
+    $("#social").prepend('<i class="fa ' + imagen.likeDado + '" aria-hidden="true" title="Me gusta"></i>');
+    $("#social span")[0].innerHTML = imagen.likes;
     crearlikeOnClickListener();
 }
 
