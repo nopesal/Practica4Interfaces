@@ -4,6 +4,7 @@ body {
     font-size: 1em;
     position: relative;
     margin: 0;
+    text-align:center;
 }
 
 #contenido {
@@ -16,6 +17,7 @@ body {
     font-family: 'PT Sans Caption', sans-serif;
     font-size: 1em;
     position: relative;
+    text-align:left;
 }
 
 nav {
