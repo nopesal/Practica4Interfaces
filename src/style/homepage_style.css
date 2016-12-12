@@ -485,6 +485,7 @@ span.psw {
     background-size: 1000px;
     padding-top: 180px;
     font-family: "PT Sans";
+    min-width: 300px;
 }
 
 .popup-signup {
