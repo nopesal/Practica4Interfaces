@@ -8,7 +8,7 @@ body {
     font-family: 'PT Sans Caption', sans-serif;
     background-color: #ededed;
     position: relative;
-    margin:0;
+    margin: 0;
 }
 
 h2 {
@@ -454,6 +454,8 @@ nav a {
 
 .informacion-linea a {
     margin-left: 3%;
+    color: #efefef;
+    text-decoration: none;
 }
 
 .informacion-linea a:visited {
@@ -661,6 +663,14 @@ footer {
     margin: auto;
 }
 
-.links-footer a:visited, a:link, a:active {
+.links-footer a:visited {
+    text-decoration: none;
+}
+
+.links-footer a:link {
+    text-decoration: none;
+}
+
+.links-footer a:active {
     text-decoration: none;
 }
