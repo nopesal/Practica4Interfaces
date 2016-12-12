@@ -335,6 +335,13 @@ footer {
     color: #A4ABBF;
 }
 
+#foto-pro{
+    width: 100%
+}
+
+#terms-cons{
+    width: 100%;
+}
 
 #info a:link {
     color: #A4ABBF;
@@ -364,6 +371,10 @@ footer {
 
 .links-footer a:visited, a:link, a:active {
     text-decoration: none;
+}
+
+.psw a{
+    color: #EBEBEB;
 }
 
 input[type=text], input[type=password], input[type=email] {
