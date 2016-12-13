@@ -1,12 +1,10 @@
 var listaImagenes;
 
 function parsearDatosImagenesJSON() {
-    $.getJSON("script/datos_imagenes.json", function (jsonParseado) {
         if (soportaLocalStorage()) {
-            localStorage["listaImagenes"] = JSON.stringify(jsonParseado);
+            localStorage["listaImagenes"] = JSON.stringify(myData);
         }
-        return jsonParseado;
-    });
+        return myData;
 }
 
 function soportaLocalStorage() {
