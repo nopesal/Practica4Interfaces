@@ -143,7 +143,6 @@ svg {
     opacity: 0.75;
     width: 85%;
     height: auto;
-    fill: #193441;
 }
 
 #name-nav {
@@ -377,7 +376,6 @@ nav a {
     -khtml-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
-    user-select: none;
 }
 
 footer {
