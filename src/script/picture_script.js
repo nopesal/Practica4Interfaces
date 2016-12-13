@@ -61,7 +61,7 @@ function comentar() {
 }
 
 function insertarComentario() {
-    $(this).after('<div class="comentario"><img src="images/michael-user.jpg" alt=""><div style="width: 100%;"><div style="display: inline"><span class="comentario-usuario">@michael</span><span class="comentario-hora">Hace 1 minuto</span></div><p class="comentario-texto">' + textarea.value + '</p><div><span class="comentario-responder">Responder</span><span class="comentario-megusta">Me gusta</span></div></div></div>');
+    $(this).after('<div class="comentario"><div style="position: relative; width: 65px;"><img src="images/michael-user.jpg" alt=""><div class="identificador-pro">PRO</div></div><div style="width: 100%;"><div style="display: inline"><span class="comentario-usuario">@michael</span><span class="comentario-hora">Hace 1 minuto</span></div><p class="comentario-texto">' + textarea.value + '</p><div><span class="comentario-responder">Responder</span><span class="comentario-megusta">Me gusta</span></div></div></div>');
     textarea.value = "";
     var numeroComentarios = parseInt($("#social span")[1].innerHTML);
     $("#social span")[1].innerHTML = numeroComentarios + 1;

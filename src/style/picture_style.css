@@ -401,6 +401,19 @@ nav a {
     border-radius: 100px;
     margin-right: 3%;
     cursor: pointer;
+    position: absolute;
+}
+
+.identificador-pro {
+    background-color: #2B3A42;
+    color: #FFFFFF;
+    font-weight: bold;
+    display: inline;
+    position: absolute;
+    top: 30px;
+    border-radius: 3px;
+    padding: 3px;
+    font-size: 0.6em;
 }
 
 .comentario-usuario {
