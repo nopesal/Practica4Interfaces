@@ -218,8 +218,7 @@ nav a {
 }
 
 .dropdown-content a:hover {
-    background-color: #EBEBEB;
-    color: #353740;
+    background: #828E93;
 }
 
 .showNot {
