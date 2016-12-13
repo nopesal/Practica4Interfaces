@@ -1,14 +1,12 @@
-/* Cuando el usuario pica en los botones correspondientes se muestra
- * y oculta el menu dropdown */
+/**
+ * Cuando el usuario hace clic en los botones correspondientes se muestra y oculta el menu dropdown.
+ * Si el menú está abierto se añade un retraso para sincronizar la desaparición de la flecha
+ * con la desaparición del menú.
+ */
 function myMenu() {
     document.getElementById("myMenu").classList.toggle("showMenu");
     document.getElementById("myNotifications").classList.remove('showNot');
     var delay = 400; //0.4 segundos
-
-    /*
-     * Si el menú está abierto se añade un retraso para sincronizar la desaparición de la fleche
-     * con la desaparición del menú.
-     */
 
     if (document.getElementById("menuNotificaciones").classList.contains('notificationsMenu')) {
         setTimeout(function () {
@@ -23,6 +21,12 @@ function myMenu() {
         document.getElementById("perfil-nav").classList.toggle('perfilNavMenu');
     }
 }
+
+/**
+ * Cuando el usuario hace clic en los botones correspondientes se muestra y oculta el menu dropdown.
+ * Si el menú está abierto se añade un retraso para sincronizar la desaparición de la flecha
+ * con la desaparición del menú.
+ */
 function myNotifications() {
     document.getElementById("myNotifications").classList.toggle("showNot");
     document.getElementById("myMenu").classList.remove('showMenu');
@@ -48,7 +52,10 @@ function myNotifications() {
     }
 }
 
-// Cierra el dropdown si se hace click fuera
+/**
+ * Cierra el dropdown si se hace clic fuera.
+ * @param event
+ */
 window.onclick = function (event) {
     if (!event.target.matches('.dropbtn')) {
 

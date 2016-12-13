@@ -1,5 +1,9 @@
 var listaImagenes;
 
+/**
+ * Guarda en el almacenamiento local del navegador la informacion de las imágenes a mostrar.
+ * @returns {*[]}
+ */
 function parsearDatosImagenesJSON() {
     if (soportaLocalStorage()) {
         localStorage["listaImagenes"] = JSON.stringify(myData);
@@ -7,10 +11,20 @@ function parsearDatosImagenesJSON() {
     return myData;
 }
 
+/**
+ * Funcion que comprueba si el navegador en el que se ejecuta la página está disponible el almacenamiento
+ * local.
+ * @returns {boolean}
+ */
 function soportaLocalStorage() {
     return ('localStorage' in window) && window['localStorage'] !== null;
 }
 
+/**
+ * Se encarga de recoger la información de las imágenes y las coloca en el diseño de la página principal.
+ * Además de colocar las imágenes, coloca la informacion de cada una que se mostrará, con los valores de
+ * los me gusta actualizados. Posteriormente se crean los escuchadores de eventos de los elementos creados.
+ */
 function cargarImagenes() {
     if (localStorage["listaImagenes"] == null) {
         listaImagenes = parsearDatosImagenesJSON();
@@ -32,6 +46,13 @@ function cargarImagenes() {
     crearAutorOnClickListener();
 }
 
+/**
+ * Cambia un atributo de la informacion de las imagenes guardado en almacenamiento local del navegador
+ * y actualiza su valor con el valor pasado por parámetros.
+ * @param elemento Elemento que ha provocado el cambio en el almacenamiento
+ * @param atributo Atributo a cambiar en el almacenamiento
+ * @param valor
+ */
 function actualizarValorStorage(elemento, atributo, valor) {
     if (soportaLocalStorage()) {
         var coleccionImagenes = $(".imagen");
@@ -51,6 +72,10 @@ function actualizarValorStorage(elemento, atributo, valor) {
     }
 }
 
+/**
+ * Función que se encarga de lanzar la página del visor de la imagen correspondiente a la imagen sobre
+ * la que se ha pulsado.
+ */
 function abrirPaginaImagen() {
     console.log("Funciona");
     var coleccionImagenes = $(".imagen");

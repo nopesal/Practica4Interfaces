@@ -1,3 +1,8 @@
+/**
+ * Variable que incluye un texto en formto JSON que se corresponde con la información de las imagenes
+ * que están presentes en la página principal de un usuario registrado
+ * @type {[*]}
+ */
 var myData = [
     {
         "identificador": "Chica",
