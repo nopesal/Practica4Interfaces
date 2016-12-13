@@ -159,27 +159,6 @@ svg {
     margin: auto;
 }
 
-.notificationsMenu:before {
-    content: "";
-    display: inline-block;
-    position: absolute;
-    border: 10px solid #193441;
-    border-color: transparent transparent #193441 transparent;
-    bottom: 0px;
-    left: 40%;
-    z-index: 100;
-}
-
-.perfilNavMenu:before {
-    content: "";
-    display: inline-block;
-    position: absolute;
-    border: 10px solid #193441;
-    border-color: transparent transparent #193441 transparent;
-    bottom: 0px;
-    left: 40%;
-}
-
 #search-div {
     width: 60%;
     margin: auto 0 auto auto;
@@ -208,6 +187,27 @@ nav a {
     width: 20%;
     margin: auto auto auto 0;
     justify-content: space-between;
+}
+
+.notificationsMenu:before {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    border: 10px solid #193441;
+    border-color: transparent transparent #193441 transparent;
+    bottom: 0px;
+    left: 40%;
+    z-index: 100;
+}
+
+.perfilNavMenu:before {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    border: 10px solid #193441;
+    border-color: transparent transparent #193441 transparent;
+    bottom: 0px;
+    left: 40%;
 }
 
 .notification {
@@ -244,40 +244,6 @@ nav a {
     text-align: left;
     font-weight: normal;
     color: white;
-}
-
-#subir-foto {
-    background-color: transparent;
-    margin-right: 10px;
-}
-
-#subir-foto p {
-    color: #464646;
-    font-family: "PT Sans";
-    /*font-weight: bold;*/
-    margin: auto;
-}
-
-#subir-foto p:hover {
-    font-weight: bold;
-}
-
-.button-sign {
-    width: 40%;
-    height: 50%;
-    margin: auto;
-    text-align: center;
-}
-
-#perfil-nav {
-    background-image: url('../images/michael-user.jpg');
-    width: 40px;
-    height: 40px;
-    background-repeat: no-repeat;
-    background-size: cover;
-    border-radius: 300px;
-    background-position: center;
-    margin-top: 20%;
 }
 
 .dropbtn {
@@ -321,6 +287,7 @@ nav a {
 #patrick{
     font-size: 1.5em;
 }
+
 .menu-opc {
     color: #EBEBEB;
     padding: 12px 16px;
@@ -340,6 +307,40 @@ nav a {
 
 .showMenu {
     height: 180px;
+}
+
+#subir-foto {
+    background-color: transparent;
+    margin-right: 10px;
+}
+
+#subir-foto p {
+    color: #464646;
+    font-family: "PT Sans";
+    /*font-weight: bold;*/
+    margin: auto;
+}
+
+#subir-foto p:hover {
+    font-weight: bold;
+}
+
+.button-sign {
+    width: 40%;
+    height: 50%;
+    margin: auto;
+    text-align: center;
+}
+
+#perfil-nav {
+    background-image: url('../images/michael-user.jpg');
+    width: 40px;
+    height: 40px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 300px;
+    background-position: center;
+    margin-top: 20%;
 }
 
 #search-bar {
