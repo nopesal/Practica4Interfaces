@@ -18,6 +18,12 @@ for (var i = 0; i < albumPeque.length; i++) {
     albumPeque[i].addEventListener("mouseout", ocultarNombreAlbum, false);
 }
 
+var flechaIzquierda = document.getElementById("flecha-izquierda");
+flechaIzquierda.addEventListener("click", cambiarFotoAnterior, false);
+
+var flechaDerecha = document.getElementById("flecha-derecha");
+flechaDerecha.addEventListener("click", cambiarFotoPosterior, false);
+
 function mostrarNombreAlbum() {
     $(this.children[1]).stop().fadeTo(300, 0.5);
     $(this.children[2]).stop().fadeTo(300, 1);
@@ -26,6 +32,22 @@ function mostrarNombreAlbum() {
 function ocultarNombreAlbum() {
     $(this.children[1]).stop().fadeTo(300, 0);
     $(this.children[2]).stop().fadeTo(300, 0);
+}
+
+function cambiarFotoAnterior() {
+    var hash = window.location.hash.substr(1);
+    var index = getIndexListaImagenes(hash);
+    if (index - 1 >= 0) {
+        window.location.href = "picture.html#" + listaImagenes[index - 1].identificador;
+    }
+}
+
+function cambiarFotoPosterior() {
+    var hash = window.location.hash.substr(1);
+    var index = getIndexListaImagenes(hash);
+    if (index + 1 <= listaImagenes.length) {
+        window.location.href = "picture.html#" + listaImagenes[index + 1].identificador;
+    }
 }
 
 var botonComentar = document.getElementById("boton-comentar");
@@ -124,3 +146,7 @@ function getIndexListaImagenes(imagen) {
         if (listaImagenes[i].identificador == imagen) return i;
     }
 }
+
+window.onhashchange = function () {
+    location.reload();
+};
