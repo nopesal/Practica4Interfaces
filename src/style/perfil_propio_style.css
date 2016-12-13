@@ -268,10 +268,22 @@ nav a {
     position: relative;
     display:block;
     width: 200px;
-    margin: auto;
-    margin-top: 30px;
+    margin: 30px auto auto;
     height: 200px;
     border-radius: 150px;
+}
+
+#identificador-pro {
+    background-color: #2B3A42;
+    color: #FFFFFF;
+    font-weight: bold;
+    display: inline;
+    position: absolute;
+    bottom: 0;
+    right: 40px;
+    border-radius: 3px;
+    padding: 5px 8px;
+    font-size: 1.6em;
 }
 
 #nombreUsuario {
