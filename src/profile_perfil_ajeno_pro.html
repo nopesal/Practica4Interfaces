@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="style/perfil_ajeno_pro_style.css">
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.0/jquery.min.js"></script>
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.9/jquery-ui.min.js"></script>
-     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=PT+Sans"/>
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=PT+Sans"/>
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=PT+Sans+Caption"/>
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=PT+Serif"/>
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Marvel"/>
@@ -74,176 +74,185 @@
     </div>
 </nav>
 
-    <!-- Cabecera con la imagen de usuario y su username-->
+<!-- Cabecera con la imagen de usuario y su username-->
 
-    <div id="cabeceraPerfil">
-        <div id="cabeceraBackground">
-        </div>
+<div id="cabeceraPerfil">
+    <div id="cabeceraBackground">
     </div>
+</div>
 
-<a href="profile_perfil_ajeno_pro.html"><img id= "imgUsuario" src="images/emily-perfil.PNG" alt="imgUsuario"></a>
-    <h1 id="nombreUsuario"> @emily</h1>
+<a href="profile_perfil_ajeno_pro.html"><img id="imgUsuario" src="images/emily-perfil.PNG" alt="imgUsuario"></a>
+<h1 id="nombreUsuario"> @emily</h1>
 
-    <div id="contenido">
+<div id="contenido">
 
 
     <!-- Menú de navegación del perfil-->
-    
-        <div id="navPerfil">
 
-            <div id="cuadroSeguidores">
-                <a href="fotografias_perfil_ajeno_pro.html">8<br>fotografías</a>
-                <a href="error404.html">164<br>seguidores</a>
-                <a href="error404.html">240<br>seguidos</a>
-            </div>
+    <div id="navPerfil">
 
-            <div id="menu">
-                <a href="fotografias_perfil_ajeno_pro.html">Fotografías</a>
-                <a href="albumes_perfil_ajeno_pro.html">Álbumes</a>
-            </div>
-
+        <div id="cuadroSeguidores">
+            <a href="fotografias_perfil_ajeno_pro.html">8<br>fotografías</a>
+            <a href="error404.html">164<br>seguidores</a>
+            <a href="error404.html">240<br>seguidos</a>
         </div>
 
-        <!-- Cuerpo de la página-->
+        <div id="menu">
+            <a href="fotografias_perfil_ajeno_pro.html">Fotografías</a>
+            <a href="albumes_perfil_ajeno_pro.html">Álbumes</a>
+        </div>
 
-        <div id="bodyPerfil">
+    </div>
 
-            <div id="barraBotones">
-                <div id="botones-perfil">
-                    <a class="boton" id="seguir" onclick="seguir()" href="#/" >Seguir</a>
-                    <a class="boton" id="presupuesto" onclick="document.getElementById('pedirPresupuesto').style.display='block'" href="#/" >
-                        Presupuesto
-                    </a>
-                    <a class="boton" id="mensaje" onclick="document.getElementById('enviarMensaje').style.display='block'" href="#/" >
-                        Mensaje
-                    </a>
-                </div>
+    <!-- Cuerpo de la página-->
 
-                <div id="pedirPresupuesto" class="popup" onsubmit="document.getElementById('pedirPresupuesto').style.display='none'">
+    <div id="bodyPerfil">
 
-                    <form class="popup-content animate">
+        <div id="barraBotones">
+            <div id="botones-perfil">
+                <a class="boton" id="seguir" onclick="seguir()" href="#/">Seguir</a>
+                <a class="boton" id="presupuesto"
+                   onclick="document.getElementById('pedirPresupuesto').style.display='block'" href="#/">
+                    Presupuesto
+                </a>
+                <a class="boton" id="mensaje" onclick="document.getElementById('enviarMensaje').style.display='block'"
+                   href="#/">
+                    Mensaje
+                </a>
+            </div>
+
+            <div id="pedirPresupuesto" class="popup"
+                 onsubmit="document.getElementById('pedirPresupuesto').style.display='none'">
+
+                <form class="popup-content animate">
                         <span onclick="document.getElementById('pedirPresupuesto').style.display='none'" class="close"
                               title="Cerrar">&times;
                         </span>
 
-                        <h1 id="tituloSolicitud"> Solicitud de presupuesto </h1>
+                    <h1 id="tituloSolicitud"> Solicitud de presupuesto </h1>
 
-                        <div class="contenedorPresupuesto">
-                            <p> Para solicitar un presupuesto al fotógrafo rellena los siguientes campos.</p>
-                            <label>Mensaje</label><br>
-                            <textarea id="textarea" rows="4" cols="39"></textarea><br>
-                            <div>
+                    <div class="contenedorPresupuesto">
+                        <p> Para solicitar un presupuesto al fotógrafo rellena los siguientes campos.</p>
+                        <label>Mensaje</label><br>
+                        <textarea id="textarea" rows="4" cols="39"></textarea><br>
+                        <div>
 
-                                <div id="eventos">
-                                    <label>Tipo de evento</label><br>
-                                    <select required>
-                                        <option value="" selected="selected">Elija una opción</option>
-                                        <option value="boda">Boda</option>
-                                        <option value="bautizo">Bautizo</option>
-                                        <option value="comunion">Comunión</option>
-                                        <option value="sesion de fotos">Sesión de fotos</option>
-                                        <option value="cumpleaños">Cumpleaños</option>
-                                        <option value="empresa">Eventos de empresa</option>
-                                        <option value="otros">Otros</option>
-                                    </select><br>
-                                </div>
-
-                                <div id="lugar">
-                                    <label>Lugar</label>
-                                    <input type="text" placeholder="Introduzca el lugar de las fotografías" name="lugar" required>
-                                </div>
-                            </div>
-                            <div id="fecha">
-                                <label>Fecha</label><br>
-                                <input type="date" name="fecha" required>
+                            <div id="eventos">
+                                <label>Tipo de evento</label><br>
+                                <select required>
+                                    <option value="" selected="selected">Elija una opción</option>
+                                    <option value="boda">Boda</option>
+                                    <option value="bautizo">Bautizo</option>
+                                    <option value="comunion">Comunión</option>
+                                    <option value="sesion de fotos">Sesión de fotos</option>
+                                    <option value="cumpleaños">Cumpleaños</option>
+                                    <option value="empresa">Eventos de empresa</option>
+                                    <option value="otros">Otros</option>
+                                </select><br>
                             </div>
 
-
-                            <div id="horas">
-                                <label>Nº Horas</label><br>
-                                <input type="number" placeholder="" name="horas" required>
+                            <div id="lugar">
+                                <label>Lugar</label>
+                                <input type="text" placeholder="Introduzca el lugar de las fotografías" name="lugar"
+                                       required>
                             </div>
-                            <div id="numFotos">
-                                <label>Nº fotos</label><br>
-                                <input type="number" placeholder="" name="numFotos" required>
-                            </div>
-
-                            <p style="text-align:center;"> ¿Quieres que retoquen tus fotos?</p>
-
-                            <div id="retoque">
-                                <input type="radio" name="retoque" value="si"> Sí
-                                <input type="radio" name="retoque" value="no" checked> No
-                            </div>
-
-                            <button id="botonEnviar" type="submit">Enviar Solicitud</button>
                         </div>
-                    </form>
-                </div>
+                        <div id="fecha">
+                            <label>Fecha</label><br>
+                            <input type="date" name="fecha" required>
+                        </div>
 
-                <div id="enviarMensaje" class="popup">
-                </div>
 
-                <h1 class= "titulosBody" style="margin:0;margin-top: 5px;">Fotos más recientes</h1>
+                        <div id="horas">
+                            <label>Nº Horas</label><br>
+                            <input type="number" placeholder="" name="horas" required>
+                        </div>
+                        <div id="numFotos">
+                            <label>Nº fotos</label><br>
+                            <input type="number" placeholder="" name="numFotos" required>
+                        </div>
 
+                        <p style="text-align:center;"> ¿Quieres que retoquen tus fotos?</p>
+
+                        <div id="retoque">
+                            <input type="radio" name="retoque" value="si"> Sí
+                            <input type="radio" name="retoque" value="no" checked> No
+                        </div>
+
+                        <button id="botonEnviar" type="submit">Enviar Solicitud</button>
+                    </div>
+                </form>
             </div>
 
-            <!--Sección "Fotografías más recientes"-->
+            <div id="enviarMensaje" class="popup">
+            </div>
 
-            <div class="fila">
+            <h1 class="titulosBody" style="margin:0;margin-top: 5px;">Fotos más recientes</h1>
 
-                <div class="columna">
-                    <a href="#foto1">
-                        <div class="transparencia" style="background-color: #E89271;"></div>
-                        <span class="tituloFoto">AMANECER EN LA PLAYA</span> <i class="fa fa-heart"></i> <span class="numeroLikes">13</span>
-                        <img src="images/playa1.jpg" alt="Fotografia1"  onclick="window.location='#urlImagen1'">
-                    </a>
-                </div>
+        </div>
 
-                <div class="columna" style="margin-left:2.5%; margin-right:2.5%;">
-                    <a href="#foto2">
-                        <div class="transparencia" style="background-color: #F5BBD3;"></div>
-                        <span class="tituloFoto">FLOR DE CEREZO</span> <i class="fa fa-heart"></i> <span class="numeroLikes">20</span>
-                        <img src="images/flores4.jpg" alt="Fotografia2">
-                    </a>
-                </div>
+        <!--Sección "Fotografías más recientes"-->
 
-                <div class="columna">
-                    <a href="#foto3">
-                        <div class="transparencia" style="background-color: #FD851C;" ></div>
-                        <span class="tituloFoto">ROSAS COLOR AMAPOLA</span> <i class="fa fa-heart"></i> <span class="numeroLikes">4</span>
-                        <img src="images/flores3.jpg" alt="Fotografia3">
-                    </a>
-                </div>
+        <div class="fila">
 
+            <div class="columna">
+                <a href="#foto1">
+                    <div class="transparencia" style="background-color: #E89271;"></div>
+                    <span class="tituloFoto">AMANECER EN LA PLAYA</span> <i class="fa fa-heart"></i> <span
+                        class="numeroLikes">13</span>
+                    <img src="images/playa1.jpg" alt="Fotografia1" onclick="window.location='#urlImagen1'">
+                </a>
+            </div>
+
+            <div class="columna" style="margin-left:2.5%; margin-right:2.5%;">
+                <a href="#foto2">
+                    <div class="transparencia" style="background-color: #F5BBD3;"></div>
+                    <span class="tituloFoto">FLOR DE CEREZO</span> <i class="fa fa-heart"></i> <span
+                        class="numeroLikes">20</span>
+                    <img src="images/flores4.jpg" alt="Fotografia2">
+                </a>
+            </div>
+
+            <div class="columna">
+                <a href="#foto3">
+                    <div class="transparencia" style="background-color: #FD851C;"></div>
+                    <span class="tituloFoto">ROSAS COLOR AMAPOLA</span> <i class="fa fa-heart"></i> <span
+                        class="numeroLikes">4</span>
+                    <img src="images/flores3.jpg" alt="Fotografia3">
+                </a>
+            </div>
+
+        </div>
+
+
+        <!--Sección "Álbumes más populares"-->
+
+        <h1 class="titulosBody">Álbumes más populares</h1>
+
+        <div class="fila">
+
+            <div class="columna">
+                <a href="#album1">
+                    <div class="transparencia" style="background-color: #E89271;"></div>
+                    <span class="tituloFoto">PLAYAS</span> <i class="fa fa-heart"></i> <span
+                        class="numeroLikes">30</span>
+                    <img src="images/playa1.jpg" alt="Album1">
+                </a>
+            </div>
+
+            <div class="columna" style="margin-left:2.5%; margin-right:2.5%;">
+                <a href="#album2">
+                    <div class="transparencia" style="background-color: #D285A4;"></div>
+                    <span class="tituloFoto">FLORES</span> <i class="fa fa-heart"></i> <span
+                        class="numeroLikes">20</span>
+                    <img src="images/flores1.jpg" alt="Album2">
+                </a>
             </div>
 
 
-            <!--Sección "Álbumes más populares"-->
-
-            <h1 class= "titulosBody">Álbumes más populares</h1>
-
-            <div class="fila">
-
-                <div class="columna">
-                    <a href="#album1">
-                        <div class="transparencia" style="background-color: #E89271;" ></div>
-                        <span class="tituloFoto">PLAYAS</span> <i class="fa fa-heart"></i> <span class="numeroLikes">30</span>
-                        <img src="images/playa1.jpg" alt="Album1">
-                    </a>
-                </div>
-
-                <div class="columna" style="margin-left:2.5%; margin-right:2.5%;">
-                    <a href="#album2">
-                        <div class="transparencia" style="background-color: #D285A4;"></div>
-                        <span class="tituloFoto">FLORES</span> <i class="fa fa-heart"></i> <span class="numeroLikes">20</span>
-                        <img src="images/flores1.jpg" alt="Album2">
-                    </a>
-                </div>
-
-
-            </div>
         </div>
     </div>
+</div>
 
 <footer>
     <div id="eslogan">
@@ -287,14 +296,14 @@
     </div>
     <div id="info">
         <p>
-            <a href="error404.html">Privacidad</a> • <a href="error404.html">Condiciones</a> • <a href="error404.html">Seguridad</a> © 2016 Aperture
+            <a href="error404.html">Privacidad</a> • <a href="error404.html">Condiciones</a> • <a href="error404.html">Seguridad</a>
+            © 2016 Aperture
         </p>
     </div>
 </footer>
 
 <script src="script/transparencias.js"></script>
 <script src="script/general.js"></script>
-
-
+<script src="script/barraNavegacion.js"></script>
 </body>
 </html>
