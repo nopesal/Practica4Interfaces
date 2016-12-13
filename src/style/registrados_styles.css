@@ -188,7 +188,7 @@ nav a {
     margin: auto auto auto 0;
     justify-content: space-between;
 }
-
+/****************************/
 .notificationsMenu:before {
     content: "";
     display: inline-block;
@@ -308,6 +308,8 @@ nav a {
 .showMenu {
     height: 180px;
 }
+
+/***********************/
 
 #subir-foto {
     background-color: transparent;
