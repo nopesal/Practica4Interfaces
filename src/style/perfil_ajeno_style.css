@@ -43,7 +43,8 @@ svg{
 }
 
 #name-nav {
-    font-family: "PT Sans";
+    font-family: "PT Sans Caption", sans-serif;
+    font-weight: bold;
     font-size: 30px;
     margin: 5% 0 0 10px;
     color: #353740;
