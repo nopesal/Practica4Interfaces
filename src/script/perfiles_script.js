@@ -1,3 +1,7 @@
+
+/* Aumenta el número de seguidores del usuario al que se da a "Seguir"
+*  y se cambia el estilo del botón para que el ususario sepa que le está siguiendo. Si vuelve a pulsar
+*  el botón se deja de seguir al usuario*/
 function seguir() {
     console.log(document.getElementById("seguir").textContent);
     var ejecucion = 0;
@@ -19,6 +23,9 @@ function seguir() {
     }
 }
 
+
+/* Hace que aparezca una transparencia con texto por encima de las imágenes de los perfiles al pasar el ratón
+* por encima y desaparece cuando el ratón deja de estar por encima*/
 var columnas =document.querySelectorAll('.columna');
 for(var i=0;i<columnas.length;i++){
     columnas[i].addEventListener("mouseenter",activarTransparencia,false);

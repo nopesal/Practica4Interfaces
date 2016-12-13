@@ -1,4 +1,5 @@
 
+/* Se muestran más imágenes cuando se pulsa en el botón "Ver más" en la sección fotografías del pefil propio*/
 $("#ver-mas")[0].addEventListener("click", verMasImagenes, false);
 
 function verMasImagenes() {
